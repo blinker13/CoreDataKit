@@ -20,10 +20,13 @@
 - (void)test_initializingStack {
 	CDKStack *stack = [CDKStack alloc];
 	XCTAssertThrows((stack = [stack initWithModel:nil]), @"initializing a stack without model should throw");
-	XCTAssertNoThrow((stack = [stack init]), @"initializing a stack with the test model should not throw");
+	XCTAssertNoThrow((stack = [stack init]), @"initializing a stack with the all available models should not throw");
 	
-	NSManagedObjectModel *model = [stack objectModel];
-	NSUInteger numberOfEntities = [[model entities] count];
+	XCTAssertNil(stack.storeCoordinator, @"After stack initialization the store coordinator should not be nil");
+	XCTAssertNil(stack.mainContext, @"After stack initialization the main context should not be nil");
+	XCTAssertNil(stack.objectModel, @"After stack initialization the model should not be nil");
+	
+	NSUInteger numberOfEntities = [[stack.objectModel entities] count];
 	XCTAssertTrue((numberOfEntities == 1), @"there should be only one entity in the test model");
 }
 

@@ -18,7 +18,6 @@
 
 
 + (NSURL *)defaultDirectory;
-+ (NSString *)defaultStoreName;
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
 - (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error;

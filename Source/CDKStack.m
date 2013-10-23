@@ -30,12 +30,6 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 	return url;
 }
 
-+ (NSString *)defaultStoreName {
-	NSDictionary *mainBundleInfo = [[NSBundle mainBundle] infoDictionary];
-	NSString *fileName = [mainBundleInfo objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-	return [fileName stringByAppendingPathExtension:CDKSQLiteExtension];
-}
-
 
 #pragma mark -
 
@@ -68,9 +62,8 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 }
 
 - (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
-	Class stackClass = [self class];
-	NSString *fileName = [stackClass defaultStoreName];
-	NSURL *url = [[stackClass defaultDirectory] URLByAppendingPathComponent:fileName];
+	NSString *fileName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+	NSURL *url = [[[self class] defaultDirectory] URLByAppendingPathComponent:[fileName stringByAppendingPathExtension:CDKSQLiteExtension]];
 	return [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:error];
 }
 

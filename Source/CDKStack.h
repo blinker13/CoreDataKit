@@ -17,7 +17,10 @@
 @property (nonatomic, readonly) NSManagedObjectContext			*mainContext;
 
 
++ (NSURL *)defaultDirectory;
++ (NSString *)defaultStoreName;
+
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
-- (NSPersistentStore *)addSQLStoreWithName:(NSString *)name options:(NSDictionary *)options error:(NSError **)error;
+- (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error;
 
 @end

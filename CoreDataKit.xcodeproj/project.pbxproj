@@ -10,7 +10,6 @@
 		BD0E871F17B2E083002E79E1 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0E871D17B2E083002E79E1 /* TestModel.xcdatamodeld */; };
 		BD157CCB17B03FD0000C0F2F /* CDKObjectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD157CCA17B03FD0000C0F2F /* CDKObjectsController.m */; };
 		BD157CD217B0E59A000C0F2F /* CDKObjectsController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD157CC917B03FD0000C0F2F /* CDKObjectsController.h */; };
-		BD157CD317B0E59A000C0F2F /* CDKUtility.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57113F177C36D600565726 /* CDKUtility.h */; };
 		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD57110B177B924D00565726 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
 		BD57110C177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
@@ -40,7 +39,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				BD157CD217B0E59A000C0F2F /* CDKObjectsController.h in Copy Files */,
-				BD157CD317B0E59A000C0F2F /* CDKUtility.h in Copy Files */,
 				BD571135177C2B7600565726 /* CDKStack.h in Copy Files */,
 				BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */,
 			);
@@ -63,7 +61,6 @@
 		BD571128177B92C500565726 /* CoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataKitTests.m; sourceTree = "<group>"; };
 		BD57112B177B931900565726 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
 		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
-		BD57113F177C36D600565726 /* CDKUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKUtility.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				BD571125177B92C500565726 /* CoreDataKit.h */,
-				BD57113F177C36D600565726 /* CDKUtility.h */,
 				BD57112B177B931900565726 /* CDKStack.h */,
 				BD57112C177B931900565726 /* CDKStack.m */,
 				BD157CC917B03FD0000C0F2F /* CDKObjectsController.h */,

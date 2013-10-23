@@ -7,22 +7,41 @@
 //
 
 #import "CDKStack.h"
-#import "CDKUtility.h"
 
 
-NSString * const CDKSQLiteSuffix	=	@".sqlite";
+NSString * const CDKSQLiteExtension	=	@"sqlite";
 
 
 @implementation CDKStack
 
+@synthesize mainContext	=	_mainContext;
+
+
++ (NSURL *)defaultDirectory {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
+	NSURL *url = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier];
+	
+	NSError *error = nil;
+	[fileManager createDirectoryAtURL:url withIntermediateDirectories:YES attributes:nil error:&error];
+	NSAssert(!error, [error localizedDescription]);
+	
+	return url;
+}
+
++ (NSString *)defaultStoreName {
+	NSDictionary *mainBundleInfo = [[NSBundle mainBundle] infoDictionary];
+	NSString *fileName = [mainBundleInfo objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+	return [fileName stringByAppendingPathExtension:CDKSQLiteExtension];
+}
+
+
+#pragma mark -
+
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	if ((self = [super init])) {
 		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
-		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-		
-		[_mainContext performBlockAndWait:^{
-			[_mainContext setPersistentStoreCoordinator:_storeCoordinator];
-		}];
 		_objectModel = model;
 	}
 	return self;
@@ -37,12 +56,21 @@ NSString * const CDKSQLiteSuffix	=	@".sqlite";
 
 #pragma mark -
 
-- (NSPersistentStore *)addSQLStoreWithName:(NSString *)name options:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
-	NSAssert(name, @"A new persistent store needs a valid name");
-	
-	NSString *file = [name stringByAppendingString:CDKSQLiteSuffix];
-	NSURL *url = [CDKDocumentsDirectory() URLByAppendingPathComponent:file];
-	
+- (NSManagedObjectContext *)mainContext {
+	if (!_mainContext) {
+		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+		
+		[_mainContext performBlockAndWait:^{
+			[_mainContext setPersistentStoreCoordinator:self.storeCoordinator];
+		}];
+	}
+	return _mainContext;
+}
+
+- (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
+	Class stackClass = [self class];
+	NSString *fileName = [stackClass defaultStoreName];
+	NSURL *url = [[stackClass defaultDirectory] URLByAppendingPathComponent:fileName];
 	return [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:error];
 }
 

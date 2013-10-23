@@ -6,6 +6,5 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import "CDKStack.h"
-#import "CDKObjectsController.h"
-#import "CDKUtility.h"
+#import <CoreDataStack/CDKStack.h>
+#import <CoreDataStack/CDKObjectsController.h>

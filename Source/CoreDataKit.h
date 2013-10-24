@@ -8,3 +8,5 @@
 
 #import <CoreDataStack/CDKStack.h>
 #import <CoreDataStack/CDKObjectsController.h>
+
+#import <CoreDataStack/NSManagedObjectContext+CDKObserving.h>

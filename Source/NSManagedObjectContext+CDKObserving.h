@@ -1,5 +1,5 @@
 //
-//  NSManagedObjectContext+CDKSaveObserving.h
+//  NSManagedObjectContext+CDKObserving.h
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 24/10/13.
@@ -9,7 +9,7 @@
 @import CoreData;
 
 
-@interface NSManagedObjectContext (CDKSaveObserving)
+@interface NSManagedObjectContext (CDKObserving)
 
 - (void)cdk_startObservingContext:(NSManagedObjectContext *)context;
 - (void)cdk_stopObservingContext:(NSManagedObjectContext *)context;

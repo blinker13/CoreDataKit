@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-@import Foundation;
 @import CoreData;
 
 

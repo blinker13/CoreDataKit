@@ -28,6 +28,11 @@
 	
 	NSUInteger numberOfEntities = [[stack.objectModel entities] count];
 	XCTAssertTrue((numberOfEntities == 1), @"there should be only one entity in the test model");
+	
+	NSError *error = nil;
+	NSPersistentStore *store = [stack addSQLiteStoreWithOptions:nil error:&error];
+	XCTAssertNotNil(store, @"Persistent store is missing: %@", [store URL]);
+	XCTAssertNil(error, @"%@", [error localizedDescription]);
 }
 
 @end

@@ -19,6 +19,7 @@
 		BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; };
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD571135177C2B7600565726 /* CDKStack.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; };
+		BDED2DE118189CDD00F9A15B /* CoreDataKitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD571127177B92C500565726 /* CoreDataKitTests-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDED2DE118189CDD00F9A15B /* CoreDataKitTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

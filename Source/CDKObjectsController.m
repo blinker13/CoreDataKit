@@ -43,7 +43,7 @@
 
 #pragma mark -
 
-- (void)fetch:(NSError **)error {
+- (NSFetchRequest *)fetchRequest {
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setRelationshipKeyPathsForPrefetching:self.relationshipKeyPathsForPrefetching];
 	[request setReturnsDistinctResults:self.returnsObjectsAsFaults];
@@ -57,7 +57,11 @@
 	[request setFetchLimit:self.fetchLimit];
 	[request setPredicate:self.predicate];
 	[request setEntity:self.entity];
-	
+	return request;
+}
+
+- (void)fetch:(NSError **)error {
+	NSFetchRequest *request = [self fetchRequest];
 	NSFetchedResultsController *entities = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.context sectionNameKeyPath:self.sectionNameKeyPath cacheName:self.cacheName];
 	
 	if (![entities performFetch:error]) {

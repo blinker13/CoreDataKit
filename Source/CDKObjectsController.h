@@ -33,6 +33,7 @@
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context entity:(NSEntityDescription *)entity;
 
+- (NSFetchRequest *)fetchRequest;
 - (void)fetch:(NSError **)error;
 
 - (id)insertNewObject:(NSDictionary *)infos;

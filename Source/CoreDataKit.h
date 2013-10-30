@@ -7,6 +7,6 @@
 //
 
 #import <CoreDataStack/CDKStack.h>
-#import <CoreDataStack/CDKObjectsController.h>
+#import <CoreDataStack/CDKFetchController.h>
 
 #import <CoreDataStack/NSManagedObjectContext+CDKObserving.h>

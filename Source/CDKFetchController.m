@@ -1,16 +1,16 @@
 //
-//  CDKObjectsController.m
+//  CDKFetchController.m
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 8/5/13.
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import "CDKObjectsController.h"
+#import "CDKFetchController.h"
 #import "CDKStack.h"
 
 
-@interface CDKObjectsController ()
+@interface CDKFetchController ()
 
 @property (nonatomic, strong) NSFetchedResultsController	*fetchedObjects;
 
@@ -18,7 +18,7 @@
 
 
 #pragma mark -
-@implementation CDKObjectsController
+@implementation CDKFetchController
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context entity:(NSEntityDescription *)entity {
 	NSAssert(context, @"A valid managed object context is needed");

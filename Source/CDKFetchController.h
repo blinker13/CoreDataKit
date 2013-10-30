@@ -1,5 +1,5 @@
 //
-//  CDKObjectsController.h
+//  CDKFetchController.h
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 8/5/13.
@@ -9,7 +9,7 @@
 @import CoreData;
 
 
-@interface CDKObjectsController : NSObject <NSFetchedResultsControllerDelegate>
+@interface CDKFetchController : NSObject <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
 @property (nonatomic, readonly) NSEntityDescription		*entity;

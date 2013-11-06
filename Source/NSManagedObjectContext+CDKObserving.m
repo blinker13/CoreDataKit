@@ -11,23 +11,15 @@
 
 @implementation NSManagedObjectContext (CDKSaveObserving)
 
-- (void)cdk_startObservingContext:(NSManagedObjectContext *)context {
-	
-	SEL action = @selector(cdk_mergeChangesFromNotification:);
+- (void)startMergingSaveNotificationsFromContext:(NSManagedObjectContext *)context {
+	SEL action = @selector(mergeChangesFromContextDidSaveNotification:);
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 	[center addObserver:self selector:action name:NSManagedObjectContextDidSaveNotification object:context];
 }
 
-- (void)cdk_stopObservingContext:(NSManagedObjectContext *)context {
+- (void)stopMergingSaveNotificationsFromContext:(NSManagedObjectContext *)context {
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 	[center removeObserver:self name:NSManagedObjectContextDidSaveNotification object:context];
-}
-
-- (void)cdk_mergeChangesFromNotification:(NSNotification *)notification {
-	
-	[self performBlock:^{
-		[self mergeChangesFromContextDidSaveNotification:notification];
-	}];
 }
 
 @end

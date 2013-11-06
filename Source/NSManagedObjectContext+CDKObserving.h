@@ -11,7 +11,7 @@
 
 @interface NSManagedObjectContext (CDKObserving)
 
-- (void)cdk_startObservingContext:(NSManagedObjectContext *)context;
-- (void)cdk_stopObservingContext:(NSManagedObjectContext *)context;
+- (void)startMergingSaveNotificationsFromContext:(NSManagedObjectContext *)context;
+- (void)stopMergingSaveNotificationsFromContext:(NSManagedObjectContext *)context;
 
 @end

@@ -9,4 +9,4 @@
 #import <CoreDataStack/CDKStack.h>
 #import <CoreDataStack/CDKFetchController.h>
 
-#import <CoreDataStack/NSManagedObjectContext+CDKObserving.h>
+#import <CoreDataStack/NSManagedObjectContext+CoreDataKit.h>

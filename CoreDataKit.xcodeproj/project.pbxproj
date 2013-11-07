@@ -17,7 +17,7 @@
 		BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; };
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD571135177C2B7600565726 /* CDKStack.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; };
-		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CDKObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CDKObserving.m */; };
+		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		BD571128177B92C500565726 /* CoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataKitTests.m; sourceTree = "<group>"; };
 		BD57112B177B931900565726 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
 		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
-		BDED2DE71819459300F9A15B /* NSManagedObjectContext+CDKObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CDKObserving.h"; sourceTree = "<group>"; };
-		BDED2DE81819459300F9A15B /* NSManagedObjectContext+CDKObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CDKObserving.m"; sourceTree = "<group>"; };
+		BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 		BDED2DE3181944BA00F9A15B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BDED2DE71819459300F9A15B /* NSManagedObjectContext+CDKObserving.h */,
-				BDED2DE81819459300F9A15B /* NSManagedObjectContext+CDKObserving.m */,
+				BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */,
+				BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDED2DE91819459300F9A15B /* NSManagedObjectContext+CDKObserving.m in Sources */,
+				BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */,
 				BD57112D177B931900565726 /* CDKStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

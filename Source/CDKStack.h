@@ -16,9 +16,11 @@
 @property (nonatomic, readonly) NSManagedObjectContext			*mainContext;
 
 
-+ (NSURL *)defaultDirectory;
-
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
-- (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error;
+
+- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError *__autoreleasing *)error;
+
+- (NSManagedObjectContext *)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
+- (NSManagedObjectContext *)rootContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 
 @end

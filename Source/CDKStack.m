@@ -17,22 +17,6 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 @synthesize mainContext	=	_mainContext;
 
 
-+ (NSURL *)defaultDirectory {
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSString *bundleIdentifier = [[NSBundle bundleForClass:self] bundleIdentifier];
-	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
-	NSURL *url = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier];
-	
-	NSError *error = nil;
-	[fileManager createDirectoryAtURL:url withIntermediateDirectories:YES attributes:nil error:&error];
-	NSAssert(!error, [error localizedDescription]);
-	
-	return url;
-}
-
-
-#pragma mark -
-
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	if ((self = [super init])) {
 		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
@@ -52,19 +36,48 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 
 - (NSManagedObjectContext *)mainContext {
 	if (!_mainContext) {
-		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-		
-		[_mainContext performBlockAndWait:^{
-			[_mainContext setPersistentStoreCoordinator:self.storeCoordinator];
-		}];
+		_mainContext = [self rootContextWithConcurrencyType:NSMainQueueConcurrencyType];
 	}
 	return _mainContext;
 }
 
-- (NSPersistentStore *)addSQLiteStoreWithOptions:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
-	NSString *fileName = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-	NSURL *url = [[[self class] defaultDirectory] URLByAppendingPathComponent:[fileName stringByAppendingPathExtension:CDKSQLiteExtension]];
-	return [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:error];
+- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSURL *directoryURL = [url URLByDeletingLastPathComponent];
+	
+	if ([fileManager createDirectoryAtURL:directoryURL withIntermediateDirectories:YES attributes:nil error:error]) {
+		return [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:error];
+	}
+	return nil;
+}
+
+- (NSManagedObjectContext *)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
+	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
+	
+	if (type == NSConfinementConcurrencyType) {
+		[context setParentContext:self.mainContext];
+		
+	} else {
+		[context performBlockAndWait:^{
+			[context setParentContext:self.mainContext];
+		}];
+	}
+	
+	return context;
+}
+
+- (NSManagedObjectContext *)rootContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
+	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
+	
+	if (type == NSConfinementConcurrencyType) {
+		[context setPersistentStoreCoordinator:self.storeCoordinator];
+		
+	} else {
+		[context performBlockAndWait:^{
+			[context setPersistentStoreCoordinator:self.storeCoordinator];
+		}];
+	}
+	return context;
 }
 
 @end

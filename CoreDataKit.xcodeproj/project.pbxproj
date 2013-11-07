@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BD0E871F17B2E083002E79E1 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0E871D17B2E083002E79E1 /* TestModel.xcdatamodeld */; };
-		BD4E72861820F9F400A52C15 /* CDKFetchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E72841820F9F400A52C15 /* CDKFetchController.m */; };
 		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD57110B177B924D00565726 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
 		BD57110C177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
@@ -48,8 +47,6 @@
 
 /* Begin PBXFileReference section */
 		BD0E871E17B2E083002E79E1 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
-		BD4E72841820F9F400A52C15 /* CDKFetchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKFetchController.m; sourceTree = "<group>"; };
-		BD4E72851820F9F400A52C15 /* CDKFetchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKFetchController.h; sourceTree = "<group>"; };
 		BD5710F9177B924D00565726 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5710FC177B924D00565726 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD571109177B924D00565726 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +119,6 @@
 				BD571125177B92C500565726 /* CoreDataKit.h */,
 				BD57112B177B931900565726 /* CDKStack.h */,
 				BD57112C177B931900565726 /* CDKStack.m */,
-				BD4E72851820F9F400A52C15 /* CDKFetchController.h */,
-				BD4E72841820F9F400A52C15 /* CDKFetchController.m */,
 				BDED2DE3181944BA00F9A15B /* Categories */,
 			);
 			path = Source;
@@ -229,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDED2DE91819459300F9A15B /* NSManagedObjectContext+CDKObserving.m in Sources */,
-				BD4E72861820F9F400A52C15 /* CDKFetchController.m in Sources */,
 				BD57112D177B931900565726 /* CDKStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

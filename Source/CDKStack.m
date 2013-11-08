@@ -9,9 +9,6 @@
 #import "CDKStack.h"
 
 
-NSString * const CDKSQLiteExtension	=	@"sqlite";
-
-
 @implementation CDKStack
 
 @synthesize mainContext	=	_mainContext;
@@ -26,8 +23,7 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 }
 
 - (instancetype)init {
-	NSArray *bundles = [NSBundle allBundles];
-	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:bundles];
+	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
 	return [self initWithModel:model];
 }
 
@@ -62,7 +58,6 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 			[context setParentContext:self.mainContext];
 		}];
 	}
-	
 	return context;
 }
 

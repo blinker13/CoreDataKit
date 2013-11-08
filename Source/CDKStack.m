@@ -7,6 +7,7 @@
 //
 
 #import "CDKStack.h"
+#import "NSManagedObjectContext+CoreDataKit.h"
 
 
 @implementation CDKStack
@@ -73,6 +74,18 @@
 		}];
 	}
 	return context;
+}
+
+- (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
+	if (block) {
+		NSManagedObjectContext *context = [self rootContextWithConcurrencyType:NSPrivateQueueConcurrencyType];
+		
+		[context performBlock:^{
+			[context startMergingSaveNotificationsIntoContext:self.mainContext];
+			block(context);
+			[context stopMergingSaveNotificationsIntoContext:self.mainContext];
+		}];
+	}
 }
 
 @end

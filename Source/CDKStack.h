@@ -23,4 +23,6 @@
 - (NSManagedObjectContext *)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 - (NSManagedObjectContext *)rootContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 
+- (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block;
+
 @end

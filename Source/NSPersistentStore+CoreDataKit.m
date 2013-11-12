@@ -18,7 +18,7 @@ NSString * const CDKSQLiteExtension	=	@".sqlite";
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
-	return [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier];
+	return [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
 }
 
 + (NSURL *)defaultStoreURL {

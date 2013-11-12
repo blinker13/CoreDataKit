@@ -22,4 +22,15 @@
     [center removeObserver:context name:NSManagedObjectContextDidSaveNotification object:self];
 }
 
+
+#pragma mark -
+
+- (NSUInteger)numberOfObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setPredicate:predicate];
+	[request setEntity:entity];
+	
+	return [self countForFetchRequest:request error:error];
+}
+
 @end

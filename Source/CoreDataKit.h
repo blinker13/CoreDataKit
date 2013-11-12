@@ -7,6 +7,8 @@
 //
 
 #import <CoreDataStack/CDKStack.h>
-#import <CoreDataStack/CDKFetchController.h>
 
+#import <CoreDataStack/NSPersistentStore+CoreDataKit.h>
 #import <CoreDataStack/NSManagedObjectContext+CoreDataKit.h>
+#import <CoreDataStack/NSManagedObject+CoreDataKit.h>
+#import <CoreDataStack/NSFetchRequest+CoreDataKit.h>

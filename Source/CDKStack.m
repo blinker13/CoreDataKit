@@ -38,7 +38,7 @@
 	return _mainContext;
 }
 
-- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError *__autoreleasing *)error {
+- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError **)error {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSURL *directoryURL = [url URLByDeletingLastPathComponent];
 	

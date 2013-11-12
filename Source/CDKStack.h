@@ -18,7 +18,7 @@
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
 
-- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError *__autoreleasing *)error;
+- (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError **)error;
 
 - (NSManagedObjectContext *)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 - (NSManagedObjectContext *)rootContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;

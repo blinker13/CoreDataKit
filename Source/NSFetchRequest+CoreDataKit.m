@@ -11,7 +11,7 @@
 
 @implementation NSFetchRequest (CoreDataKit)
 
-+ (instancetype)fetchRequestForKey:(NSString *)key withFunction:(NSString *)function resultType:(NSAttributeType)type {
++ (instancetype)fetchRequestWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type {
 	NSExpression *keyExpression = [NSExpression expressionForKeyPath:key];
 	NSExpression *maxExpression = [NSExpression expressionForFunction:function arguments:@[keyExpression]];
 	

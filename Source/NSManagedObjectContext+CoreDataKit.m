@@ -11,6 +11,17 @@
 
 @implementation NSManagedObjectContext (CoreDataKit)
 
+- (NSUInteger)countForEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setPredicate:predicate];
+	[request setEntity:entity];
+	
+	return [self countForFetchRequest:request error:error];
+}
+
+
+#pragma mark -
+
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context {
 	SEL action = @selector(mergeChangesFromContextDidSaveNotification:);
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
@@ -20,17 +31,6 @@
 - (void)stopMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context {
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver:context name:NSManagedObjectContextDidSaveNotification object:self];
-}
-
-
-#pragma mark -
-
-- (NSUInteger)numberOfObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
-	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	[request setPredicate:predicate];
-	[request setEntity:entity];
-	
-	return [self countForFetchRequest:request error:error];
 }
 
 @end

@@ -11,9 +11,9 @@
 
 @interface NSManagedObjectContext (CoreDataKit)
 
+- (NSUInteger)countForEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error;
+
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 - (void)stopMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
-
-- (NSUInteger)numberOfObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error;
 
 @end

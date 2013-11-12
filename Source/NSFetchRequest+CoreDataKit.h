@@ -11,6 +11,6 @@
 
 @interface NSFetchRequest (CoreDataKit)
 
-+ (instancetype)fetchRequestForKey:(NSString *)key withFunction:(NSString *)function resultType:(NSAttributeType)type;
++ (instancetype)fetchRequestWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type;
 
 @end

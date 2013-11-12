@@ -19,8 +19,16 @@
 + (NSEntityDescription *)entityDescriptionInContext:(NSManagedObjectContext *)context {
 	NSManagedObjectModel *model = [context.persistentStoreCoordinator managedObjectModel];
 	NSDictionary *entitiesByName = [model entitiesByName];
-	NSString *name = NSStringFromClass([self class]);
+	NSString *name = NSStringFromClass(self);
 	return [entitiesByName objectForKey:name];
+}
+
++ (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context {
+	NSEntityDescription *entity = [self entityDescriptionInContext:context];
+	NSDictionary *attributes = [entity attributesByName];
+	NSAttributeDescription *attribute = [attributes objectForKey:key];
+	NSAssert(attribute, @"'%@' does not implement an attribute named '%@'.", NSStringFromClass(self), attribute);
+	return [attribute attributeType];
 }
 
 @end

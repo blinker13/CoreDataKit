@@ -12,6 +12,8 @@
 @interface NSManagedObject (CoreDataKit)
 
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
+
 + (NSEntityDescription *)entityDescriptionInContext:(NSManagedObjectContext *)context;
++ (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context;
 
 @end

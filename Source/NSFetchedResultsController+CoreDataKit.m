@@ -19,7 +19,7 @@
 
 #pragma mark -
 
-- (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKUpdateHandler)handler {
+- (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler {
 	NSMutableOrderedSet *objects = [[NSMutableOrderedSet alloc] initWithArray:self.fetchedObjects];
 	NSIndexSet *indexes = [[NSIndexSet alloc] initWithIndex:index];
 	[objects moveObjectsAtIndexes:indexes toIndex:newIndex];
@@ -31,7 +31,7 @@
 		__weak id<NSFetchedResultsControllerDelegate> delegate = self.delegate;
 		[self setDelegate:nil];
 		
-		for (; currentIndex <= stop; currentIndex++) {
+		for (; currentIndex <= endIndex; currentIndex++) {
 			id object = [objects objectAtIndex:currentIndex];
 			handler(object, currentIndex);
 		}

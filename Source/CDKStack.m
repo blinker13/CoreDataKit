@@ -12,12 +12,11 @@
 
 @implementation CDKStack
 
-@synthesize mainContext	=	_mainContext;
-
-
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	if ((self = [super init])) {
 		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+		[_mainContext setPersistentStoreCoordinator:_storeCoordinator];
 		_objectModel = model;
 	}
 	return self;
@@ -30,13 +29,6 @@
 
 
 #pragma mark -
-
-- (NSManagedObjectContext *)mainContext {
-	if (!_mainContext) {
-		_mainContext = [self rootContextWithConcurrencyType:NSMainQueueConcurrencyType];
-	}
-	return _mainContext;
-}
 
 - (NSPersistentStore *)addSQLiteStoreWithURL:(NSURL *)url options:(NSDictionary *)options error:(NSError **)error {
 	NSFileManager *fileManager = [NSFileManager defaultManager];

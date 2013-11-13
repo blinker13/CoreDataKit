@@ -7,6 +7,7 @@
 //
 
 #import "NSManagedObjectContext+CoreDataKit.h"
+#import "NSManagedObject+CoreDataKit.h"
 
 
 @implementation NSManagedObjectContext (CoreDataKit)
@@ -25,7 +26,7 @@
 	return context;
 }
 
-- (NSUInteger)countForEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
+- (NSUInteger)countObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setPredicate:predicate];
 	[request setEntity:entity];

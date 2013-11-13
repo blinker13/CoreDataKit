@@ -62,25 +62,12 @@
 	return context;
 }
 
-- (NSManagedObjectContext *)rootContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
-	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
-	
-	if (type == NSConfinementConcurrencyType) {
-		[context setPersistentStoreCoordinator:self.storeCoordinator];
-		
-	} else {
-		[context performBlockAndWait:^{
-			[context setPersistentStoreCoordinator:self.storeCoordinator];
-		}];
-	}
-	return context;
-}
-
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
 	if (block) {
-		NSManagedObjectContext *context = [self rootContextWithConcurrencyType:NSPrivateQueueConcurrencyType];
+		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
 		
 		[context performBlock:^{
+			[context setPersistentStoreCoordinator:self.storeCoordinator];
 			[context startMergingSaveNotificationsIntoContext:self.mainContext];
 			block(context);
 			[context stopMergingSaveNotificationsIntoContext:self.mainContext];

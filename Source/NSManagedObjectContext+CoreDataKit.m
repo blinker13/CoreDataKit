@@ -11,6 +11,20 @@
 
 @implementation NSManagedObjectContext (CoreDataKit)
 
+- (instancetype)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
+	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
+	
+	if (type == NSConfinementConcurrencyType) {
+		[context setParentContext:self];
+		
+	} else {
+		[context performBlockAndWait:^{
+			[context setParentContext:self];
+		}];
+	}
+	return context;
+}
+
 - (NSUInteger)countForEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setPredicate:predicate];

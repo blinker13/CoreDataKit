@@ -20,6 +20,7 @@
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD571135177C2B7600565726 /* CDKStack.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; };
 		BD5822761832D0D400180794 /* NSFetchRequest+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5822751832D0D400180794 /* NSFetchRequest+CoreDataKit.m */; };
+		BDC865C41834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */; };
 		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+CoreDataKit.h"; sourceTree = "<group>"; };
 		BD5822751832D0D400180794 /* NSFetchRequest+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +157,8 @@
 				BD07DF3D182C5A6300903342 /* NSManagedObject+CoreDataKit.m */,
 				BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */,
 				BD5822751832D0D400180794 /* NSFetchRequest+CoreDataKit.m */,
+				BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */,
+				BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				BD07DF3E182C5A6300903342 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BD57112D177B931900565726 /* CDKStack.m in Sources */,
 				BD07DF41182C635200903342 /* NSPersistentStore+CoreDataKit.m in Sources */,
+				BDC865C41834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

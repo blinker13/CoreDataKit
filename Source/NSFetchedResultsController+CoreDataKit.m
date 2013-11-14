@@ -11,13 +11,20 @@
 
 @implementation NSFetchedResultsController (CoreDataKit)
 
-- (NSInteger)numberOfObjectInSection:(NSInteger)section {
+- (NSInteger)numberOfObjectsInSection:(NSInteger)section {
 	id<NSFetchedResultsSectionInfo> info = [self.sections objectAtIndex:section];
 	return [info numberOfObjects];
 }
 
-
-#pragma mark -
+- (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths {
+	NSMutableArray *objects = [[NSMutableArray alloc] init];
+	
+	for (NSIndexPath *indexPath in indexPaths) {
+		NSManagedObject *object = [self objectAtIndexPath:indexPath];
+		[objects addObject:object];
+	}
+	return objects;
+}
 
 - (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler {
 	NSMutableOrderedSet *objects = [[NSMutableOrderedSet alloc] initWithArray:self.fetchedObjects];
@@ -42,6 +49,12 @@
 - (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath {
 	NSManagedObject *object = [self objectAtIndexPath:indexPath];
 	[self.managedObjectContext deleteObject:object];
+}
+
+- (void)deleteObjectsAtIndexPaths:(NSArray *)indexPaths {
+	for (NSManagedObject *object in [self objectsAtIndexPaths:indexPaths]) {
+		[self.managedObjectContext deleteObject:object];
+	}
 }
 
 @end

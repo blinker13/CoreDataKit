@@ -17,7 +17,7 @@
 
 @implementation CoreDataKitTests
 
-- (void)test_initializingStack {
+- (void)testStackInitialization {
 	CDKStack *stack = [CDKStack alloc];
 	XCTAssertThrows((stack = [stack initWithModel:nil]), @"initializing a stack without model should throw");
 	XCTAssertNoThrow((stack = [stack init]), @"initializing a stack with the all available models should not throw");
@@ -25,14 +25,6 @@
 	XCTAssertNotNil(stack.storeCoordinator, @"After stack initialization the store coordinator should not be nil");
 	XCTAssertNotNil(stack.mainContext, @"After stack initialization the main context should not be nil");
 	XCTAssertNotNil(stack.objectModel, @"After stack initialization the model should not be nil");
-	
-	NSUInteger numberOfEntities = [[stack.objectModel entities] count];
-	XCTAssertTrue((numberOfEntities == 1), @"there should be only one entity in the test model");
-	
-	NSError *error = nil;
-	NSPersistentStore *store = [stack addSQLiteStoreWithOptions:nil error:&error];
-	XCTAssertNotNil(store, @"Persistent store is missing: %@", [store URL]);
-	XCTAssertNil(error, @"%@", [error localizedDescription]);
 }
 
 @end

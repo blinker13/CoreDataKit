@@ -12,3 +12,4 @@
 #import <CoreDataStack/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataStack/NSManagedObject+CoreDataKit.h>
 #import <CoreDataStack/NSFetchRequest+CoreDataKit.h>
+#import <CoreDataStack/NSFetchedResultsController+CoreDataKit.h>

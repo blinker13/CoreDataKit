@@ -40,20 +40,6 @@
 	return nil;
 }
 
-- (NSManagedObjectContext *)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
-	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
-	
-	if (type == NSConfinementConcurrencyType) {
-		[context setParentContext:self.mainContext];
-		
-	} else {
-		[context performBlockAndWait:^{
-			[context setParentContext:self.mainContext];
-		}];
-	}
-	return context;
-}
-
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
 	if (block) {
 		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];

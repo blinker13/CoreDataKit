@@ -13,4 +13,7 @@
 
 + (instancetype)fetchRequestWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type;
 
++ (instancetype)fetchRequestWithEntity:(NSEntityDescription *)entity sortDescriptor:(NSSortDescriptor *)sortDescriptor;
++ (instancetype)fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate;
+
 @end

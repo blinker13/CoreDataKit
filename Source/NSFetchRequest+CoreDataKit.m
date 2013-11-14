@@ -26,4 +26,18 @@
 	return request;
 }
 
++ (instancetype)fetchRequestWithEntity:(NSEntityDescription *)entity sortDescriptor:(NSSortDescriptor *)sortDescriptor {
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setSortDescriptors:@[sortDescriptor]];
+	[request setEntity:entity];
+	return request;
+}
+
++ (instancetype)fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate {
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setPredicate:predicate];
+	[request setEntity:entity];
+	return request;
+}
+
 @end

@@ -48,18 +48,13 @@
 
 - (void)test_addingSQLiteFile {
 	CDKStack *stack = [self stackFixture];
-	
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSString *bundleIdentifier = [[NSBundle bundleForClass:[self class]] bundleIdentifier];
-	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
-	NSURL *directoryPath = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
-	NSURL *path = [directoryPath URLByAppendingPathComponent:@"Test.sqlite"];
+	NSURL *url = [self sqliteUrlFixture];
 	
 	NSError *error = nil;
-	[stack addSQLiteStoreWithURL:path options:nil error:&error];
+	[stack addSQLiteStoreWithURL:url options:nil error:&error];
 	XCTAssertNil(error, @"%@", [error localizedDescription]);
 	
-	XCTAssertTrue([fileManager fileExistsAtPath:[path path]], @"Test.sqlite was not added");
+	XCTAssertTrue([fileManager fileExistsAtPath:[url path]], @"Test.sqlite was not added");
 }
 
 
@@ -69,6 +64,21 @@
 	NSArray *bundles = [NSBundle allBundles];
 	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:bundles];
 	return [[CDKStack alloc] initWithModel:model];
+}
+
+- (CDKStack *)persistentStackFixture {
+	CDKStack *stack = [self stackFixture];
+	NSURL *fileURL = [self sqliteUrlFixture];
+	[stack addSQLiteStoreWithURL:fileURL options:nil error:nil];
+	return stack;
+}
+
+- (NSURL *)sqliteUrlFixture {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *bundleIdentifier = [[NSBundle bundleForClass:[self class]] bundleIdentifier];
+	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
+	NSURL *directoryPath = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
+	return [directoryPath URLByAppendingPathComponent:@"Test.sqlite"];
 }
 
 @end

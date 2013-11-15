@@ -14,7 +14,7 @@ extern NSString * const CDKSQLiteExtension;
 
 @interface NSPersistentStore (CoreDataKit)
 
-@property (nonatomic, getter = isBackupEnabled) BOOL	backupEnabled;
+@property (nonatomic, getter = isExcludedFromBackup) BOOL	excludedFromBackup;
 
 
 + (NSURL *)defaultDirectoryURL;

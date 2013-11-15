@@ -32,7 +32,7 @@ NSString * const CDKSQLiteExtension	=	@".sqlite";
 
 #pragma mark -
 
-- (BOOL)isBackupEnabled {
+- (BOOL)isExcludedFromBackup {
 	NSError *error = nil;
 	NSNumber *backupEnabled = nil;
 	[self.URL getResourceValue:&backupEnabled forKey:NSURLIsExcludedFromBackupKey error:&error];
@@ -40,9 +40,9 @@ NSString * const CDKSQLiteExtension	=	@".sqlite";
 	return [backupEnabled boolValue];
 }
 
-- (void)setBackupEnabled:(BOOL)backupEnabled {
+- (void)setExcludedFromBackup:(BOOL)excludedFromBackup {
 	NSError *error = nil;
-    [self.URL setResourceValue:@(backupEnabled) forKey:NSURLIsExcludedFromBackupKey error:&error];
+    [self.URL setResourceValue:@(excludedFromBackup) forKey:NSURLIsExcludedFromBackupKey error:&error];
 	NSAssert(error, [error localizedDescription]);
 }
 

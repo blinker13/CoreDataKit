@@ -1,5 +1,5 @@
 //
-//  CoreDataKitTests.m
+//  CDKStackTests.m
 //  CoreDataKitTests
 //
 //  Created by Felix Gabel on 6/26/13.
@@ -10,17 +10,22 @@
 #import "CDKStack.h"
 
 
-@interface CoreDataKitTests : XCTestCase
+@interface CDKStackTests : XCTestCase
 
 @end
 
 
-@implementation CoreDataKitTests
+@implementation CDKStackTests
 
-- (void)testStackInitialization {
-	CDKStack *stack = [CDKStack alloc];
-	XCTAssertThrows((stack = [stack initWithModel:nil]), @"initializing a stack without model should throw");
-	XCTAssertNoThrow((stack = [stack init]), @"initializing a stack with the all available models should not throw");
+- (void)test_initializeStackWithInvalidModel {
+	XCTAssertThrows(([[CDKStack alloc] initWithModel:nil]), @"initializing a stack without model should throw");
+}
+
+- (void)test_initializeStackWithTestModel {
+	
+	NSArray *bundles = [NSBundle allBundles];
+	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:bundles];
+	CDKStack *stack = [[CDKStack alloc] initWithModel:model];
 	
 	XCTAssertNotNil(stack.storeCoordinator, @"After stack initialization the store coordinator should not be nil");
 	XCTAssertNotNil(stack.mainContext, @"After stack initialization the main context should not be nil");

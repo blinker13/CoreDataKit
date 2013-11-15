@@ -21,15 +21,16 @@
 	XCTAssertThrows(([[CDKStack alloc] initWithModel:nil]), @"initializing a stack without model should throw");
 }
 
+- (void)test_initializeStackWithEmptyModel {
+	CDKStack *stack = [[CDKStack alloc] init];
+	XCTAssertTrue(([stack.objectModel.entities count] == 0), @"There should be 0 to test entities in the model");
+}
+
 - (void)test_initializeStackWithTestModel {
-	
 	NSArray *bundles = [NSBundle allBundles];
 	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:bundles];
 	CDKStack *stack = [[CDKStack alloc] initWithModel:model];
-	
-	XCTAssertNotNil(stack.storeCoordinator, @"After stack initialization the store coordinator should not be nil");
-	XCTAssertNotNil(stack.mainContext, @"After stack initialization the main context should not be nil");
-	XCTAssertNotNil(stack.objectModel, @"After stack initialization the model should not be nil");
+	XCTAssertTrue(([stack.objectModel.entities count] == 2), @"There should be 2 to test entities in the model");
 }
 
 @end

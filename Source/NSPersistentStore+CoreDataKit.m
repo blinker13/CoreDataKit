@@ -29,4 +29,21 @@ NSString * const CDKSQLiteExtension	=	@".sqlite";
 	return [fileURL URLByAppendingPathExtension:CDKSQLiteExtension];
 }
 
+
+#pragma mark -
+
+- (BOOL)isBackupEnabled {
+	NSError *error = nil;
+	NSNumber *backupEnabled = nil;
+	[self.URL getResourceValue:&backupEnabled forKey:NSURLIsExcludedFromBackupKey error:&error];
+	NSAssert(!error, [error localizedDescription]);
+	return [backupEnabled boolValue];
+}
+
+- (void)setBackupEnabled:(BOOL)backupEnabled {
+	NSError *error = nil;
+    [self.URL setResourceValue:@(backupEnabled) forKey:NSURLIsExcludedFromBackupKey error:&error];
+	NSAssert(error, [error localizedDescription]);
+}
+
 @end

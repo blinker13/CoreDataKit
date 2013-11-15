@@ -17,7 +17,7 @@
 		BD57110C177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710F9177B924D00565726 /* libCoreDataKit.a */; };
 		BD571123177B929000565726 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD571122177B929000565726 /* CoreData.framework */; };
-		BD571129177B92C800565726 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CDKStackTests.m */; };
+		BD571129177B92C800565726 /* CoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CoreDataKitTests.m */; };
 		BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; };
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD571135177C2B7600565726 /* CDKStack.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; };
@@ -68,7 +68,7 @@
 		BD571122177B929000565726 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD571125177B92C500565726 /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
 		BD571127177B92C500565726 /* CoreDataKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataKitTests-Info.plist"; sourceTree = "<group>"; };
-		BD571128177B92C500565726 /* CDKStackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
+		BD571128177B92C500565726 /* CoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataKitTests.m; sourceTree = "<group>"; };
 		BD57112B177B931900565726 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
 		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			children = (
 				BD571127177B92C500565726 /* CoreDataKitTests-Info.plist */,
 				BD0E871D17B2E083002E79E1 /* TestModel.xcdatamodeld */,
-				BD571128177B92C500565726 /* CDKStackTests.m */,
+				BD571128177B92C500565726 /* CoreDataKitTests.m */,
 				BD10D98C1836C9C6000FDED1 /* Entities */,
 			);
 			path = Tests;
@@ -276,7 +276,7 @@
 			files = (
 				BD10D9931836CA62000FDED1 /* Foo.m in Sources */,
 				BD10D9941836CA66000FDED1 /* Bar.m in Sources */,
-				BD571129177B92C800565726 /* CDKStackTests.m in Sources */,
+				BD571129177B92C800565726 /* CoreDataKitTests.m in Sources */,
 				BD0E871F17B2E083002E79E1 /* TestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

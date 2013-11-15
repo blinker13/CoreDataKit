@@ -1,5 +1,5 @@
 //
-//  CDKStackTests.m
+//  CoreDataKitTests.m
 //  CoreDataKitTests
 //
 //  Created by Felix Gabel on 6/26/13.
@@ -10,12 +10,12 @@
 #import "CDKStack.h"
 
 
-@interface CDKStackTests : XCTestCase
+@interface CoreDataKitTests : XCTestCase
 
 @end
 
 
-@implementation CDKStackTests
+@implementation CoreDataKitTests
 
 - (void)test_initializeStackWithInvalidModel {
 	XCTAssertThrows(([[CDKStack alloc] initWithModel:nil]), @"initializing a stack without model should throw");

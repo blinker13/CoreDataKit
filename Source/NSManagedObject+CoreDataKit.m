@@ -7,6 +7,7 @@
 //
 
 #import "NSManagedObject+CoreDataKit.h"
+#import "NSManagedObjectModel+CoreDataKit.h"
 
 
 @implementation NSManagedObject (CoreDataKit)
@@ -18,9 +19,7 @@
 
 + (NSEntityDescription *)entityDescriptionInContext:(NSManagedObjectContext *)context {
 	NSManagedObjectModel *model = [context.persistentStoreCoordinator managedObjectModel];
-	NSDictionary *entitiesByName = [model entitiesByName];
-	NSString *name = NSStringFromClass(self);
-	return [entitiesByName objectForKey:name];
+	return [model entityForClass:[self class]];
 }
 
 + (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context {

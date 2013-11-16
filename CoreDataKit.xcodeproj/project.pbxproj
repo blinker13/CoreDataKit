@@ -12,21 +12,51 @@
 		BD0E871F17B2E083002E79E1 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0E871D17B2E083002E79E1 /* TestModel.xcdatamodeld */; };
 		BD10D9931836CA62000FDED1 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D9911836CA31000FDED1 /* Foo.m */; };
 		BD10D9941836CA66000FDED1 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D98E1836CA31000FDED1 /* Bar.m */; };
+		BD10D9971836F0C6000FDED1 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9981836F0C6000FDED1 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3F182C635200903342 /* NSPersistentStore+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D99C1836F0C6000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9B41836F18F000FDED1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
+		BD10D9B81836F18F000FDED1 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */; };
+		BD10D9C71836F289000FDED1 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
+		BD10D9C81836F28C000FDED1 /* NSPersistentStore+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD07DF40182C635200903342 /* NSPersistentStore+CoreDataKit.m */; };
+		BD10D9C91836F28F000FDED1 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
+		BD10D9CA1836F292000FDED1 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD07DF3D182C5A6300903342 /* NSManagedObject+CoreDataKit.m */; };
+		BD10D9CB1836F297000FDED1 /* NSFetchRequest+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5822751832D0D400180794 /* NSFetchRequest+CoreDataKit.m */; };
+		BD10D9CC1836F3C7000FDED1 /* CoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CoreDataKitTests.m */; };
+		BD10D9CD1836F3CC000FDED1 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D9911836CA31000FDED1 /* Foo.m */; };
+		BD10D9CE1836F3D2000FDED1 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0E871D17B2E083002E79E1 /* TestModel.xcdatamodeld */; };
+		BD10D9CF1836F3D7000FDED1 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D98E1836CA31000FDED1 /* Bar.m */; };
+		BD10D9D01836F3FD000FDED1 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D11836F3FD000FDED1 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D21836F3FD000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3F182C635200903342 /* NSPersistentStore+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D31836F3FD000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D41836F3FD000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D51836F3FD000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D61836F41A000FDED1 /* Foundation.framework */; };
+		BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D81836F428000FDED1 /* CoreData.framework */; };
 		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD57110B177B924D00565726 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
-		BD57110C177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710F9177B924D00565726 /* libCoreDataKit.a */; };
 		BD571123177B929000565726 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD571122177B929000565726 /* CoreData.framework */; };
 		BD571129177B92C800565726 /* CoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CoreDataKitTests.m */; };
-		BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; };
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
-		BD571135177C2B7600565726 /* CDKStack.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; };
 		BD5822761832D0D400180794 /* NSFetchRequest+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5822751832D0D400180794 /* NSFetchRequest+CoreDataKit.m */; };
 		BDC865C41834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */; };
 		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BD10D9B61836F18F000FDED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD5710F1177B924D00565726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD10D9A11836F18F000FDED1;
+			remoteInfo = "CoreDataKit (Mac)";
+		};
 		BD57110F177B924D00565726 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD5710F1177B924D00565726 /* Project object */;
@@ -35,21 +65,6 @@
 			remoteInfo = CoreDataKit;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BD5710F7177B924D00565726 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				BD571135177C2B7600565726 /* CDKStack.h in Copy Files */,
-				BD57112A177B92DC00565726 /* CoreDataKit.h in Copy Files */,
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -61,9 +76,13 @@
 		BD10D98E1836CA31000FDED1 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 		BD10D9901836CA31000FDED1 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		BD10D9911836CA31000FDED1 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD10D9D61836F41A000FDED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BD10D9D81836F428000FDED1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		BD5710F9177B924D00565726 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5710FC177B924D00565726 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BD571109177B924D00565726 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD571109177B924D00565726 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD57110A177B924D00565726 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD571122177B929000565726 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD571125177B92C500565726 /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
@@ -80,6 +99,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD10D99F1836F18F000FDED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */,
+				BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10D9B01836F18F000FDED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9B81836F18F000FDED1 /* libCoreDataKit.a in Frameworks */,
+				BD10D9B41836F18F000FDED1 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD5710F6177B924D00565726 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,7 +132,6 @@
 			files = (
 				BD57110B177B924D00565726 /* XCTest.framework in Frameworks */,
 				BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */,
-				BD57110C177B924D00565726 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				BD5710F9177B924D00565726 /* libCoreDataKit.a */,
-				BD571109177B924D00565726 /* CoreDataKitTests.xctest */,
+				BD571109177B924D00565726 /* CoreDataKit.xctest */,
+				BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */,
+				BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,8 +173,10 @@
 		BD5710FB177B924D00565726 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD10D9D61836F41A000FDED1 /* Foundation.framework */,
 				BD5710FC177B924D00565726 /* Foundation.framework */,
 				BD571122177B929000565726 /* CoreData.framework */,
+				BD10D9D81836F428000FDED1 /* CoreData.framework */,
 				BD57110A177B924D00565726 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -183,27 +223,92 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BD10D9961836F0B5000FDED1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9971836F0C6000FDED1 /* CoreDataKit.h in Headers */,
+				BD10D9981836F0C6000FDED1 /* CDKStack.h in Headers */,
+				BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
+				BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
+				BD10D99C1836F0C6000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */,
+				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10D9A01836F18F000FDED1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9D01836F3FD000FDED1 /* CoreDataKit.h in Headers */,
+				BD10D9D11836F3FD000FDED1 /* CDKStack.h in Headers */,
+				BD10D9D21836F3FD000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
+				BD10D9D31836F3FD000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BD10D9D41836F3FD000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
+				BD10D9D51836F3FD000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		BD5710F8177B924D00565726 /* CoreDataKit */ = {
+		BD10D9A11836F18F000FDED1 /* CoreDataKit (Mac) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD57111C177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKit" */;
+			buildConfigurationList = BD10D9C11836F18F000FDED1 /* Build configuration list for PBXNativeTarget "CoreDataKit (Mac)" */;
 			buildPhases = (
-				BD5710F5177B924D00565726 /* Sources */,
-				BD5710F6177B924D00565726 /* Frameworks */,
-				BD5710F7177B924D00565726 /* Copy Files */,
+				BD10D99E1836F18F000FDED1 /* Sources */,
+				BD10D99F1836F18F000FDED1 /* Frameworks */,
+				BD10D9A01836F18F000FDED1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CoreDataKit;
+			name = "CoreDataKit (Mac)";
+			productName = "CoreDataKit (Mac)";
+			productReference = BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BD10D9B21836F18F000FDED1 /* CoreDataKitTests (Mac) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD10D9C41836F18F000FDED1 /* Build configuration list for PBXNativeTarget "CoreDataKitTests (Mac)" */;
+			buildPhases = (
+				BD10D9AF1836F18F000FDED1 /* Sources */,
+				BD10D9B01836F18F000FDED1 /* Frameworks */,
+				BD10D9B11836F18F000FDED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD10D9B71836F18F000FDED1 /* PBXTargetDependency */,
+			);
+			name = "CoreDataKitTests (Mac)";
+			productName = "CoreDataKit (Mac)Tests";
+			productReference = BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD5710F8177B924D00565726 /* CoreDataKit (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD57111C177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKit (iOS)" */;
+			buildPhases = (
+				BD5710F5177B924D00565726 /* Sources */,
+				BD5710F6177B924D00565726 /* Frameworks */,
+				BD10D9961836F0B5000FDED1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreDataKit (iOS)";
 			productName = CoreDataKit;
 			productReference = BD5710F9177B924D00565726 /* libCoreDataKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BD571108177B924D00565726 /* CoreDataKitTests */ = {
+		BD571108177B924D00565726 /* CoreDataKitTests (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD57111F177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKitTests" */;
+			buildConfigurationList = BD57111F177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKitTests (iOS)" */;
 			buildPhases = (
 				BD571105177B924D00565726 /* Sources */,
 				BD571106177B924D00565726 /* Frameworks */,
@@ -214,9 +319,9 @@
 			dependencies = (
 				BD571110177B924D00565726 /* PBXTargetDependency */,
 			);
-			name = CoreDataKitTests;
+			name = "CoreDataKitTests (iOS)";
 			productName = CoreDataKitTests;
-			productReference = BD571109177B924D00565726 /* CoreDataKitTests.xctest */;
+			productReference = BD571109177B924D00565726 /* CoreDataKit.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,13 +345,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD5710F8177B924D00565726 /* CoreDataKit */,
-				BD571108177B924D00565726 /* CoreDataKitTests */,
+				BD5710F8177B924D00565726 /* CoreDataKit (iOS) */,
+				BD10D9A11836F18F000FDED1 /* CoreDataKit (Mac) */,
+				BD571108177B924D00565726 /* CoreDataKitTests (iOS) */,
+				BD10D9B21836F18F000FDED1 /* CoreDataKitTests (Mac) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD10D9B11836F18F000FDED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD571107177B924D00565726 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +371,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD10D99E1836F18F000FDED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9C71836F289000FDED1 /* CDKStack.m in Sources */,
+				BD10D9CB1836F297000FDED1 /* NSFetchRequest+CoreDataKit.m in Sources */,
+				BD10D9C81836F28C000FDED1 /* NSPersistentStore+CoreDataKit.m in Sources */,
+				BD10D9C91836F28F000FDED1 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
+				BD10D9CA1836F292000FDED1 /* NSManagedObject+CoreDataKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10D9AF1836F18F000FDED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10D9CE1836F3D2000FDED1 /* TestModel.xcdatamodeld in Sources */,
+				BD10D9CF1836F3D7000FDED1 /* Bar.m in Sources */,
+				BD10D9CD1836F3CC000FDED1 /* Foo.m in Sources */,
+				BD10D9CC1836F3C7000FDED1 /* CoreDataKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD5710F5177B924D00565726 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,14 +421,94 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BD10D9B71836F18F000FDED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD10D9A11836F18F000FDED1 /* CoreDataKit (Mac) */;
+			targetProxy = BD10D9B61836F18F000FDED1 /* PBXContainerItemProxy */;
+		};
 		BD571110177B924D00565726 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD5710F8177B924D00565726 /* CoreDataKit */;
+			target = BD5710F8177B924D00565726 /* CoreDataKit (iOS) */;
 			targetProxy = BD57110F177B924D00565726 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BD10D9C21836F18F000FDED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		BD10D9C31836F18F000FDED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		BD10D9C51836F18F000FDED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Tests/CoreDataKitTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BD10D9C61836F18F000FDED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Tests/CoreDataKitTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		BD57111A177B924D00565726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -308,8 +525,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -323,9 +541,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = CoreDataKit;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -345,8 +563,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -354,8 +573,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = CoreDataKit;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -363,24 +582,22 @@
 		BD57111D177B924D00565726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/CoreDataKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		BD57111E177B924D00565726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/CoreDataKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -391,12 +608,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "Tests/CoreDataKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -404,7 +615,8 @@
 					XCTest,
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -416,8 +628,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "Tests/CoreDataKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -425,7 +635,8 @@
 					XCTest,
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -433,6 +644,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD10D9C11836F18F000FDED1 /* Build configuration list for PBXNativeTarget "CoreDataKit (Mac)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10D9C21836F18F000FDED1 /* Debug */,
+				BD10D9C31836F18F000FDED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD10D9C41836F18F000FDED1 /* Build configuration list for PBXNativeTarget "CoreDataKitTests (Mac)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10D9C51836F18F000FDED1 /* Debug */,
+				BD10D9C61836F18F000FDED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BD5710F4177B924D00565726 /* Build configuration list for PBXProject "CoreDataKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -442,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD57111C177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKit" */ = {
+		BD57111C177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKit (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD57111D177B924D00565726 /* Debug */,
@@ -451,7 +680,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD57111F177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKitTests" */ = {
+		BD57111F177B924D00565726 /* Build configuration list for PBXNativeTarget "CoreDataKitTests (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD571120177B924D00565726 /* Debug */,

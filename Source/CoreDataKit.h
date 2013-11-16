@@ -12,4 +12,7 @@
 #import <CoreDataStack/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataStack/NSManagedObject+CoreDataKit.h>
 #import <CoreDataStack/NSFetchRequest+CoreDataKit.h>
+
+#if (TARGET_OS_MAC && TARGET_OS_IPHONE)
 #import <CoreDataStack/NSFetchedResultsController+CoreDataKit.h>
+#endif

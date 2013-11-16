@@ -54,6 +54,7 @@
 	[stack addSQLiteStoreWithURL:url options:nil error:&error];
 	XCTAssertNil(error, @"%@", [error localizedDescription]);
 	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
 	XCTAssertTrue([fileManager fileExistsAtPath:[url path]], @"Test.sqlite was not added");
 }
 

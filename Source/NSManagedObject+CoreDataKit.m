@@ -14,7 +14,7 @@
 
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context {
 	NSEntityDescription *entity = [self entityDescriptionInContext:context];
-	return [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+	return [[self alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
 }
 
 + (NSEntityDescription *)entityDescriptionInContext:(NSManagedObjectContext *)context {

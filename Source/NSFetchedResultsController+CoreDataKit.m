@@ -7,6 +7,7 @@
 //
 
 #import "NSFetchedResultsController+CoreDataKit.h"
+#import "NSManagedObject+CoreDataKit.h"
 
 
 @implementation NSFetchedResultsController (CoreDataKit)
@@ -44,6 +45,12 @@
 		}
 		[self setDelegate:delegate];
 	}
+}
+
+- (id)insertNewObject {
+	NSEntityDescription *entity = [self.fetchRequest entity];
+	Class entityClass = NSClassFromString(entity.managedObjectClassName);
+	return [entityClass insertNewObjectInContext:self.managedObjectContext];
 }
 
 - (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath {

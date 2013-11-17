@@ -19,6 +19,7 @@ typedef void (^CDKMoveHandler)(id object, NSUInteger index);
 
 - (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler;
 
+- (id)insertNewObject;
 - (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath;
 - (void)deleteObjectsAtIndexPaths:(NSArray *)indexPaths;
 

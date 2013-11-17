@@ -47,12 +47,6 @@
 	}
 }
 
-- (id)insertNewObject {
-	NSEntityDescription *entity = [self.fetchRequest entity];
-	Class entityClass = NSClassFromString(entity.managedObjectClassName);
-	return [entityClass insertNewObjectInContext:self.managedObjectContext];
-}
-
 - (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath error:(NSError **)error {
 	NSManagedObject *object = [self objectAtIndexPath:indexPath];
 	[self.managedObjectContext deleteObject:object];

@@ -38,7 +38,7 @@
 		BD10D9D51836F3FD000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5822741832D0D400180794 /* NSFetchRequest+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D61836F41A000FDED1 /* Foundation.framework */; };
 		BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D81836F428000FDED1 /* CoreData.framework */; };
-		BD4A5B421837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4A5B401837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h */; };
+		BD4A5B421837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4A5B401837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4A5B431837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4A5B401837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h */; };
 		BD4A5B441837FC830019F572 /* NSManagedObjectModel+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4A5B411837FC830019F572 /* NSManagedObjectModel+CoreDataKit.m */; };
 		BD4A5B451837FC830019F572 /* NSManagedObjectModel+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4A5B411837FC830019F572 /* NSManagedObjectModel+CoreDataKit.m */; };
@@ -240,9 +240,9 @@
 				BD10D9981836F0C6000FDED1 /* CDKStack.h in Headers */,
 				BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
 				BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BD4A5B421837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h in Headers */,
 				BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
 				BD10D99C1836F0C6000FDED1 /* NSFetchRequest+CoreDataKit.h in Headers */,
+				BD4A5B421837FC830019F572 /* NSManagedObjectModel+CoreDataKit.h in Headers */,
 				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

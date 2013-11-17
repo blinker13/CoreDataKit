@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import <CoreDataStack/CDKStack.h>
+#import <CoreDataKit/CDKStack.h>
 
-#import <CoreDataStack/NSPersistentStore+CoreDataKit.h>
-#import <CoreDataStack/NSManagedObjectContext+CoreDataKit.h>
-#import <CoreDataStack/NSManagedObject+CoreDataKit.h>
-#import <CoreDataStack/NSFetchRequest+CoreDataKit.h>
+#import <CoreDataKit/NSPersistentStore+CoreDataKit.h>
+#import <CoreDataKit/NSManagedObjectModel+CoreDataKit.h>
+#import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>
+#import <CoreDataKit/NSManagedObject+CoreDataKit.h>
+#import <CoreDataKit/NSFetchRequest+CoreDataKit.h>
 
 #if (TARGET_OS_MAC && TARGET_OS_IPHONE)
-#import <CoreDataStack/NSFetchedResultsController+CoreDataKit.h>
+#import <CoreDataKit/NSFetchedResultsController+CoreDataKit.h>
 #endif

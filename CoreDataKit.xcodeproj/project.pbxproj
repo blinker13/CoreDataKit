@@ -598,6 +598,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/CoreDataKit.dst;
 				OTHER_LDFLAGS = "-ObjC";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -609,6 +610,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/CoreDataKit.dst;
 				OTHER_LDFLAGS = "-ObjC";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

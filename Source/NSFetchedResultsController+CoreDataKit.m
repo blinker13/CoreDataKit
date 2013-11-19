@@ -12,14 +12,6 @@
 
 @implementation NSFetchedResultsController (CoreDataKit)
 
-+ (instancetype)fetchedResultsControllerWithRequest:(NSFetchRequest *)request {
-	CSRPersistentStack *stack = [CSRPersistentStack sharedStack];
-	return [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:stack.mainContext sectionNameKeyPath:nil cacheName:nil];
-}
-
-
-#pragma mark - info
-
 - (NSInteger)numberOfObjectsInSection:(NSInteger)section {
 	id<NSFetchedResultsSectionInfo> info = [self.sections objectAtIndex:section];
 	return [info numberOfObjects];
@@ -34,9 +26,6 @@
 	}
 	return objects;
 }
-
-
-#pragma mark - manipulation
 
 - (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler {
 	NSMutableOrderedSet *objects = [[NSMutableOrderedSet alloc] initWithArray:self.fetchedObjects];

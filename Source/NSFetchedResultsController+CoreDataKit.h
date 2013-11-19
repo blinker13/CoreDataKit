@@ -14,6 +14,8 @@ typedef void (^CDKMoveHandler)(id object, NSUInteger index);
 
 @interface NSFetchedResultsController (CoreDataKit)
 
++ (instancetype)fetchedResultsControllerWithRequest:(NSFetchRequest *)request;
+
 - (NSInteger)numberOfObjectsInSection:(NSInteger)section;
 - (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths;
 

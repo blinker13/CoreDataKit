@@ -13,8 +13,6 @@
 
 - (instancetype)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 
-- (NSUInteger)countObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error;
-
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 - (void)stopMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 

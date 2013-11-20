@@ -26,14 +26,6 @@
 	return context;
 }
 
-- (NSUInteger)countObjects:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate error:(NSError **)error {
-	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	[request setPredicate:predicate];
-	[request setEntity:entity];
-	
-	return [self countForFetchRequest:request error:error];
-}
-
 
 #pragma mark -
 

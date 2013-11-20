@@ -14,6 +14,6 @@
 #import <CoreDataKit/NSManagedObject+CoreDataKit.h>
 #import <CoreDataKit/NSFetchRequest+CoreDataKit.h>
 
-#if (TARGET_OS_MAC && TARGET_OS_IPHONE)
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <CoreDataKit/NSFetchedResultsController+CoreDataKit.h>
 #endif

@@ -56,6 +56,21 @@
 	return request;
 }
 
++ (NSFetchRequest *)fetchRequestWithPredicateFormat:(NSString *)format, ... {
+	va_list list, listCopy;
+	va_start(list, format);
+	va_copy(listCopy, list);
+	va_end(list);
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:format arguments:listCopy];
+	
+	va_end(listCopy);
+	
+	NSFetchRequest *request = [self fetchRequest];
+	[request setPredicate:predicate];
+	return request;
+}
+
 + (NSFetchRequest *)fetchRequest {
 	NSString *entityName = [self entityName];
 	return [[NSFetchRequest alloc] initWithEntityName:entityName];

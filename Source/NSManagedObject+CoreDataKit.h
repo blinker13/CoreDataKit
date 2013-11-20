@@ -11,9 +11,12 @@
 
 @interface NSManagedObject (CoreDataKit)
 
++ (NSString *)entityName;
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
 
-+ (NSEntityDescription *)entityDescriptionInContext:(NSManagedObjectContext *)context;
 + (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context;
+
++ (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending;
++ (NSFetchRequest *)fetchRequest;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "NSManagedObject+CoreDataKit.h"
-#import "NSManagedObjectModel+CoreDataKit.h"
 
 
 @implementation NSManagedObject (CoreDataKit)

@@ -27,7 +27,18 @@
 }
 
 
-#pragma mark -
+#pragma mark - manipulation
+
+- (NSUInteger)deleteAllObjects:(NSFetchRequest *)request error:(NSError **)error {
+	NSArray *objects = [self executeFetchRequest:request error:error];
+	for (NSManagedObject *object in objects) {
+		[self deleteObject:object];
+	}
+	return [objects count];
+}
+
+
+#pragma mark - auto merge save changes
 
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context {
 	SEL action = @selector(mergeChangesFromContextDidSaveNotification:);

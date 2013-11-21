@@ -13,6 +13,8 @@
 
 - (instancetype)childContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type;
 
+- (NSUInteger)deleteAllObjects:(NSFetchRequest *)request error:(NSError **)error;
+
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 - (void)stopMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 

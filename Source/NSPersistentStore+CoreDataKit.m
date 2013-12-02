@@ -9,7 +9,7 @@
 #import "NSPersistentStore+CoreDataKit.h"
 
 
-NSString * const CDKSQLiteExtension	=	@".sqlite";
+NSString * const CDKSQLiteExtension	=	@"sqlite";
 
 
 @implementation NSPersistentStore (CoreDataKit)

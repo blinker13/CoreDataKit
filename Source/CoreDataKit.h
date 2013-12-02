@@ -12,7 +12,6 @@
 #import <CoreDataKit/NSManagedObjectModel+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObject+CoreDataKit.h>
-#import <CoreDataKit/NSFetchRequest+CoreDataKit.h>
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <CoreDataKit/NSFetchedResultsController+CoreDataKit.h>

@@ -51,7 +51,10 @@
 	}
 	[self setCurrentResult:nil];
 	[self setHandler:handler];
-	[self setNeedsReload];
+	
+	[self.context performBlockAndWait:^{
+		[self loadCurrentResult];
+	}];
 }
 
 - (void)stop {
@@ -75,9 +78,9 @@
 
 - (void)setNeedsReload {
 	if (!self.isReloadingResult && self.isObservingChanges) {
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+		[self.context performBlock:^{
 			[self loadCurrentResult];
-		});
+		}];
 		[self setIsReloadingResult:YES];
 	}
 }
@@ -91,17 +94,15 @@
 }
 
 - (void)loadCurrentResult {
-	[self.context performBlock:^{
-		NSError *aggregationError = nil;
-		NSArray *results = [self.context executeFetchRequest:self.request error:&aggregationError];
-		id result = [self processedResult:results];
-		
-		if (self.handler && ![result isEqual:self.currentResult]) {
-			self.handler(result, aggregationError);
-			[self setCurrentResult:result];
-		}
-		[self setIsReloadingResult:NO];
-	}];
+	NSError *executionError = nil;
+	NSArray *results = [self.context executeFetchRequest:self.request error:&executionError];
+	id result = [self processedResult:results];
+	
+	if (self.handler && ![result isEqual:self.currentResult]) {
+		self.handler(result, executionError);
+		[self setCurrentResult:result];
+	}
+	[self setIsReloadingResult:NO];
 }
 
 @end

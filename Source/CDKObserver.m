@@ -15,6 +15,7 @@
 @property (nonatomic, strong) id	currentResult;
 
 @property BOOL	isObservingChanges;
+@property BOOL	isReloadingResult;
 
 @end
 
@@ -50,7 +51,7 @@
 	}
 	[self setCurrentResult:nil];
 	[self setHandler:handler];
-	[self loadCurrentResult];
+	[self setNeedsReload];
 }
 
 - (void)stop {
@@ -72,11 +73,21 @@
 	return fetchedResults;
 }
 
+- (void)setNeedsReload {
+	if (!self.isReloadingResult && self.isObservingChanges) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+			[self loadCurrentResult];
+		});
+		[self setIsReloadingResult:YES];
+	}
+}
+
 
 #pragma mark -
 
 - (void)evaluateChanges:(NSNotification *)notification {
-	[self loadCurrentResult];
+	//TODO: evaluate notification infos
+	[self setNeedsReload];
 }
 
 - (void)loadCurrentResult {
@@ -89,6 +100,7 @@
 			self.handler(result, aggregationError);
 			[self setCurrentResult:result];
 		}
+		[self setIsReloadingResult:NO];
 	}];
 }
 

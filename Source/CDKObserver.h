@@ -28,5 +28,6 @@ typedef void (^ CDKObservationHandler)(id result, NSError *error);
 - (BOOL)isRunning;
 
 - (id)processedResult:(NSArray *)fetchedResults;
+- (void)setNeedsReload;
 
 @end

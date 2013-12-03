@@ -8,8 +8,10 @@
 
 #import <CoreDataKit/CDKStack.h>
 
+#import <CoreDataKit/CDKObserver.h>
+#import <CoreDataKit/CDKAggregationObserver.h>
+
 #import <CoreDataKit/NSPersistentStore+CoreDataKit.h>
-#import <CoreDataKit/NSManagedObjectModel+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObject+CoreDataKit.h>
 

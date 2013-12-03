@@ -35,6 +35,8 @@
 #pragma mark - fetch request
 
 + (NSFetchRequest *)fetchRequestWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type {
+	NSAssert([key rangeOfString:@"."].location == NSNotFound, @"A keypath is not a valid option");
+	
 	NSExpression *keyExpression = [NSExpression expressionForKeyPath:key];
 	NSExpression *maxExpression = [NSExpression expressionForFunction:function arguments:@[keyExpression]];
 	

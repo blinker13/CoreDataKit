@@ -12,6 +12,7 @@
 #import <CoreDataKit/CDKAggregationObserver.h>
 
 #import <CoreDataKit/NSPersistentStore+CoreDataKit.h>
+#import <CoreDataKit/NSExpressionDescription+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObject+CoreDataKit.h>
 

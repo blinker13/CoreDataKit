@@ -7,6 +7,7 @@
 //
 
 #import "NSManagedObject+CoreDataKit.h"
+#import "NSExpressionDescription+CoreDataKit.h"
 
 
 @implementation NSManagedObject (CoreDataKit)
@@ -34,23 +35,6 @@
 
 #pragma mark - fetch request
 
-+ (NSFetchRequest *)fetchRequestWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type {
-	NSAssert([key rangeOfString:@"."].location == NSNotFound, @"A keypath is not a valid option");
-	
-	NSExpression *keyExpression = [NSExpression expressionForKeyPath:key];
-	NSExpression *maxExpression = [NSExpression expressionForFunction:function arguments:@[keyExpression]];
-	
-	NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
-	[expressionDescription setExpressionResultType:type];
-	[expressionDescription setExpression:maxExpression];
-	[expressionDescription setName:key];
-	
-	NSFetchRequest *request = [self fetchRequest];
-	[request setPropertiesToFetch:@[expressionDescription]];
-	[request setResultType:NSDictionaryResultType];
-	return request;
-}
-
 + (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending {
 	NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:key ascending:ascending];
 	NSFetchRequest *request = [self fetchRequest];
@@ -70,6 +54,13 @@
 	
 	NSFetchRequest *request = [self fetchRequest];
 	[request setPredicate:predicate];
+	return request;
+}
+
++ (NSFetchRequest *)fetchRequestWithDescriptions:(NSArray *)descriptions {
+	NSFetchRequest *request = [self fetchRequest];
+	[request setResultType:NSDictionaryResultType];
+	[request setPropertiesToFetch:descriptions];
 	return request;
 }
 

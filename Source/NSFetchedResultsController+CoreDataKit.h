@@ -14,8 +14,9 @@ typedef void (^CDKMoveHandler)(id object, NSUInteger index);
 
 @interface NSFetchedResultsController (CoreDataKit)
 
+- (NSInteger)numberOfSections;
 - (NSInteger)numberOfObjectsInSection:(NSInteger)section;
-- (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths;
+- (NSArray *)objectsForIndexPaths:(NSArray *)indexPaths;
 
 - (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler;
 

@@ -12,12 +12,16 @@
 
 @implementation NSFetchedResultsController (CoreDataKit)
 
+- (NSInteger)numberOfSections {
+	return [self.sections count];
+}
+
 - (NSInteger)numberOfObjectsInSection:(NSInteger)section {
 	id<NSFetchedResultsSectionInfo> info = [self.sections objectAtIndex:section];
 	return [info numberOfObjects];
 }
 
-- (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths {
+- (NSArray *)objectsForIndexPaths:(NSArray *)indexPaths {
 	NSMutableArray *objects = [[NSMutableArray alloc] init];
 	
 	for (NSIndexPath *indexPath in indexPaths) {
@@ -54,7 +58,7 @@
 }
 
 - (void)deleteObjectsAtIndexPaths:(NSArray *)indexPaths error:(NSError **)error {
-	for (NSManagedObject *object in [self objectsAtIndexPaths:indexPaths]) {
+	for (NSManagedObject *object in [self objectsForIndexPaths:indexPaths]) {
 		[self.managedObjectContext deleteObject:object];
 	}
 	[self.managedObjectContext save:error];

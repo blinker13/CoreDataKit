@@ -20,9 +20,11 @@
 @implementation CDKAggregationObserver
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request {
+	NSAssert([request.propertiesToFetch count] == 1, @"The request should include one Expression Description");
+	
 	if ((self = [super initWithContext:context request:request])) {
 		_expressionDescription = [request.propertiesToFetch firstObject];
-		NSAssert(_expressionDescription, @"Request should include a NSExpressionDescription");
+		NSAssert([_expressionDescription class] == [NSExpressionDescription class], @"Request should include a NSExpressionDescription");
 	}
 	return self;
 }

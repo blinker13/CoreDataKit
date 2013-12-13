@@ -32,8 +32,8 @@
 - (id)currentResult {
 	NSArray *result = [super currentResult];
 	NSString *key = [self.expressionDescription name];
-	NSDictionary *result = [fetchedResults firstObject];
-	return [result objectForKey:key];
+	NSDictionary *resultWrapper = [result firstObject];
+	return [resultWrapper objectForKey:key];
 }
 
 @end

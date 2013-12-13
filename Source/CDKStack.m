@@ -54,6 +54,7 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
 		
 		[context performBlock:^{
+			[context setUndoManager:nil];
 			[context setPersistentStoreCoordinator:self.storeCoordinator];
 			[context startMergingSaveNotificationsIntoContext:self.mainContext];
 			block(context);

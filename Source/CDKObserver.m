@@ -12,7 +12,7 @@
 @interface CDKObserver ()
 
 @property (nonatomic, copy) CDKObservationHandler	handler;
-@property (nonatomic, strong) id	currentResult;
+@property (nonatomic, strong) id	unprocessedResult;
 
 @property BOOL	isObservingChanges;
 @property BOOL	isReloadingResult;
@@ -38,6 +38,10 @@
 
 #pragma mark -
 
+- (id)currentResult {
+	return self.unprocessedResult;
+}
+
 - (void)startWithHandler:(CDKObservationHandler)handler {
 	if (!self.isObservingChanges) {
 		SEL action = @selector(evaluateChanges:);
@@ -49,7 +53,7 @@
 		}
 		[self setIsObservingChanges:YES];
 	}
-	[self setCurrentResult:nil];
+	[self setUnprocessedResult:nil];
 	[self setHandler:handler];
 	
 	[self.context performBlockAndWait:^{
@@ -65,20 +69,16 @@
 		
 		[self setIsObservingChanges:NO];
 	}
-	[self setCurrentResult:nil];
+	[self setUnprocessedResult:nil];
 }
 
 - (BOOL)isRunning {
 	return [self isObservingChanges];
 }
 
-- (id)processedResult:(NSArray *)fetchedResults {
-	return fetchedResults;
-}
-
 - (void)setNeedsReload {
 	if (!self.isReloadingResult && self.isObservingChanges) {
-		[self.context performBlock:^{
+		[self.context performBlockAndWait:^{
 			[self loadCurrentResult];
 		}];
 		[self setIsReloadingResult:YES];
@@ -96,11 +96,11 @@
 - (void)loadCurrentResult {
 	NSError *executionError = nil;
 	NSArray *results = [self.context executeFetchRequest:self.request error:&executionError];
-	id result = [self processedResult:results];
 	
-	if (self.handler && ![result isEqual:self.currentResult]) {
-		self.handler(result, executionError);
-		[self setCurrentResult:result];
+	if (self.handler && ![results isEqual:self.unprocessedResult]) {
+		[self setUnprocessedResult:results];
+		
+		self.handler(self.currentResult, executionError);
 	}
 	[self setIsReloadingResult:NO];
 }

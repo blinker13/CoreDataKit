@@ -14,10 +14,10 @@ typedef void (^ CDKObservationHandler)(id result, NSError *error);
 
 @interface CDKObserver : NSObject
 
-@property (nonatomic, readonly) id	currentResult;
-
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
 @property (nonatomic, readonly) NSFetchRequest			*request;
+
+@property (nonatomic, readonly) id	currentResult;
 
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
@@ -27,7 +27,6 @@ typedef void (^ CDKObservationHandler)(id result, NSError *error);
 
 - (BOOL)isRunning;
 
-- (id)processedResult:(NSArray *)fetchedResults;
 - (void)setNeedsReload;
 
 @end

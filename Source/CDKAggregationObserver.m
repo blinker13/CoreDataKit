@@ -29,7 +29,8 @@
 	return self;
 }
 
-- (id)processedResult:(NSArray *)fetchedResults {
+- (id)currentResult {
+	NSArray *result = [super currentResult];
 	NSString *key = [self.expressionDescription name];
 	NSDictionary *result = [fetchedResults firstObject];
 	return [result objectForKey:key];

@@ -9,15 +9,8 @@
 @import CoreData;
 
 
-extern NSString * const CDKSQLiteExtension;
-
-
 @interface NSPersistentStore (CoreDataKit)
 
 @property (nonatomic, getter = isExcludedFromBackup) BOOL	excludedFromBackup;
-
-
-+ (NSURL *)defaultDirectoryURL;
-+ (NSURL *)defaultStoreURL;
 
 @end

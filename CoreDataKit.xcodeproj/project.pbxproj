@@ -36,7 +36,6 @@
 		BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D61836F41A000FDED1 /* Foundation.framework */; };
 		BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D81836F428000FDED1 /* CoreData.framework */; };
 		BD2926AB18790FD700CD136D /* CDKFilterController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2926A918790FD700CD136D /* CDKFilterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD2926AC18790FD700CD136D /* CDKFilterController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2926A918790FD700CD136D /* CDKFilterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD2926AD18790FD700CD136D /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKFilterController.m */; };
 		BD2926AE18790FD700CD136D /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKFilterController.m */; };
 		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
@@ -61,7 +60,7 @@
 		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 		BDFCC841185B75DE0096CF7D /* CDKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFCC83F185B75DE0096CF7D /* CDKObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFCC842185B75DE0096CF7D /* CDKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFCC840185B75DE0096CF7D /* CDKObserver.m */; };
-		BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFCC83F185B75DE0096CF7D /* CDKObserver.h */; };
+		BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFCC83F185B75DE0096CF7D /* CDKObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,17 +274,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD62A356184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
 				BD10D9971836F0C6000FDED1 /* CoreDataKit.h in Headers */,
 				BD10D9981836F0C6000FDED1 /* CDKStack.h in Headers */,
-				BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
-				BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BD62A35C184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BD62A343184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
-				BDFCC841185B75DE0096CF7D /* CDKObserver.h in Headers */,
-				BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
 				BD2926AB18790FD700CD136D /* CDKFilterController.h in Headers */,
+				BDFCC841185B75DE0096CF7D /* CDKObserver.h in Headers */,
+				BD62A343184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
+				BD62A356184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
+				BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
+				BD62A35C184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
+				BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
+				BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,15 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9D01836F3FD000FDED1 /* CoreDataKit.h in Headers */,
-				BD62A344184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
 				BD10D9D11836F3FD000FDED1 /* CDKStack.h in Headers */,
+				BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */,
+				BD62A344184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
+				BD62A357184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
 				BD10D9D21836F3FD000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
+				BD62A35D184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BD10D9D31836F3FD000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
 				BD10D9D41836F3FD000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BD62A35D184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */,
-				BD62A357184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
-				BD2926AC18790FD700CD136D /* CDKFilterController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

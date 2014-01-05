@@ -7,7 +7,6 @@
 //
 
 #import <CoreDataKit/CDKStack.h>
-#import <CoreDataKit/CDKFilterController.h>
 
 #import <CoreDataKit/CDKObserver.h>
 #import <CoreDataKit/CDKAggregationObserver.h>
@@ -19,4 +18,5 @@
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <CoreDataKit/NSFetchedResultsController+CoreDataKit.h>
+#import <CoreDataKit/CDKFilterController.h>
 #endif

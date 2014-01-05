@@ -15,8 +15,8 @@
 
 @optional
 - (void)controllerWillChangeContent:(CDKSearchController *)controller;
-- (void)controller:(CDKSearchController *)controller didFindObjectAtIndex:(NSUInteger)index;
-- (void)controller:(CDKSearchController *)controller didFilterObjectAtIndex:(NSUInteger)index;
+- (void)controller:(CDKSearchController *)controller didInsertObjectAtIndex:(NSUInteger)index;
+- (void)controller:(CDKSearchController *)controller didRemoveObjectAtIndex:(NSUInteger)index;
 - (void)controllerDidChangeContent:(CDKSearchController *)controller;
 
 @end
@@ -29,7 +29,7 @@
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
 @property (nonatomic, readonly) NSFetchRequest			*request;
 
-@property (nonatomic) NSUInteger	numberOfObjects;
+@property (nonatomic, readonly) NSUInteger	numberOfObjects;
 
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;

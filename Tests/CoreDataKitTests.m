@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 #import "CDKStack.h"
 
 #import "NSPersistentStore+CoreDataKit.h"

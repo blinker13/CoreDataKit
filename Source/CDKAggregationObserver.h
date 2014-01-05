@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import "CDKObserver.h"
+#import "CDKAbstractObserver.h"
 
 
-@interface CDKAggregationObserver : CDKObserver
+@interface CDKAggregationObserver : CDKAbstractObserver
 
 @end

@@ -1,8 +1,8 @@
 //
-//  CDKAggregationObserver.m
+//  CDKObserver.m
 //  CoreDataKit
 //
-//  Created by Felix Gabel on 02/12/13.
+//  Created by Felix Gabel on 13/12/13.
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
@@ -11,11 +11,9 @@
 
 @interface CDKObserver ()
 
-@property (nonatomic, copy) CDKObservationHandler	handler;
-@property (nonatomic, strong) id	unprocessedResult;
-
-@property BOOL	isObservingChanges;
-@property BOOL	isReloadingResult;
+@property (nonatomic) BOOL	shouldDelegateInserts;
+@property (nonatomic) BOOL	shouldDelegateUpdates;
+@property (nonatomic) BOOL	shouldDelegateDeletes;
 
 @end
 
@@ -23,86 +21,63 @@
 #pragma mark -
 @implementation CDKObserver
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request {
+- (instancetype)initWithContext:(NSManagedObjectContext *)context {
 	if ((self = [super init])) {
 		_context = context;
-		_request = request;
+		
+		SEL selector = @selector(processChangeNotification:);
+		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+		[center addObserver:self selector:selector name:NSManagedObjectContextDidSaveNotification object:_context];
 	}
 	return self;
 }
 
+- (instancetype)init {
+	return [self initWithContext:nil];
+}
+
 - (void)dealloc {
-	[self stop];
+	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+	[center removeObserver:self name:NSManagedObjectContextObjectsDidChangeNotification object:self.context];
+	[center removeObserver:self name:NSManagedObjectContextDidSaveNotification object:self.context];
 }
 
 
 #pragma mark -
 
-- (id)currentResult {
-	return self.unprocessedResult;
+- (void)setDelegate:(id<CDKObserverDelegate>)delegate {
+	if (delegate != self.delegate) {
+		[self setShouldDelegateInserts:[delegate respondsToSelector:@selector(observer:didObserveInsert:)]];
+		[self setShouldDelegateUpdates:[delegate respondsToSelector:@selector(observer:didObserveUpdate:)]];
+		[self setShouldDelegateDeletes:[delegate respondsToSelector:@selector(observer:didObserveDelete:)]];
+		_delegate = delegate;
+	}
 }
 
-- (void)startWithHandler:(CDKObservationHandler)handler {
-	if (!self.isObservingChanges) {
-		SEL action = @selector(evaluateChanges:);
+- (void)setShouldIncludePendingChanges:(BOOL)shouldIncludePendingChanges {
+	if (shouldIncludePendingChanges != self.shouldIncludePendingChanges) {
 		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-		[center addObserver:self selector:action name:NSManagedObjectContextDidSaveNotification object:self.context];
 		
-		if ([self.request includesPendingChanges]) {
-			[center addObserver:self selector:action name:NSManagedObjectContextObjectsDidChangeNotification object:self.context];
+		if (shouldIncludePendingChanges) {
+			SEL selector = @selector(processChangeNotification:);
+			[center addObserver:self selector:selector name:NSManagedObjectContextObjectsDidChangeNotification object:self.context];
+			
+		} else {
+			[center removeObserver:self name:NSManagedObjectContextObjectsDidChangeNotification object:self.context];
 		}
-		[self setIsObservingChanges:YES];
+		_shouldIncludePendingChanges = shouldIncludePendingChanges;
 	}
-	[self setUnprocessedResult:nil];
-	[self setHandler:handler];
+}
+
+
+#pragma mark - private methods
+
+- (void)processChangeNotification:(NSNotification *)notification {
+	NSDictionary *info = [notification userInfo];
 	
-	[self.context performBlockAndWait:^{
-		[self loadCurrentResult];
-	}];
-}
-
-- (void)stop {
-	if (self.isObservingChanges) {
-		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-		[center removeObserver:self name:NSManagedObjectContextObjectsDidChangeNotification object:self.context];
-		[center removeObserver:self name:NSManagedObjectContextDidSaveNotification object:self.context];
-		
-		[self setIsObservingChanges:NO];
-	}
-	[self setUnprocessedResult:nil];
-}
-
-- (BOOL)isRunning {
-	return [self isObservingChanges];
-}
-
-- (void)setNeedsReload {
-	if (!self.isReloadingResult && self.isObservingChanges) {
-		[self.context performBlockAndWait:^{
-			[self loadCurrentResult];
-		}];
-		[self setIsReloadingResult:YES];
-	}
-}
-
-
-#pragma mark -
-
-- (void)evaluateChanges:(NSNotification *)notification {
-	//TODO: evaluate notification infos
-	[self setNeedsReload];
-}
-
-- (void)loadCurrentResult {
-	NSError *executionError = nil;
-	NSArray *results = [self.context executeFetchRequest:self.request error:&executionError];
-	
-	if (self.handler && ![results isEqual:self.unprocessedResult]) {
-		[self setUnprocessedResult:results];
-		
-		self.handler(self.currentResult, executionError);
-	}
-	[self setIsReloadingResult:NO];
+	if (self.shouldDelegateInserts) [self.delegate observer:self didObserveInsert:[info objectForKey:NSInsertedObjectsKey]];
+	if (self.shouldDelegateUpdates) [self.delegate observer:self didObserveUpdate:[info objectForKey:NSUpdatedObjectsKey]];
+	if (self.shouldDelegateDeletes) [self.delegate observer:self didObserveDelete:[info objectForKey:NSDeletedObjectsKey]];
 }
 
 @end

@@ -16,6 +16,7 @@
 
 + (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context;
 
++ (NSFetchRequest *)fetchRequestForAttribute:(NSString *)attribute ascending:(BOOL)ascending;
 + (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending;
 + (NSFetchRequest *)fetchRequestWithPredicateFormat:(NSString *)format, ...;
 + (NSFetchRequest *)fetchRequestWithDescriptions:(NSArray *)descriptions;

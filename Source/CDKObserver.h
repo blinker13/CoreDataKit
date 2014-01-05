@@ -1,32 +1,34 @@
 //
-//  CDKAggregationObserver.h
+//  CDKObserver.h
 //  CoreDataKit
 //
-//  Created by Felix Gabel on 02/12/13.
+//  Created by Felix Gabel on 13/12/13.
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
 @import CoreData;
 
+@class CDKObserver;
 
-typedef void (^ CDKObservationHandler)(id result, NSError *error);
+
+@protocol CDKObserverDelegate <NSObject>
+
+- (void)observer:(CDKObserver *)observer didObserveInsert:(NSSet *)insertedObjects;
+- (void)observer:(CDKObserver *)observer didObserveUpdate:(NSSet *)insertedObjects;
+- (void)observer:(CDKObserver *)observer didObserveDelete:(NSSet *)insertedObjects;
+
+@end
+
 
 
 @interface CDKObserver : NSObject
 
+@property (nonatomic, weak) id<CDKObserverDelegate>		delegate;
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
-@property (nonatomic, readonly) NSFetchRequest			*request;
 
-@property (nonatomic, readonly) id	currentResult;
+@property (nonatomic) BOOL	shouldIncludePendingChanges;
 
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
-
-- (void)startWithHandler:(CDKObservationHandler)handler;
-- (void)stop;
-
-- (BOOL)isRunning;
-
-- (void)setNeedsReload;
+- (instancetype)initWithContext:(NSManagedObjectContext *)context;
 
 @end

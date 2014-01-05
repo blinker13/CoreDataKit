@@ -6,12 +6,11 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 
 @interface Foo : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, strong) NSString	*name;
 
 @end

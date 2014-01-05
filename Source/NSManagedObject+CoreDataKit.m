@@ -35,6 +35,13 @@
 
 #pragma mark - fetch request
 
++ (NSFetchRequest *)fetchRequestForAttribute:(NSString *)attribute ascending:(BOOL)ascending {
+	NSFetchRequest *request = [self fetchRequestWithSortKey:attribute ascending:ascending];
+	[request setResultType:NSDictionaryResultType];
+	[request setPropertiesToFetch:@[attribute]];
+	return request;
+}
+
 + (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending {
 	NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:key ascending:ascending];
 	NSFetchRequest *request = [self fetchRequest];

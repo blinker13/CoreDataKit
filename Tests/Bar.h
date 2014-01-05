@@ -6,13 +6,12 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 
 @interface Bar : NSManagedObject
 
-@property (nonatomic, retain) NSDate * creationDate;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, strong) NSDate	*creationDate;
+@property (nonatomic, strong) NSString	*name;
 
 @end

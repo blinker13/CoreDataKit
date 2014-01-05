@@ -28,9 +28,13 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 	return self;
 }
 
+- (instancetype)initWithModel:(NSManagedObjectModel *)model {
+	return [self initWithModel:model storeName:CDKDefaultStoreName()];
+}
+
 - (instancetype)init {
 	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
-	return [self initWithModel:model storeName:CDKDefaultStoreName()];
+	return [self initWithModel:model];
 }
 
 

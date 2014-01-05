@@ -26,6 +26,8 @@
 
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model storeName:(NSString *)name;
+- (instancetype)initWithModel:(NSManagedObjectModel *)model;
+
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block;
 
 @end

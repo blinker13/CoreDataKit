@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 NHCoding. All rights reserved.
 //
 
-#import "CDKSearchController.h"
+#import "CDKFilterController.h"
 
 
 #pragma mark -
-@interface CDKSearchController () <NSFetchedResultsControllerDelegate>
+@interface CDKFilterController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController	*fetchedObjects;
 
@@ -22,7 +22,7 @@
 
 
 #pragma mark -
-@implementation CDKSearchController
+@implementation CDKFilterController
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request {
 	NSAssert(context, @"Invalid context in CDKSearchController");

@@ -8,23 +8,23 @@
 
 @import CoreData;
 
-@class CDKSearchController;
+@class CDKFilterController;
 
 
-@protocol CDKSearchControllerDelegate <NSObject>
+@protocol CDKFilterControllerDelegate <NSObject>
 
 @optional
-- (void)controllerWillChangeContent:(CDKSearchController *)controller;
-- (void)controller:(CDKSearchController *)controller didInsertObjectAtIndex:(NSUInteger)index;
-- (void)controller:(CDKSearchController *)controller didRemoveObjectAtIndex:(NSUInteger)index;
-- (void)controllerDidChangeContent:(CDKSearchController *)controller;
+- (void)controllerWillChangeContent:(CDKFilterController *)controller;
+- (void)controller:(CDKFilterController *)controller didInsertObjectAtIndex:(NSUInteger)index;
+- (void)controller:(CDKFilterController *)controller didRemoveObjectAtIndex:(NSUInteger)index;
+- (void)controllerDidChangeContent:(CDKFilterController *)controller;
 
 @end
 
 
-@interface CDKSearchController : NSObject
+@interface CDKFilterController : NSObject
 
-@property (nonatomic, weak) id<CDKSearchControllerDelegate>	delegate;
+@property (nonatomic, weak) id<CDKFilterControllerDelegate>	delegate;
 
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
 @property (nonatomic, readonly) NSFetchRequest			*request;

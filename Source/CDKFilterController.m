@@ -93,12 +93,23 @@
 #pragma mark - private methods
 
 - (NSArray *)filteredObjectsUsingPredicate:(NSPredicate *)predicate {
-	NSArray *filteredObjects = [self.filteredObjectsCache objectForKey:predicate];
+	NSArray *filteredObjects = nil;
 	
-	if (!filteredObjects) {
-		NSArray *fetchedObjects = [self.fetchedObjects fetchedObjects];
-		filteredObjects = [fetchedObjects filteredArrayUsingPredicate:predicate];
-		[self.filteredObjectsCache setObject:filteredObjects forKey:predicate];
+	if (predicate) {
+		filteredObjects = [self.filteredObjectsCache objectForKey:predicate];
+		
+		if (!filteredObjects) {
+			NSArray *fetchedObjects = [self.fetchedObjects fetchedObjects];
+			filteredObjects = [fetchedObjects filteredArrayUsingPredicate:predicate];
+			
+			if ([filteredObjects count] == 0 && self.shouldReturnAllWhenEmpty) {
+				filteredObjects = fetchedObjects;
+			}
+			[self.filteredObjectsCache setObject:filteredObjects forKey:predicate];
+		}
+		
+	} else {
+		 filteredObjects = [self.fetchedObjects fetchedObjects];
 	}
 	return filteredObjects;
 }

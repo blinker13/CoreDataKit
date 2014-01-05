@@ -7,6 +7,7 @@
 //
 
 #import <CoreDataKit/CDKStack.h>
+#import <CoreDataKit/CDKFilterController.h>
 
 #import <CoreDataKit/CDKObserver.h>
 #import <CoreDataKit/CDKAggregationObserver.h>

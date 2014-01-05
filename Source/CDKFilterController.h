@@ -31,6 +31,8 @@
 
 @property (nonatomic, readonly) NSUInteger	numberOfObjects;
 
+@property (nonatomic) BOOL	shouldReturnAllWhenEmpty;
+
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
 - (void)filterUsingPredicate:(NSPredicate *)predicate finished:(void (^)(NSArray *objects))handler;

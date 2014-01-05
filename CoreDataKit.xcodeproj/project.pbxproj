@@ -35,6 +35,10 @@
 		BD10D9D41836F3FD000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D61836F41A000FDED1 /* Foundation.framework */; };
 		BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D81836F428000FDED1 /* CoreData.framework */; };
+		BD2926AB18790FD700CD136D /* CDKSearchController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2926A918790FD700CD136D /* CDKSearchController.h */; };
+		BD2926AC18790FD700CD136D /* CDKSearchController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2926A918790FD700CD136D /* CDKSearchController.h */; };
+		BD2926AD18790FD700CD136D /* CDKSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKSearchController.m */; };
+		BD2926AE18790FD700CD136D /* CDKSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKSearchController.m */; };
 		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
 		BD57110B177B924D00565726 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
 		BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710F9177B924D00565726 /* libCoreDataKit.a */; };
@@ -91,6 +95,8 @@
 		BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD10D9D61836F41A000FDED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BD10D9D81836F428000FDED1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		BD2926A918790FD700CD136D /* CDKSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKSearchController.h; sourceTree = "<group>"; };
+		BD2926AA18790FD700CD136D /* CDKSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKSearchController.m; sourceTree = "<group>"; };
 		BD5710F9177B924D00565726 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5710FC177B924D00565726 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD571109177B924D00565726 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +172,15 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		BD2926A818790F9300CD136D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BD2926A918790FD700CD136D /* CDKSearchController.h */,
+				BD2926AA18790FD700CD136D /* CDKSearchController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		BD5710F0177B924D00565726 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +220,7 @@
 				BD571125177B92C500565726 /* CoreDataKit.h */,
 				BD57112B177B931900565726 /* CDKStack.h */,
 				BD57112C177B931900565726 /* CDKStack.m */,
+				BD2926A818790F9300CD136D /* Search */,
 				BD62A340184D38A500A21125 /* Observer */,
 				BDED2DE3181944BA00F9A15B /* Categories */,
 			);
@@ -269,6 +285,7 @@
 				BDFCC841185B75DE0096CF7D /* CDKObserver.h in Headers */,
 				BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */,
 				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
+				BD2926AB18790FD700CD136D /* CDKSearchController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +302,7 @@
 				BD62A35D184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */,
 				BD62A357184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
+				BD2926AC18790FD700CD136D /* CDKSearchController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +434,7 @@
 				BD10D9C81836F28C000FDED1 /* NSPersistentStore+CoreDataKit.m in Sources */,
 				BD62A346184D38D700A21125 /* CDKAbstractObserver.m in Sources */,
 				BD10D9C91836F28F000FDED1 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
+				BD2926AE18790FD700CD136D /* CDKSearchController.m in Sources */,
 				BD62A35F184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BD10D9CA1836F292000FDED1 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BD62A359184DE2E600A21125 /* CDKAggregationObserver.m in Sources */,
@@ -441,6 +460,7 @@
 				BD07DF3E182C5A6300903342 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BD62A358184DE2E600A21125 /* CDKAggregationObserver.m in Sources */,
 				BD62A35E184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */,
+				BD2926AD18790FD700CD136D /* CDKSearchController.m in Sources */,
 				BDFCC842185B75DE0096CF7D /* CDKObserver.m in Sources */,
 				BD57112D177B931900565726 /* CDKStack.m in Sources */,
 				BD07DF41182C635200903342 /* NSPersistentStore+CoreDataKit.m in Sources */,

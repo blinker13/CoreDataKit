@@ -16,7 +16,7 @@
 	return NSStringFromClass(self);
 }
 
-+ (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context {
++ (instancetype)insertInContext:(NSManagedObjectContext *)context {
 	return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
 }
 
@@ -34,21 +34,21 @@
 
 #pragma mark - fetch request
 
-+ (NSFetchRequest *)fetchRequestForAttribute:(NSString *)attribute ascending:(BOOL)ascending {
-	NSFetchRequest *request = [self fetchRequestWithSortKey:attribute ascending:ascending];
++ (NSFetchRequest *)requestForAttribute:(NSString *)attribute ascending:(BOOL)ascending {
+	NSFetchRequest *request = [self requestWithSortKey:attribute ascending:ascending];
 	[request setResultType:NSDictionaryResultType];
 	[request setPropertiesToFetch:@[attribute]];
 	return request;
 }
 
-+ (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending {
++ (NSFetchRequest *)requestWithSortKey:(NSString *)key ascending:(BOOL)ascending {
 	NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:key ascending:ascending];
-	NSFetchRequest *request = [self fetchRequest];
+	NSFetchRequest *request = [self request];
 	[request setSortDescriptors:@[sort]];
 	return request;
 }
 
-+ (NSFetchRequest *)fetchRequestWithPredicateFormat:(NSString *)format, ... {
++ (NSFetchRequest *)requestWithPredicateFormat:(NSString *)format, ... {
 	va_list list, listCopy;
 	va_start(list, format);
 	va_copy(listCopy, list);
@@ -58,19 +58,19 @@
 	
 	va_end(listCopy);
 	
-	NSFetchRequest *request = [self fetchRequest];
+	NSFetchRequest *request = [self request];
 	[request setPredicate:predicate];
 	return request;
 }
 
-+ (NSFetchRequest *)fetchRequestWithDescriptions:(NSArray *)descriptions {
-	NSFetchRequest *request = [self fetchRequest];
++ (NSFetchRequest *)requestWithDescriptions:(NSArray *)descriptions {
+	NSFetchRequest *request = [self request];
 	[request setResultType:NSDictionaryResultType];
 	[request setPropertiesToFetch:descriptions];
 	return request;
 }
 
-+ (NSFetchRequest *)fetchRequest {
++ (NSFetchRequest *)request {
 	NSString *entityName = [self entityName];
 	return [[NSFetchRequest alloc] initWithEntityName:entityName];
 }

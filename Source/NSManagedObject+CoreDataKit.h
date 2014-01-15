@@ -12,14 +12,14 @@
 @interface NSManagedObject (CoreDataKit)
 
 + (NSString *)entityName;
-+ (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
++ (instancetype)insertInContext:(NSManagedObjectContext *)context;
 
 + (NSAttributeType)attributeTypeForKey:(NSString *)key inContext:(NSManagedObjectContext *)context;
 
-+ (NSFetchRequest *)fetchRequestForAttribute:(NSString *)attribute ascending:(BOOL)ascending;
-+ (NSFetchRequest *)fetchRequestWithSortKey:(NSString *)key ascending:(BOOL)ascending;
-+ (NSFetchRequest *)fetchRequestWithPredicateFormat:(NSString *)format, ...;
-+ (NSFetchRequest *)fetchRequestWithDescriptions:(NSArray *)descriptions;
-+ (NSFetchRequest *)fetchRequest;
++ (NSFetchRequest *)requestForAttribute:(NSString *)attribute ascending:(BOOL)ascending;
++ (NSFetchRequest *)requestWithSortKey:(NSString *)key ascending:(BOOL)ascending;
++ (NSFetchRequest *)requestWithPredicateFormat:(NSString *)format, ...;
++ (NSFetchRequest *)requestWithDescriptions:(NSArray *)descriptions;
++ (NSFetchRequest *)request;
 
 @end

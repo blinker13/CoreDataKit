@@ -104,8 +104,8 @@
 		BD571125177B92C500565726 /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
 		BD571127177B92C500565726 /* CoreDataKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataKitTests-Info.plist"; sourceTree = "<group>"; };
 		BD571128177B92C500565726 /* CoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataKitTests.m; sourceTree = "<group>"; };
-		BD57112B177B931900565726 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
-		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
+		BD57112B177B931900565726 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDKStack.h; path = Source/CDKStack.h; sourceTree = "<group>"; };
+		BD57112C177B931900565726 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDKStack.m; path = Source/CDKStack.m; sourceTree = "<group>"; };
 		BD62A341184D38D700A21125 /* CDKAbstractObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKAbstractObserver.h; sourceTree = "<group>"; };
 		BD62A342184D38D700A21125 /* CDKAbstractObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKAbstractObserver.m; sourceTree = "<group>"; };
 		BD62A354184DE2E600A21125 /* CDKAggregationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKAggregationObserver.h; sourceTree = "<group>"; };
@@ -217,8 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				BD571125177B92C500565726 /* CoreDataKit.h */,
-				BD57112B177B931900565726 /* CDKStack.h */,
-				BD57112C177B931900565726 /* CDKStack.m */,
+				BDA9BA5218874F2B00AFE5DA /* Stack */,
 				BD2926A818790F9300CD136D /* Filter */,
 				BD62A340184D38A500A21125 /* Observer */,
 				BDED2DE3181944BA00F9A15B /* Categories */,
@@ -248,6 +247,16 @@
 				BD62A355184DE2E600A21125 /* CDKAggregationObserver.m */,
 			);
 			name = Observer;
+			sourceTree = "<group>";
+		};
+		BDA9BA5218874F2B00AFE5DA /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				BD57112B177B931900565726 /* CDKStack.h */,
+				BD57112C177B931900565726 /* CDKStack.m */,
+			);
+			name = Stack;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BDED2DE3181944BA00F9A15B /* Categories */ = {

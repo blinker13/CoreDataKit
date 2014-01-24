@@ -18,4 +18,6 @@
 - (void)startMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 - (void)stopMergingSaveNotificationsIntoContext:(NSManagedObjectContext *)context;
 
+- (NSManagedObjectID *)objectIDForURI:(NSURL *)uri;
+
 @end

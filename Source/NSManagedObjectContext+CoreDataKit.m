@@ -51,4 +51,12 @@
     [center removeObserver:context name:NSManagedObjectContextDidSaveNotification object:self];
 }
 
+
+#pragma mark -
+
+- (NSManagedObjectID *)objectIDForURI:(NSURL *)uri {
+	NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+	return [coordinator managedObjectIDForURIRepresentation:uri];
+}
+
 @end

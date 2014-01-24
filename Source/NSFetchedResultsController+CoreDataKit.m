@@ -7,6 +7,7 @@
 //
 
 #import "NSFetchedResultsController+CoreDataKit.h"
+#import "NSManagedObjectContext+CoreDataKit.h"
 #import "NSManagedObject+CoreDataKit.h"
 
 
@@ -29,6 +30,22 @@
 		[objects addObject:object];
 	}
 	return objects;
+}
+
+- (NSString *)identifierForObjectAtIndexPath:(NSIndexPath *)indexPath {
+	NSManagedObject *object = [self objectAtIndexPath:indexPath];
+	return [object stringID];
+}
+
+- (NSIndexPath *)indexPathForObjectWithIdentifier:(NSString *)identifier {
+	NSURL *uri = [[NSURL alloc] initWithString:identifier];
+	NSManagedObjectID *objectID = [self.managedObjectContext objectIDForURI:uri];
+	
+	NSError *error = nil;
+	NSManagedObject *object = [self.managedObjectContext existingObjectWithID:objectID error:&error];
+	NSAssert(!error, [error localizedDescription]);
+	
+	return [self indexPathForObject:object];
 }
 
 - (void)moveObjectAtIndex:(NSUInteger)index toIndex:(NSUInteger)newIndex update:(CDKMoveHandler)handler {

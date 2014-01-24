@@ -75,4 +75,13 @@
 	return [[NSFetchRequest alloc] initWithEntityName:entityName];
 }
 
+
+#pragma mark -
+
+- (NSString *)stringID {
+	NSManagedObjectID *objectID = [self objectID];
+	NSURL *uri = [objectID URIRepresentation];
+	return [uri absoluteString];
+}
+
 @end

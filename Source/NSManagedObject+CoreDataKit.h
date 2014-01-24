@@ -22,4 +22,6 @@
 + (NSFetchRequest *)requestWithDescriptions:(NSArray *)descriptions;
 + (NSFetchRequest *)request;
 
+- (NSString *)stringID;
+
 @end

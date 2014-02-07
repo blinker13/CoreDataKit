@@ -14,10 +14,10 @@
 @protocol CDKFilterControllerDelegate <NSObject>
 
 @optional
-- (void)controllerWillChangeContent:(CDKFilterController *)controller;
-- (void)controller:(CDKFilterController *)controller didInsertObjectAtIndex:(NSUInteger)index;
+- (void)controllerWillChangeResults:(CDKFilterController *)controller;
+- (void)controller:(CDKFilterController *)controller didInsertObject:(id)object atIndex:(NSUInteger)index;
 - (void)controller:(CDKFilterController *)controller didRemoveObjectAtIndex:(NSUInteger)index;
-- (void)controllerDidChangeContent:(CDKFilterController *)controller;
+- (void)controllerDidChangeResults:(CDKFilterController *)controller;
 
 @end
 
@@ -29,14 +29,14 @@
 @property (nonatomic, readonly) NSManagedObjectContext	*context;
 @property (nonatomic, readonly) NSFetchRequest			*request;
 
-@property (nonatomic, readonly) NSUInteger	numberOfObjects;
-
+@property (nonatomic, readonly) NSUInteger	numberOfResults;
+//@property (nonatomic, readonly) BOOL	is
 @property (nonatomic) BOOL	shouldReturnAllWhenEmpty;
 
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
 - (void)filterUsingPredicate:(NSPredicate *)predicate finished:(void (^)(NSArray *objects))handler;
 
-- (id)objectAtIndex:(NSUInteger)index;
+- (id)resultAtIndex:(NSUInteger)index;
 
 @end

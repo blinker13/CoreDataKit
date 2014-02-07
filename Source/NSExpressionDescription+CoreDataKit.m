@@ -9,7 +9,7 @@
 #import "NSExpressionDescription+CoreDataKit.h"
 
 
-NSString * const CDKObjectIDKey	=	@"objectID";
+NSString *const CDKObjectIDKey	=	@"objectID";
 
 
 @implementation NSExpressionDescription (CoreDataKit)

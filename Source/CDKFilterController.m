@@ -9,14 +9,24 @@
 #import "CDKFilterController.h"
 
 
-#pragma mark -
+typedef NS_OPTIONS(NSUInteger, CDKFilterCallbackMask) {
+	CDKFilterCallbackDisabled		=	0 << 0,
+	CDKFilterCallbackWillChange		=	1 << 0,
+	CDKFilterCallbackInsertResult	=	1 << 1,
+	CDKFilterCallbackRemoveResult	=	1 << 2,
+	CDKFilterCallbackDidChange		=	1 << 3,
+};
+
+
 @interface CDKFilterController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController	*fetchedObjects;
 
-@property (nonatomic, strong) NSCache		*filteredObjectsCache;
-@property (nonatomic, strong) NSArray		*filteredObjects;
+@property (nonatomic, strong) NSArray		*currentResults;
 @property (nonatomic, strong) NSPredicate	*currentFilter;
+@property (nonatomic, strong) NSCache		*resultsCache;
+
+@property (nonatomic) CDKFilterCallbackMask	callbackMask;
 
 @end
 
@@ -25,11 +35,11 @@
 @implementation CDKFilterController
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request {
-	NSAssert(context, @"Invalid context in CDKSearchController");
-	NSAssert(request, @"Invalid request in CDKSearchController");
+	NSAssert(context, @"Invalid context: %@", context);
+	NSAssert(request, @"Invalid request: %@", request);
 	
 	if ((self = [super init])) {
-		_filteredObjectsCache = [[NSCache alloc] init];
+		_resultsCache = [[NSCache alloc] init];
 		_context = context;
 		_request = request;
 		
@@ -48,28 +58,6 @@
 
 #pragma mark -
 
-- (NSUInteger)numberOfObjects {
-	return [self.filteredObjects count];
-}
-
-- (id)objectAtIndex:(NSUInteger)index {
-	return [self.filteredObjects objectAtIndex:index];
-}
-
-- (void)filterUsingPredicate:(NSPredicate *)predicate finished:(void (^)(NSArray *objects))handler {
-	
-	[self.context performBlock:^{
-		NSArray *searchedObjects = [self filteredObjectsUsingPredicate:predicate];
-		[self processSearchChanges:searchedObjects];
-		[self setFilteredObjects:searchedObjects];
-		[self setCurrentFilter:predicate];
-		
-		if (handler) {
-			handler(searchedObjects);
-		}
-	}];
-}
-
 - (NSFetchedResultsController *)fetchedObjects {
 	if (!_fetchedObjects) {
 		_fetchedObjects = [[NSFetchedResultsController alloc] initWithFetchRequest:self.request managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
@@ -80,6 +68,38 @@
 		NSAssert(!error, [error localizedDescription]);
 	}
 	return _fetchedObjects;
+}
+
+- (void)setDelegate:(id<CDKFilterControllerDelegate>)delegate {
+	if (delegate != self.delegate) {
+		if ([delegate respondsToSelector:@selector(controllerWillChangeContent:)]) _callbackMask |= CDKFilterCallbackWillChange;
+		if ([delegate respondsToSelector:@selector(controllerDidChangeContent:)]) _callbackMask |= CDKFilterCallbackDidChange;
+		if ([delegate respondsToSelector:@selector(controller:didInsertObject:atIndex:)]) _callbackMask |= CDKFilterCallbackInsertResult;
+		if ([delegate respondsToSelector:@selector(controller:didRemoveObjectAtIndex:)]) _callbackMask |= CDKFilterCallbackRemoveResult;
+		_delegate = delegate;
+	}
+}
+
+- (void)filterUsingPredicate:(NSPredicate *)predicate finished:(void (^)(NSArray *objects))handler {
+	
+	[self.context performBlock:^{
+		[self setCurrentFilter:predicate];
+		
+		NSArray *results = [self filteredObjectsUsingPredicate:predicate];
+//		[self processSearchResults:results];
+		
+		if (handler) {
+			handler(results);
+		}
+	}];
+}
+
+- (NSUInteger)numberOfObjects {
+	return [self.currentResults count];
+}
+
+- (id)resultAtIndex:(NSUInteger)index {
+	return [self.currentResults objectAtIndex:index];
 }
 
 
@@ -96,7 +116,7 @@
 	NSArray *filteredObjects = nil;
 	
 	if (predicate) {
-		filteredObjects = [self.filteredObjectsCache objectForKey:predicate];
+		filteredObjects = [self.resultsCache objectForKey:predicate];
 		
 		if (!filteredObjects) {
 			NSArray *fetchedObjects = [self.fetchedObjects fetchedObjects];
@@ -105,7 +125,7 @@
 			if ([filteredObjects count] == 0 && self.shouldReturnAllWhenEmpty) {
 				filteredObjects = fetchedObjects;
 			}
-			[self.filteredObjectsCache setObject:filteredObjects forKey:predicate];
+			[self.resultsCache setObject:filteredObjects forKey:predicate];
 		}
 		
 	} else {
@@ -114,16 +134,55 @@
 	return filteredObjects;
 }
 
-- (void)processSearchChanges:(NSArray *)searchedObjects {
-	if (![self.filteredObjects isEqualToArray:searchedObjects]) {
-		NSArray *filteredObjects = [self filteredObjects];
-		
-		//TODO: implement delegate calls
+- (void)processSearchResults:(NSArray *)results {
+	BOOL shouldCallBack = (self.callbackMask != CDKFilterCallbackDisabled);
+	
+	if (shouldCallBack && ![self.currentResults isEqualToArray:results]) {
+//		NSIndexSet *inserts = [self processInsertedResults:results];
+//		NSIndexSet *removes = [self processRemovedResults:results];
+//		
+//		[self setCurrentResults:results];
+//		[self sendDelegateCallbackWithInserts:inserts removes:removes];
 	}
 }
 
+- (void)sendDelegateCallbackWithInserts:(NSIndexSet *)inserts removes:(NSIndexSet *)removes {
+	
+	if ([inserts count] || [removes count]) {
+		if (self.callbackMask | CDKFilterCallbackWillChange) {
+			[self.delegate controllerWillChangeResults:self];
+		}
+		if (self.callbackMask | CDKFilterCallbackInsertResult) {
+			
+		}
+	}
+}
+
+//- (NSIndexSet *)processInsertedResults:(NSArray *)results {
+//	if (self.currentResults && (self.callbackMask & CDKFilterCallbackInsertResult)) {
+////		return [results ]
+//		
+//		[results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//			if ([self.currentResults indexOfObject:obj] == NSNotFound) {
+//				[self.delegate controller:self didInsertObject:obj atIndex:idx];
+//			}
+//		}];
+//	}
+//	return nil;
+//}
+//
+//- (NSIndexSet *)processRemovedResults:(NSArray *)results {
+//	if (self.callbackMask & CDKFilterCallbackRemoveResult) {
+//		[self.currentResults enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//			if ([results indexOfObject:obj] == NSNotFound) {
+//				[self.delegate controller:self didRemoveObjectAtIndex:idx];
+//			}
+//		}];
+//	}
+//}
+
 - (void)resetFilteredObjectsCache:(NSNotification *)notification {
-	[self.filteredObjectsCache removeAllObjects];
+	[self.resultsCache removeAllObjects];
 	[self filterUsingPredicate:self.currentFilter finished:nil];
 }
 

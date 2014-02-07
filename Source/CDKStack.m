@@ -10,7 +10,7 @@
 #import "NSManagedObjectContext+CoreDataKit.h"
 
 
-NSString * const CDKSQLiteExtension	=	@"sqlite";
+NSString *const CDKSQLiteExtension	=	@"sqlite";
 
 
 @implementation CDKStack

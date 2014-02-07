@@ -9,7 +9,7 @@
 @import CoreData;
 
 
-extern NSString * const CDKObjectIDKey;
+extern NSString *const CDKObjectIDKey;
 
 
 @interface NSExpressionDescription (CoreDataKit)

@@ -58,6 +58,10 @@
 		BD62A35F184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD62A35B184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m */; };
 		BDC865C41834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */; };
 		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
+		BDED885A18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDED885B18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDED885C18B7B8A7000CC59B /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED885918B7B8A7000CC59B /* NSCoder+CoreDataKit.m */; };
+		BDED885D18B7B8A7000CC59B /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED885918B7B8A7000CC59B /* NSCoder+CoreDataKit.m */; };
 		BDFCC841185B75DE0096CF7D /* CDKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFCC83F185B75DE0096CF7D /* CDKObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFCC842185B75DE0096CF7D /* CDKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFCC840185B75DE0096CF7D /* CDKObserver.m */; };
 		BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFCC83F185B75DE0096CF7D /* CDKObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +120,8 @@
 		BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDED885918B7B8A7000CC59B /* NSCoder+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDFCC83F185B75DE0096CF7D /* CDKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKObserver.h; sourceTree = "<group>"; };
 		BDFCC840185B75DE0096CF7D /* CDKObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,16 +268,18 @@
 		BDED2DE3181944BA00F9A15B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BD07DF3F182C635200903342 /* NSPersistentStore+CoreDataKit.h */,
-				BD07DF40182C635200903342 /* NSPersistentStore+CoreDataKit.m */,
+				BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */,
+				BDED885918B7B8A7000CC59B /* NSCoder+CoreDataKit.m */,
 				BD62A35A184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h */,
 				BD62A35B184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m */,
-				BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */,
-				BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */,
 				BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */,
 				BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */,
+				BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */,
+				BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */,
 				BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */,
 				BD07DF3D182C5A6300903342 /* NSManagedObject+CoreDataKit.m */,
+				BD07DF3F182C635200903342 /* NSPersistentStore+CoreDataKit.h */,
+				BD07DF40182C635200903342 /* NSPersistentStore+CoreDataKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -290,6 +298,7 @@
 				BD62A343184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
 				BD62A356184DE2E600A21125 /* CDKAggregationObserver.h in Headers */,
 				BD10D9991836F0C6000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */,
+				BDED885A18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */,
 				BD62A35C184DF82100A21125 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
 				BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */,
@@ -302,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9D01836F3FD000FDED1 /* CoreDataKit.h in Headers */,
+				BDED885B18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */,
 				BD10D9D11836F3FD000FDED1 /* CDKStack.h in Headers */,
 				BDFCC843185BDA510096CF7D /* CDKObserver.h in Headers */,
 				BD62A344184D38D700A21125 /* CDKAbstractObserver.h in Headers */,
@@ -438,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9C71836F289000FDED1 /* CDKStack.m in Sources */,
+				BDED885D18B7B8A7000CC59B /* NSCoder+CoreDataKit.m in Sources */,
 				BD10D9C81836F28C000FDED1 /* NSPersistentStore+CoreDataKit.m in Sources */,
 				BD62A346184D38D700A21125 /* CDKAbstractObserver.m in Sources */,
 				BD10D9C91836F28F000FDED1 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
@@ -469,6 +480,7 @@
 				BD62A35E184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BD2926AD18790FD700CD136D /* CDKFilterController.m in Sources */,
 				BDFCC842185B75DE0096CF7D /* CDKObserver.m in Sources */,
+				BDED885C18B7B8A7000CC59B /* NSCoder+CoreDataKit.m in Sources */,
 				BD57112D177B931900565726 /* CDKStack.m in Sources */,
 				BD07DF41182C635200903342 /* NSPersistentStore+CoreDataKit.m in Sources */,
 				BD62A345184D38D700A21125 /* CDKAbstractObserver.m in Sources */,

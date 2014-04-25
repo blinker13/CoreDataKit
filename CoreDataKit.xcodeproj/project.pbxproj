@@ -18,7 +18,6 @@
 		BD10D99A1836F0C6000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D99B1836F0C6000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D99D1836F0C6000FDED1 /* NSFetchedResultsController+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD10D9B41836F18F000FDED1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
 		BD10D9B81836F18F000FDED1 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */; };
 		BD10D9C71836F289000FDED1 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD10D9C81836F28C000FDED1 /* NSPersistentStore+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD07DF40182C635200903342 /* NSPersistentStore+CoreDataKit.m */; };
@@ -33,15 +32,10 @@
 		BD10D9D21836F3FD000FDED1 /* NSPersistentStore+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3F182C635200903342 /* NSPersistentStore+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D9D31836F3FD000FDED1 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D9D41836F3FD000FDED1 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D61836F41A000FDED1 /* Foundation.framework */; };
-		BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD10D9D81836F428000FDED1 /* CoreData.framework */; };
 		BD2926AB18790FD700CD136D /* CDKFilterController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2926A918790FD700CD136D /* CDKFilterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD2926AD18790FD700CD136D /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKFilterController.m */; };
 		BD2926AE18790FD700CD136D /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2926AA18790FD700CD136D /* CDKFilterController.m */; };
-		BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710FC177B924D00565726 /* Foundation.framework */; };
-		BD57110B177B924D00565726 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD57110A177B924D00565726 /* XCTest.framework */; };
 		BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5710F9177B924D00565726 /* libCoreDataKit.a */; };
-		BD571123177B929000565726 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD571122177B929000565726 /* CoreData.framework */; };
 		BD571129177B92C800565726 /* CoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CoreDataKitTests.m */; };
 		BD57112D177B931900565726 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57112C177B931900565726 /* CDKStack.m */; };
 		BD62A343184D38D700A21125 /* CDKAbstractObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD62A341184D38D700A21125 /* CDKAbstractObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,15 +90,10 @@
 		BD10D9911836CA31000FDED1 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		BD10D9A21836F18F000FDED1 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD10D9D61836F41A000FDED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BD10D9D81836F428000FDED1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		BD2926A918790FD700CD136D /* CDKFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKFilterController.h; sourceTree = "<group>"; };
 		BD2926AA18790FD700CD136D /* CDKFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKFilterController.m; sourceTree = "<group>"; };
 		BD5710F9177B924D00565726 /* libCoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD5710FC177B924D00565726 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD571109177B924D00565726 /* CoreDataKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD57110A177B924D00565726 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BD571122177B929000565726 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD571125177B92C500565726 /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
 		BD571127177B92C500565726 /* CoreDataKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataKitTests-Info.plist"; sourceTree = "<group>"; };
 		BD571128177B92C500565726 /* CoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataKitTests.m; sourceTree = "<group>"; };
@@ -131,8 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD10D9D91836F428000FDED1 /* CoreData.framework in Frameworks */,
-				BD10D9D71836F41A000FDED1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9B81836F18F000FDED1 /* libCoreDataKit.a in Frameworks */,
-				BD10D9B41836F18F000FDED1 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD5710FD177B924D00565726 /* Foundation.framework in Frameworks */,
-				BD571123177B929000565726 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD57110B177B924D00565726 /* XCTest.framework in Frameworks */,
 				BD571111177B924D00565726 /* libCoreDataKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +174,6 @@
 			children = (
 				BD571124177B92C500565726 /* Source */,
 				BD571126177B92C500565726 /* Tests */,
-				BD5710FB177B924D00565726 /* Frameworks */,
 				BD5710FA177B924D00565726 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,18 +187,6 @@
 				BD10D9B31836F18F000FDED1 /* CoreDataKit.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BD5710FB177B924D00565726 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BD10D9D61836F41A000FDED1 /* Foundation.framework */,
-				BD5710FC177B924D00565726 /* Foundation.framework */,
-				BD571122177B929000565726 /* CoreData.framework */,
-				BD10D9D81836F428000FDED1 /* CoreData.framework */,
-				BD57110A177B924D00565726 /* XCTest.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BD571124177B92C500565726 /* Source */ = {

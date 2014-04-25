@@ -9,16 +9,6 @@
 #import "CDKObserver.h"
 
 
-@interface CDKObserver ()
-
-@property (nonatomic) BOOL	shouldDelegateInserts;
-@property (nonatomic) BOOL	shouldDelegateUpdates;
-@property (nonatomic) BOOL	shouldDelegateDeletes;
-
-@end
-
-
-#pragma mark -
 @implementation CDKObserver
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context {
@@ -45,15 +35,6 @@
 
 #pragma mark -
 
-- (void)setDelegate:(id<CDKObserverDelegate>)delegate {
-	if (delegate != self.delegate) {
-		[self setShouldDelegateInserts:[delegate respondsToSelector:@selector(observer:didObserveInsert:)]];
-		[self setShouldDelegateUpdates:[delegate respondsToSelector:@selector(observer:didObserveUpdate:)]];
-		[self setShouldDelegateDeletes:[delegate respondsToSelector:@selector(observer:didObserveDelete:)]];
-		_delegate = delegate;
-	}
-}
-
 - (void)setShouldIncludePendingChanges:(BOOL)shouldIncludePendingChanges {
 	if (shouldIncludePendingChanges != self.shouldIncludePendingChanges) {
 		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
@@ -74,10 +55,30 @@
 
 - (void)processChangeNotification:(NSNotification *)notification {
 	NSDictionary *info = [notification userInfo];
-	
-	if (self.shouldDelegateInserts) [self.delegate observer:self didObserveInsert:[info objectForKey:NSInsertedObjectsKey]];
-	if (self.shouldDelegateUpdates) [self.delegate observer:self didObserveUpdate:[info objectForKey:NSUpdatedObjectsKey]];
-	if (self.shouldDelegateDeletes) [self.delegate observer:self didObserveDelete:[info objectForKey:NSDeletedObjectsKey]];
+	[self delegateInsertedObjects:info];
+	[self delegateUpdatedObjects:info];
+	[self delegateDeletedObjects:info];
+}
+
+- (void)delegateInsertedObjects:(NSDictionary *)userInfo {
+	if ([self.delegate respondsToSelector:@selector(observer:didObserveInsert:)]) {
+		NSSet *objects = [userInfo objectForKey:NSInsertedObjectsKey];
+		[self.delegate observer:self didObserveInsert:objects];
+	}
+}
+
+- (void)delegateUpdatedObjects:(NSDictionary *)userInfo {
+	if ([self.delegate respondsToSelector:@selector(observer:didObserveInsert:)]) {
+		NSSet *objects = [userInfo objectForKey:NSUpdatedObjectsKey];
+		[self.delegate observer:self didObserveUpdate:objects];
+	}
+}
+
+- (void)delegateDeletedObjects:(NSDictionary *)userInfo {
+	if ([self.delegate respondsToSelector:@selector(observer:didObserveInsert:)]) {
+		NSSet *objects = [userInfo objectForKey:NSDeletedObjectsKey];
+		[self.delegate observer:self didObserveDelete:objects];
+	}
 }
 
 @end

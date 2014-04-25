@@ -87,6 +87,7 @@ typedef NS_OPTIONS(NSUInteger, CDKFilterCallbackMask) {
 		
 		NSArray *results = [self filteredObjectsUsingPredicate:predicate];
 //		[self processSearchResults:results];
+		[self setCurrentResults:results];
 		
 		if (handler) {
 			handler(results);
@@ -94,7 +95,7 @@ typedef NS_OPTIONS(NSUInteger, CDKFilterCallbackMask) {
 	}];
 }
 
-- (NSUInteger)numberOfObjects {
+- (NSUInteger)numberOfResults {
 	return [self.currentResults count];
 }
 
@@ -141,7 +142,7 @@ typedef NS_OPTIONS(NSUInteger, CDKFilterCallbackMask) {
 //		NSIndexSet *inserts = [self processInsertedResults:results];
 //		NSIndexSet *removes = [self processRemovedResults:results];
 //		
-//		[self setCurrentResults:results];
+		[self setCurrentResults:results];
 //		[self sendDelegateCallbackWithInserts:inserts removes:removes];
 	}
 }

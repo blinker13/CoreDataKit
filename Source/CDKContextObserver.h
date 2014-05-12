@@ -1,5 +1,5 @@
 //
-//  CDKObserver.h
+//  CDKContextObserver.h
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 13/12/13.
@@ -8,20 +8,20 @@
 
 @import CoreData;
 
-@class CDKObserver;
+@class CDKContextObserver;
 
 
 @protocol CDKObserverDelegate <NSObject>
 
-- (void)observer:(CDKObserver *)observer didObserveInsert:(NSSet *)insertedObjects;
-- (void)observer:(CDKObserver *)observer didObserveUpdate:(NSSet *)insertedObjects;
-- (void)observer:(CDKObserver *)observer didObserveDelete:(NSSet *)insertedObjects;
+- (void)observer:(CDKContextObserver *)observer didObserveInsert:(NSSet *)insertedObjects;
+- (void)observer:(CDKContextObserver *)observer didObserveUpdate:(NSSet *)insertedObjects;
+- (void)observer:(CDKContextObserver *)observer didObserveDelete:(NSSet *)insertedObjects;
 
 @end
 
 
 
-@interface CDKObserver : NSObject
+@interface CDKContextObserver : NSObject
 
 @property (nonatomic, weak) id<CDKObserverDelegate>		delegate;
 @property (nonatomic, readonly) NSManagedObjectContext	*context;

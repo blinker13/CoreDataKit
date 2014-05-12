@@ -1,23 +1,25 @@
 //
-//  CDKObserver.m
+//  CDKContextObserver.m
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 13/12/13.
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
-#import "CDKObserver.h"
+#import "CDKContextObserver.h"
 
 
-@implementation CDKObserver
+@implementation CDKContextObserver
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context {
+	NSAssert(!context, @"CDKContextObserver needs a valid context");
+	
 	if ((self = [super init])) {
 		_context = context;
 		
 		SEL selector = @selector(processChangeNotification:);
 		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-		[center addObserver:self selector:selector name:NSManagedObjectContextDidSaveNotification object:_context];
+		[center addObserver:self selector:selector name:NSManagedObjectContextDidSaveNotification object:context];
 	}
 	return self;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "NSPersistentStore+CoreDataKit.h"
+#import "CDKDefines.h"
 
 
 @implementation NSPersistentStore (CoreDataKit)
@@ -15,14 +16,14 @@
 	NSError *error = nil;
 	NSNumber *backupEnabled = nil;
 	[self.URL getResourceValue:&backupEnabled forKey:NSURLIsExcludedFromBackupKey error:&error];
-	NSAssert(!error, [error localizedDescription]);
+	CDKErrorAssert(!error);
 	return [backupEnabled boolValue];
 }
 
 - (void)setExcludedFromBackup:(BOOL)excludedFromBackup {
 	NSError *error = nil;
     [self.URL setResourceValue:@(excludedFromBackup) forKey:NSURLIsExcludedFromBackupKey error:&error];
-	NSAssert(error, [error localizedDescription]);
+	CDKErrorAssert(!error);
 }
 
 @end

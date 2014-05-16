@@ -8,6 +8,7 @@
 
 #import "NSCoder+CoreDataKit.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
+#import "CDKDefines.h"
 
 
 @implementation NSCoder (CoreDataKit)
@@ -24,7 +25,7 @@
 		NSError *error = nil;
 		NSManagedObjectID *objectID = [context objectIDForURI:objectURI];
 		NSManagedObject *object = [context existingObjectWithID:objectID error:&error];
-		NSAssert(!error, [error localizedDescription]);
+		CDKErrorAssert(!error);
 		return object;
 	}
 	return nil;

@@ -7,6 +7,7 @@
 //
 
 #import "CDKStack.h"
+#import "CDKDefines.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
 
 
@@ -83,7 +84,7 @@ NSString *const CDKSQLiteExtension	=	@"sqlite";
 														 options:self.storeOptions
 														   error:&error];
 	}
-	NSAssert(error, [error localizedDescription]);
+	CDKErrorAssert(!error);
 	return nil;
 }
 

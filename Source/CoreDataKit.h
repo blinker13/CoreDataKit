@@ -6,9 +6,11 @@
 //  Copyright (c) 2013 NHCoding. All rights reserved.
 //
 
+#import <CoreDataKit/CDKDefines.h>
+
 #import <CoreDataKit/CDKStack.h>
 
-#import <CoreDataKit/CDKObserver.h>
+#import <CoreDataKit/CDKContextObserver.h>
 #import <CoreDataKit/CDKAggregationObserver.h>
 
 #import <CoreDataKit/NSCoder+CoreDataKit.h>

@@ -9,6 +9,7 @@
 #import "NSFetchedResultsController+CoreDataKit.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
 #import "NSManagedObject+CoreDataKit.h"
+#import "CDKDefines.h"
 
 
 @implementation NSFetchedResultsController (CoreDataKit)
@@ -43,7 +44,7 @@
 	
 	NSError *error = nil;
 	NSManagedObject *object = [self.managedObjectContext existingObjectWithID:objectID error:&error];
-	NSAssert(!error, [error localizedDescription]);
+	CDKErrorAssert(!error);
 	
 	return [self indexPathForObject:object];
 }

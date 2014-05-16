@@ -51,6 +51,8 @@
 		BD62A35E184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD62A35B184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m */; };
 		BD62A35F184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD62A35B184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m */; };
 		BDC865C41834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */; };
+		BDD6526F19265EDA00E0CB32 /* CDKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD6526E19265EB200E0CB32 /* CDKDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD6527019265EE200E0CB32 /* CDKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD6526E19265EB200E0CB32 /* CDKDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDED2DE91819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 		BDED885A18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDED885B18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +109,7 @@
 		BD62A35B184DF82100A21125 /* NSExpressionDescription+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDC865C21834347500EFE91E /* NSFetchedResultsController+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDC865C31834347500EFE91E /* NSFetchedResultsController+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDD6526E19265EB200E0CB32 /* CDKDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKDefines.h; sourceTree = "<group>"; };
 		BDED2DE71819459300F9A15B /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDED885818B7B8A7000CC59B /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BD571125177B92C500565726 /* CoreDataKit.h */,
+				BDD6526E19265EB200E0CB32 /* CDKDefines.h */,
 				BDA9BA5218874F2B00AFE5DA /* Stack */,
 				BD2926A818790F9300CD136D /* Filter */,
 				BD62A340184D38A500A21125 /* Observer */,
@@ -262,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9971836F0C6000FDED1 /* CoreDataKit.h in Headers */,
+				BDD6526F19265EDA00E0CB32 /* CDKDefines.h in Headers */,
 				BD10D9981836F0C6000FDED1 /* CDKStack.h in Headers */,
 				BD2926AB18790FD700CD136D /* CDKFilterController.h in Headers */,
 				BDFCC841185B75DE0096CF7D /* CDKContextObserver.h in Headers */,
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD10D9D01836F3FD000FDED1 /* CoreDataKit.h in Headers */,
+				BDD6527019265EE200E0CB32 /* CDKDefines.h in Headers */,
 				BDED885B18B7B8A7000CC59B /* NSCoder+CoreDataKit.h in Headers */,
 				BD10D9D11836F3FD000FDED1 /* CDKStack.h in Headers */,
 				BDFCC843185BDA510096CF7D /* CDKContextObserver.h in Headers */,

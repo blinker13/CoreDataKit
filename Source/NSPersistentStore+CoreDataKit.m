@@ -16,14 +16,14 @@
 	NSError *error = nil;
 	NSNumber *backupEnabled = nil;
 	[self.URL getResourceValue:&backupEnabled forKey:NSURLIsExcludedFromBackupKey error:&error];
-	CDKErrorAssert(!error);
+	CDKAssertError(error);
 	return [backupEnabled boolValue];
 }
 
 - (void)setExcludedFromBackup:(BOOL)excludedFromBackup {
 	NSError *error = nil;
     [self.URL setResourceValue:@(excludedFromBackup) forKey:NSURLIsExcludedFromBackupKey error:&error];
-	CDKErrorAssert(!error);
+	CDKAssertError(error);
 }
 
 @end

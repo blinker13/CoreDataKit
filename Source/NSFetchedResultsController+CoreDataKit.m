@@ -44,7 +44,7 @@
 	
 	NSError *error = nil;
 	NSManagedObject *object = [self.managedObjectContext existingObjectWithID:objectID error:&error];
-	CDKErrorAssert(!error);
+	CDKAssertError(error);
 	
 	return [self indexPathForObject:object];
 }

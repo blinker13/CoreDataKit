@@ -9,20 +9,15 @@
 @import CoreData;
 
 
-#define CDKDefaultStoreName()	([[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleExecutableKey])
-
-
 @interface CDKStack : NSObject
 
+@property (nonatomic, readonly) NSManagedObjectModel			*model;
 @property (nonatomic, readonly) NSManagedObjectContext			*mainContext;
-@property (nonatomic, readonly) NSManagedObjectModel			*objectModel;
 @property (nonatomic, readonly) NSPersistentStoreCoordinator	*storeCoordinator;
 @property (nonatomic, readonly) NSPersistentStore				*store;
 
-@property (nonatomic, readonly) NSString		*storeConfiguration;
-@property (nonatomic, readonly) NSDictionary	*storeOptions;
-@property (nonatomic, readonly) NSString		*storeName;
-@property (nonatomic, readonly) NSURL			*storeURL;
+@property (nonatomic, readonly) NSString		*configuration;
+@property (nonatomic, readonly) NSDictionary	*options;
 
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model storeName:(NSString *)name;

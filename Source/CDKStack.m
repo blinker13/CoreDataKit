@@ -9,9 +9,7 @@
 #import "CDKStack.h"
 #import "CDKDefines.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
-
-
-NSString *const CDKSQLiteExtension	=	@"sqlite";
+#import "NSURL+CoreDataKit.h"
 
 
 @implementation CDKStack
@@ -21,16 +19,14 @@ NSString *const CDKSQLiteExtension	=	@"sqlite";
 		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
 		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 		[_mainContext setPersistentStoreCoordinator:_storeCoordinator];
-		_storeName = name ?: CDKDefaultStoreName();
-		_objectModel = model;
-		
-		[self createStore];
+		_store = [self loadStoreWithName:name];
+		_model = model;
 	}
 	return self;
 }
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
-	return [self initWithModel:model storeName:CDKDefaultStoreName()];
+	return [self initWithModel:model storeName:nil];
 }
 
 - (instancetype)init {
@@ -41,51 +37,43 @@ NSString *const CDKSQLiteExtension	=	@"sqlite";
 
 #pragma mark -
 
-- (NSString *)storeConfiguration {
+- (NSString *)configuration {
 	return nil;
 }
 
-- (NSURL *)storeURL {
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
-	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
-	NSURL *directoryURL = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
-	NSURL *fileURL = [directoryURL URLByAppendingPathComponent:self.storeName isDirectory:NO];
-	return [fileURL URLByAppendingPathExtension:CDKSQLiteExtension];
+- (NSDictionary *)options {
+	return nil;
 }
 
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
-	if (block) {
-		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+	
+	[context performBlock:^{
+		[context setUndoManager:nil];
+		[context setPersistentStoreCoordinator:self.storeCoordinator];
+		[context startMergingSaveNotificationsIntoContext:self.mainContext];
 		
-		[context performBlock:^{
-			[context setUndoManager:nil];
-			[context setPersistentStoreCoordinator:self.storeCoordinator];
-			[context startMergingSaveNotificationsIntoContext:self.mainContext];
-			block(context);
-			[context stopMergingSaveNotificationsIntoContext:self.mainContext];
-		}];
-	}
+		block(context);
+		
+		[context stopMergingSaveNotificationsIntoContext:self.mainContext];
+	}];
 }
 
 
 #pragma mark - private methods
 
-- (NSPersistentStore *)createStore {
-	NSURL *storeURL = [self storeURL];
+- (NSPersistentStore *)loadStoreWithName:(NSString *)name {
+	NSURL *storeURL = [NSURL defaultStoreURLWithName:name];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSURL *directoryURL = [storeURL URLByDeletingLastPathComponent];
-	
+	NSPersistentStore *store = nil;
 	NSError *error = nil;
+	
 	if ([fileManager createDirectoryAtURL:directoryURL withIntermediateDirectories:YES attributes:nil error:&error]) {
-		return [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-												   configuration:self.storeConfiguration
-															 URL:storeURL
-														 options:self.storeOptions
-														   error:&error];
+		store = [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:self.configuration URL:storeURL options:self.options error:&error];
 	}
-	CDKErrorAssert(!error);
-	return nil;
+	CDKAssertError(error);
+	return store;
 }
 
 @end

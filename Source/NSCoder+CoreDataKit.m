@@ -25,7 +25,7 @@
 		NSError *error = nil;
 		NSManagedObjectID *objectID = [context objectIDForURI:objectURI];
 		NSManagedObject *object = [context existingObjectWithID:objectID error:&error];
-		CDKErrorAssert(!error);
+		CDKAssertError(error);
 		return object;
 	}
 	return nil;

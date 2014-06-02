@@ -12,8 +12,8 @@
 @interface NSURL (CoreDataKit)
 
 + (instancetype)defaultStoreURL;
-+ (instancetype)URLWithStoreName:(NSString *)name;
++ (instancetype)defaultStoreURLWithName:(NSString *)name;
 
-- (instancetype)URLByAppendingStoreName:(NSString *)name;
+- (instancetype)storeURLByAppendingName:(NSString *)name;
 
 @end

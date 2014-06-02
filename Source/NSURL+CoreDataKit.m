@@ -18,18 +18,18 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 	NSBundle *bundle = [NSBundle mainBundle];
 	NSDictionary *infos = [bundle infoDictionary];
 	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-	return [self URLWithStoreName:name];
+	return [self defaultStoreURLWithName:name];
 }
 
-+ (instancetype)URLWithStoreName:(NSString *)name {
++ (instancetype)defaultStoreURLWithName:(NSString *)name {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
 	NSURL *directoryURL = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
-	return [directoryURL URLByAppendingStoreName:name];
+	return [directoryURL storeURLByAppendingName:name];
 }
 
-- (instancetype)URLByAppendingStoreName:(NSString *)name {
+- (instancetype)storeURLByAppendingName:(NSString *)name {
 	NSURL *url = [self URLByAppendingPathComponent:name isDirectory:NO];
 	return [url URLByAppendingPathExtension:CDKSQLiteExtension];
 }

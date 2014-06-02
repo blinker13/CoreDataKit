@@ -20,7 +20,6 @@
 @end
 
 
-
 @interface CDKContextObserver : NSObject
 
 @property (nonatomic, weak) id<CDKObserverDelegate>		delegate;

@@ -7,7 +7,6 @@
 //
 
 #import "NSURL+CoreDataKit.h"
-#import "CDKDefines.h"
 
 
 NSString * const CDKSQLiteExtension	=	@"sqlite";
@@ -15,14 +14,24 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 
 @implementation NSURL (CoreDataKit)
 
-+ (instancetype)defaultStoreURLWithName:(NSString *)name {
-	NSString *storeName = name ?: CDKDefaultStoreName();
++ (instancetype)defaultStoreURL {
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSDictionary *infos = [bundle infoDictionary];
+	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+	return [self URLWithStoreName:name];
+}
+
++ (instancetype)URLWithStoreName:(NSString *)name {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
 	NSURL *directoryURL = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
-	NSURL *fileURL = [directoryURL URLByAppendingPathComponent:storeName isDirectory:NO];
-	return [fileURL URLByAppendingPathExtension:CDKSQLiteExtension];
+	return [directoryURL URLByAppendingStoreName:name];
+}
+
+- (instancetype)URLByAppendingStoreName:(NSString *)name {
+	NSURL *url = [self URLByAppendingPathComponent:name isDirectory:NO];
+	return [url URLByAppendingPathExtension:CDKSQLiteExtension];
 }
 
 @end

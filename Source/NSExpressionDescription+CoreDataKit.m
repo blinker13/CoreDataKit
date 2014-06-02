@@ -28,7 +28,7 @@ NSString *const CDKObjectIDKey	=	@"objectID";
 	return description;
 }
 
-+ (instancetype)descriptionForObjectID {
++ (instancetype)objectIDDescription {
 	NSExpression *expression = [NSExpression expressionForEvaluatedObject];
 	
 	NSExpressionDescription *description = [[NSExpressionDescription alloc] init];

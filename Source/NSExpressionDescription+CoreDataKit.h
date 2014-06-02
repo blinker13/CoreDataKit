@@ -15,6 +15,6 @@ extern NSString *const CDKObjectIDKey;
 @interface NSExpressionDescription (CoreDataKit)
 
 + (instancetype)descriptionWithFunction:(NSString *)function forKey:(NSString *)key resultType:(NSAttributeType)type;
-+ (instancetype)descriptionForObjectID;
++ (instancetype)objectIDDescription;
 
 @end

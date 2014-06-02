@@ -14,19 +14,23 @@
 
 @implementation CDKStack
 
-- (instancetype)initWithModel:(NSManagedObjectModel *)model storeName:(NSString *)name {
+- (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url {
+	NSAssert(model, @"A stack must be initialized with a managed object model: %@", model);
+	NSAssert(model, @"A stack must be initialized with a valid URL: %@", url);
+	
 	if ((self = [super init])) {
 		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
 		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 		[_mainContext setPersistentStoreCoordinator:_storeCoordinator];
-		_store = [self loadStoreWithName:name];
+		_store = [self loadStoreWithURL:url];
 		_model = model;
 	}
 	return self;
 }
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
-	return [self initWithModel:model storeName:nil];
+	NSURL *url = [NSURL defaultStoreURL];
+	return [self initWithModel:model URL:url];
 }
 
 - (instancetype)init {
@@ -36,14 +40,6 @@
 
 
 #pragma mark -
-
-- (NSString *)configuration {
-	return nil;
-}
-
-- (NSDictionary *)options {
-	return nil;
-}
 
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
 	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
@@ -59,18 +55,25 @@
 	}];
 }
 
+- (NSString *)configuration {
+	return nil;
+}
+
+- (NSDictionary *)options {
+	return nil;
+}
+
 
 #pragma mark - private methods
 
-- (NSPersistentStore *)loadStoreWithName:(NSString *)name {
-	NSURL *storeURL = [NSURL defaultStoreURLWithName:name];
+- (NSPersistentStore *)loadStoreWithURL:(NSURL *)url {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSURL *directoryURL = [storeURL URLByDeletingLastPathComponent];
+	NSURL *directoryURL = [url URLByDeletingLastPathComponent];
 	NSPersistentStore *store = nil;
 	NSError *error = nil;
 	
 	if ([fileManager createDirectoryAtURL:directoryURL withIntermediateDirectories:YES attributes:nil error:&error]) {
-		store = [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:self.configuration URL:storeURL options:self.options error:&error];
+		store = [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:self.configuration URL:url options:self.options error:&error];
 	}
 	CDKAssertError(error);
 	return store;

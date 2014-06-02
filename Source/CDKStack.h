@@ -16,13 +16,13 @@
 @property (nonatomic, readonly) NSPersistentStoreCoordinator	*storeCoordinator;
 @property (nonatomic, readonly) NSPersistentStore				*store;
 
-@property (nonatomic, readonly) NSString		*configuration;
-@property (nonatomic, readonly) NSDictionary	*options;
 
-
-- (instancetype)initWithModel:(NSManagedObjectModel *)model storeName:(NSString *)name;
+- (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url;
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
 
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block;
+
+- (NSString *)configuration;
+- (NSDictionary *)options;
 
 @end

@@ -12,17 +12,21 @@
 
 @implementation NSPersistentStore (CoreDataKit)
 
-- (BOOL)isExcludedFromBackup {
+- (BOOL)shouldExcludeFromBackup {
 	NSError *error = nil;
 	NSNumber *backupEnabled = nil;
+	
 	[self.URL getResourceValue:&backupEnabled forKey:NSURLIsExcludedFromBackupKey error:&error];
 	CDKAssertError(error);
+	
 	return [backupEnabled boolValue];
 }
 
-- (void)setExcludedFromBackup:(BOOL)excludedFromBackup {
+- (void)setShouldExcludeFromBackup:(BOOL)shouldExcludeFromBackup {
+	NSNumber *value = @(shouldExcludeFromBackup);
 	NSError *error = nil;
-    [self.URL setResourceValue:@(excludedFromBackup) forKey:NSURLIsExcludedFromBackupKey error:&error];
+	
+    [self.URL setResourceValue:value forKey:NSURLIsExcludedFromBackupKey error:&error];
 	CDKAssertError(error);
 }
 

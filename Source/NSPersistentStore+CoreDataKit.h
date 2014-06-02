@@ -11,6 +11,6 @@
 
 @interface NSPersistentStore (CoreDataKit)
 
-@property (nonatomic, getter = isExcludedFromBackup) BOOL	excludedFromBackup;
+@property (nonatomic) BOOL	shouldExcludeFromBackup;
 
 @end

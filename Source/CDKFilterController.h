@@ -34,7 +34,7 @@
 @property (nonatomic) BOOL	shouldReturnAllWhenEmpty;
 
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
+- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request NS_DESIGNATED_INITIALIZER;
 - (void)filterUsingPredicate:(NSPredicate *)predicate finished:(void (^)(NSArray *objects))handler;
 
 - (id)resultAtIndex:(NSUInteger)index;

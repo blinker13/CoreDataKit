@@ -20,7 +20,7 @@ typedef void (^ CDKObservationHandler)(id result, NSError *error);
 @property (nonatomic, readonly) id	currentResult;
 
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request;
+- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request NS_DESIGNATED_INITIALIZER;
 
 - (void)startWithHandler:(CDKObservationHandler)handler;
 - (void)stop;

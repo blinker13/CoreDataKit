@@ -28,6 +28,6 @@
 @property (nonatomic) BOOL	shouldIncludePendingChanges;
 
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context;
+- (instancetype)initWithContext:(NSManagedObjectContext *)context NS_DESIGNATED_INITIALIZER;
 
 @end

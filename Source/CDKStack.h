@@ -17,7 +17,7 @@
 @property (nonatomic, readonly) NSPersistentStore				*store;
 
 
-- (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url;
+- (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithModel:(NSManagedObjectModel *)model;
 
 - (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block;

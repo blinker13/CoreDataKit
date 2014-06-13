@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
+@import CoreDataKit;
 @import XCTest;
 
 

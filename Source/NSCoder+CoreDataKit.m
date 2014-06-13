@@ -8,7 +8,7 @@
 
 #import "NSCoder+CoreDataKit.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
-#import "CDKDefines.h"
+#import "CDKAssert.h"
 
 
 @implementation NSCoder (CoreDataKit)

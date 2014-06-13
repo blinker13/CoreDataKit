@@ -1,5 +1,5 @@
 //
-//  CDKDefines.h
+//  CDKAssert.h
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 16/05/14.

@@ -7,7 +7,7 @@
 //
 
 #import "CDKStack.h"
-#import "CDKDefines.h"
+#import "CDKAssert.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
 #import "NSURL+CoreDataKit.h"
 

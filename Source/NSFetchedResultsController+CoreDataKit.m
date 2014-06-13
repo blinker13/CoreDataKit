@@ -9,7 +9,7 @@
 #import "NSFetchedResultsController+CoreDataKit.h"
 #import "NSManagedObjectContext+CoreDataKit.h"
 #import "NSManagedObject+CoreDataKit.h"
-#import "CDKDefines.h"
+#import "CDKAssert.h"
 
 
 @implementation NSFetchedResultsController (CoreDataKit)

@@ -9,6 +9,4 @@
 @import Foundation;
 
 
-#define CDKDefaultStoreName()	([[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleExecutableKey])
-
 #define CDKAssertError(e)	NSAssert(!(e), @"%@/n%@", error.localizedDescription, error.userInfo)

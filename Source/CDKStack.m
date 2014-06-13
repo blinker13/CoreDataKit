@@ -16,12 +16,12 @@
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url {
 	NSAssert(model, @"A stack must be initialized with a managed object model: %@", model);
-	NSAssert(model, @"A stack must be initialized with a valid URL: %@", url);
+	NSAssert(url, @"A stack must be initialized with a valid URL: %@", url);
 	
 	if ((self = [super init])) {
-		_storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+		_coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
 		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-		[_mainContext setPersistentStoreCoordinator:_storeCoordinator];
+		[_mainContext setPersistentStoreCoordinator:_coordinator];
 		_store = [self loadStoreWithURL:url];
 		_model = model;
 	}
@@ -41,26 +41,12 @@
 
 #pragma mark -
 
-- (void)performBlockInBackground:(void (^)(NSManagedObjectContext *context))block {
-	NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-	
-	[context performBlock:^{
-		[context setUndoManager:nil];
-		[context setPersistentStoreCoordinator:self.storeCoordinator];
-		[context startMergingSaveNotificationsIntoContext:self.mainContext];
-		
-		block(context);
-		
-		[context stopMergingSaveNotificationsIntoContext:self.mainContext];
-	}];
-}
-
 - (NSString *)configuration {
 	return nil;
 }
 
 - (NSDictionary *)options {
-	return nil;
+	return @{ NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES };
 }
 
 
@@ -73,7 +59,7 @@
 	NSError *error = nil;
 	
 	if ([fileManager createDirectoryAtURL:directoryURL withIntermediateDirectories:YES attributes:nil error:&error]) {
-		store = [self.storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:self.configuration URL:url options:self.options error:&error];
+		store = [self.coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:self.configuration URL:url options:self.options error:&error];
 	}
 	CDKAssertError(error);
 	return store;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD13D6E7194AED9600A1515A /* CoreDataKit iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD13D6DC194AED9600A1515A /* CoreDataKit iOS.framework */; };
+		BD13D6E7194AED9600A1515A /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD13D6DC194AED9600A1515A /* CoreDataKit.framework */; };
 		BD13D700194AEF6700A1515A /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD571125177B92C500565726 /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD13D701194AEF6700A1515A /* CDKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD6526E19265EB200E0CB32 /* CDKDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD13D702194AEF6700A1515A /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD57112B177B931900565726 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,7 +47,7 @@
 		BD10D98E1836CA31000FDED1 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 		BD10D9901836CA31000FDED1 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		BD10D9911836CA31000FDED1 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
-		BD13D6DC194AED9600A1515A /* CoreDataKit iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "CoreDataKit iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD13D6DC194AED9600A1515A /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD13D6E6194AED9600A1515A /* CoreDataKit Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataKit Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD13D6F6194AEDF000A1515A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD13D6F7194AEDF000A1515A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD13D6E7194AED9600A1515A /* CoreDataKit iOS.framework in Frameworks */,
+				BD13D6E7194AED9600A1515A /* CoreDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 		BD5710FA177B924D00565726 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD13D6DC194AED9600A1515A /* CoreDataKit iOS.framework */,
+				BD13D6DC194AED9600A1515A /* CoreDataKit.framework */,
 				BD13D6E6194AED9600A1515A /* CoreDataKit Tests iOS.xctest */,
 			);
 			name = Products;
@@ -242,7 +242,7 @@
 			);
 			name = "CoreDataKit iOS";
 			productName = "CoreDataKit (iOS)";
-			productReference = BD13D6DC194AED9600A1515A /* CoreDataKit iOS.framework */;
+			productReference = BD13D6DC194AED9600A1515A /* CoreDataKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD13D6E5194AED9600A1515A /* CoreDataKit Tests iOS */ = {
@@ -372,12 +372,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -398,12 +396,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -459,22 +455,22 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -503,10 +499,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -541,6 +539,7 @@
 				BD13D6F1194AED9600A1515A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD13D6F2194AED9600A1515A /* Build configuration list for PBXNativeTarget "CoreDataKit Tests iOS" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +548,7 @@
 				BD13D6F4194AED9600A1515A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD5710F4177B924D00565726 /* Build configuration list for PBXProject "CoreDataKit" */ = {
 			isa = XCConfigurationList;

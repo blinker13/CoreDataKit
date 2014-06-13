@@ -3,7 +3,7 @@
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 05/01/14.
-//  Copyright (c) 2014 NHCoding. All rights reserved.
+//  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
 #import "CDKFilterController.h"

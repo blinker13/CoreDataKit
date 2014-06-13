@@ -3,7 +3,7 @@
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/02/14.
-//  Copyright (c) 2014 NHCoding. All rights reserved.
+//  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
 @import CoreData;

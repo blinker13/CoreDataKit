@@ -3,7 +3,7 @@
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 03/12/13.
-//  Copyright (c) 2013 NHCoding. All rights reserved.
+//  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
 #import "NSExpressionDescription+CoreDataKit.h"

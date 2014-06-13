@@ -27,6 +27,9 @@
 		BD13D710194AF11000A1515A /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDED2DE81819459300F9A15B /* NSManagedObjectContext+CoreDataKit.m */; };
 		BD13D711194AF11000A1515A /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD07DF3D182C5A6300903342 /* NSManagedObject+CoreDataKit.m */; };
 		BD13D712194AF11000A1515A /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A58EE193499C100F684F9 /* NSURL+CoreDataKit.m */; };
+		BDCA8DBB194B5D58002E758A /* CoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571128177B92C500565726 /* CoreDataKitTests.m */; };
+		BDCA8DBC194B5D60002E758A /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0E871D17B2E083002E79E1 /* Test.xcdatamodeld */; };
+		BDCA8DBF194B5DDF002E758A /* CoreDataKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD13D6DC194AED9600A1515A /* CoreDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,27 @@
 			remoteGlobalIDString = BD13D6DB194AED9600A1515A;
 			remoteInfo = "CoreDataKit (iOS)";
 		};
+		BDCA8DC0194B5E16002E758A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD5710F1177B924D00565726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD13D6DB194AED9600A1515A;
+			remoteInfo = "CoreDataKit iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDCA8DBE194B5DCD002E758A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BDCA8DBF194B5DDF002E758A /* CoreDataKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BD07DF3C182C5A6300903342 /* NSManagedObject+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -251,12 +274,13 @@
 			buildPhases = (
 				BD13D6E2194AED9600A1515A /* Sources */,
 				BD13D6E3194AED9600A1515A /* Frameworks */,
-				BD13D6E4194AED9600A1515A /* Resources */,
+				BDCA8DBE194B5DCD002E758A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				BD13D6E9194AED9600A1515A /* PBXTargetDependency */,
+				BDCA8DC1194B5E16002E758A /* PBXTargetDependency */,
 			);
 			name = "CoreDataKit Tests iOS";
 			productName = "CoreDataKit (iOS)Tests";
@@ -307,13 +331,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD13D6E4194AED9600A1515A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -337,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCA8DBB194B5D58002E758A /* CoreDataKitTests.m in Sources */,
+				BDCA8DBC194B5D60002E758A /* Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +366,11 @@
 			isa = PBXTargetDependency;
 			target = BD13D6DB194AED9600A1515A /* CoreDataKit iOS */;
 			targetProxy = BD13D6E8194AED9600A1515A /* PBXContainerItemProxy */;
+		};
+		BDCA8DC1194B5E16002E758A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD13D6DB194AED9600A1515A /* CoreDataKit iOS */;
+			targetProxy = BDCA8DC0194B5E16002E758A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

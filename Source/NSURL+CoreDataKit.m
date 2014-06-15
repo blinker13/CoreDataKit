@@ -14,14 +14,7 @@ NSString * const CDKSQLiteExtension	=	@"sqlite";
 
 @implementation NSURL (CoreDataKit)
 
-+ (instancetype)defaultStoreURL {
-	NSBundle *bundle = [NSBundle mainBundle];
-	NSDictionary *infos = [bundle infoDictionary];
-	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-	return [self defaultStoreURLWithName:name];
-}
-
-+ (instancetype)defaultStoreURLWithName:(NSString *)name {
++ (instancetype)storeURLWithName:(NSString *)name {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];

@@ -8,29 +8,23 @@
 
 #import "CDKStack.h"
 #import "CDKAssert.h"
-#import "NSManagedObjectContext+CoreDataKit.h"
+
 #import "NSURL+CoreDataKit.h"
 
 
 @implementation CDKStack
 
-- (instancetype)initWithModel:(NSManagedObjectModel *)model URL:(NSURL *)url {
+- (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	NSAssert(model, @"A stack must be initialized with a managed object model: %@", model);
-	NSAssert(url, @"A stack must be initialized with a valid URL: %@", url);
 	
 	if ((self = [super init])) {
 		_coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
 		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 		[_mainContext setPersistentStoreCoordinator:_coordinator];
-		_store = [self loadStoreWithURL:url];
+		_store = [self loadStore];
 		_model = model;
 	}
 	return self;
-}
-
-- (instancetype)initWithModel:(NSManagedObjectModel *)model {
-	NSURL *url = [NSURL defaultStoreURL];
-	return [self initWithModel:model URL:url];
 }
 
 - (instancetype)init {
@@ -49,10 +43,18 @@
 	return @{ NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES };
 }
 
+- (NSURL *)URL {
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSDictionary *infos = [bundle infoDictionary];
+	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+	return [NSURL storeURLWithName:name];
+}
+
 
 #pragma mark - private methods
 
-- (NSPersistentStore *)loadStoreWithURL:(NSURL *)url {
+- (NSPersistentStore *)loadStore {
+	NSURL *url = [self URL];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSURL *directoryURL = [url URLByDeletingLastPathComponent];
 	NSPersistentStore *store = nil;

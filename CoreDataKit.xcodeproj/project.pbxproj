@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
 		BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BD080CC5194B7C560052F7BE /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9F194B7B190052F7BE /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,7 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				BD080CBD194B7B980052F7BE /* General */,
-				BD080CC4194B7C3C0052F7BE /* Classes */,
+				BD080CC4194B7C3C0052F7BE /* Stack */,
+				BD080D2A194B8B850052F7BE /* Controller */,
 				BD080CCB194B7C680052F7BE /* Categories */,
 			);
 			path = Source;
@@ -178,17 +179,13 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		BD080CC4194B7C3C0052F7BE /* Classes */ = {
+		BD080CC4194B7C3C0052F7BE /* Stack */ = {
 			isa = PBXGroup;
 			children = (
 				BD080C9F194B7B190052F7BE /* CDKStack.h */,
 				BD080CA0194B7B190052F7BE /* CDKStack.m */,
-				BD080C9D194B7B190052F7BE /* CDKFilterController.h */,
-				BD080C9E194B7B190052F7BE /* CDKFilterController.m */,
-				BD080C9B194B7B190052F7BE /* CDKContextObserver.h */,
-				BD080C9C194B7B190052F7BE /* CDKContextObserver.m */,
 			);
-			name = Classes;
+			name = Stack;
 			sourceTree = "<group>";
 		};
 		BD080CCB194B7C680052F7BE /* Categories */ = {
@@ -210,6 +207,17 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		BD080D2A194B8B850052F7BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD080C9D194B7B190052F7BE /* CDKFilterController.h */,
+				BD080C9E194B7B190052F7BE /* CDKFilterController.m */,
+				BD080C9B194B7B190052F7BE /* CDKContextObserver.h */,
+				BD080C9C194B7B190052F7BE /* CDKContextObserver.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -217,17 +225,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
-				BD080CD4194B7C820052F7BE /* NSManagedObject+CoreDataKit.h in Headers */,
-				BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */,
-				BD080CD6194B7C820052F7BE /* NSURL+CoreDataKit.h in Headers */,
 				BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */,
 				BD080CC5194B7C560052F7BE /* CDKStack.h in Headers */,
 				BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */,
+				BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */,
+				BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */,
+				BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BD080CD0194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.h in Headers */,
 				BD080CD2194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */,
+				BD080CD4194B7C820052F7BE /* NSManagedObject+CoreDataKit.h in Headers */,
+				BD080CD6194B7C820052F7BE /* NSURL+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

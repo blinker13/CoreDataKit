@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
+#import <CoreDataKit/CDKAssert.h>
+
 #import <CoreDataKit/CDKStack.h>
 #import <CoreDataKit/CDKContextObserver.h>
 

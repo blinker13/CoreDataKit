@@ -172,8 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				BD080CBD194B7B980052F7BE /* General */,
-				BD080CC4194B7C3C0052F7BE /* Stack */,
-				BD080D2A194B8B850052F7BE /* Controller */,
+				BD080CC4194B7C3C0052F7BE /* Classes */,
 				BD080CCB194B7C680052F7BE /* Categories */,
 			);
 			path = Source;
@@ -230,15 +229,19 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		BD080CC4194B7C3C0052F7BE /* Stack */ = {
+		BD080CC4194B7C3C0052F7BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				BD080C9F194B7B190052F7BE /* CDKStack.h */,
 				BD080CA0194B7B190052F7BE /* CDKStack.m */,
 				BDE1673E195CDC1200CAFC5F /* CDKStackComponents.h */,
 				BDE1673F195CDC1200CAFC5F /* CDKStackComponents.m */,
+				BD080C9B194B7B190052F7BE /* CDKContextObserver.h */,
+				BD080C9C194B7B190052F7BE /* CDKContextObserver.m */,
+				BD080C9D194B7B190052F7BE /* CDKFilterController.h */,
+				BD080C9E194B7B190052F7BE /* CDKFilterController.m */,
 			);
-			name = Stack;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		BD080CCB194B7C680052F7BE /* Categories */ = {
@@ -258,17 +261,6 @@
 				BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		BD080D2A194B8B850052F7BE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BD080C9D194B7B190052F7BE /* CDKFilterController.h */,
-				BD080C9E194B7B190052F7BE /* CDKFilterController.m */,
-				BD080C9B194B7B190052F7BE /* CDKContextObserver.h */,
-				BD080C9C194B7B190052F7BE /* CDKContextObserver.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

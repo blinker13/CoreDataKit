@@ -9,6 +9,7 @@
 #import <CoreDataKit/CDKAssert.h>
 
 #import <CoreDataKit/CDKStack.h>
+#import <CoreDataKit/CDKStackComponents.h>
 #import <CoreDataKit/CDKContextObserver.h>
 
 #import <CoreDataKit/NSCoder+CoreDataKit.h>

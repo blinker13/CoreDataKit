@@ -8,6 +8,8 @@
 
 @import CoreData;
 
+@class CDKStackComponents;
+
 
 @interface CDKStack : NSObject
 
@@ -16,11 +18,7 @@
 @property (nonatomic, readonly) NSPersistentStoreCoordinator	*coordinator;
 @property (nonatomic, readonly) NSPersistentStore				*store;
 
-@property (nonatomic, readonly) NSString		*configuration;
-@property (nonatomic, readonly) NSDictionary	*options;
-@property (nonatomic, readonly) NSURL			*URL;
 
-
-- (instancetype)initWithModel:(NSManagedObjectModel *)model NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithComponents:(CDKStackComponents *)components NS_DESIGNATED_INITIALIZER;
 
 @end

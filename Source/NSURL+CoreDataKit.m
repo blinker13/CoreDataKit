@@ -9,22 +9,22 @@
 #import "NSURL+CoreDataKit.h"
 
 
-NSString * const CDKSQLiteExtension	=	@"sqlite";
+NSString * const CDKStoreExtension	=	@"sqlite";
 
 
 @implementation NSURL (CoreDataKit)
 
-+ (instancetype)storeURLWithName:(NSString *)name {
++ (instancetype)URLWithStoreName:(NSString *)name {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 	NSArray *urls = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
 	NSURL *directoryURL = [[urls firstObject] URLByAppendingPathComponent:bundleIdentifier isDirectory:YES];
-	return [directoryURL storeURLByAppendingName:name];
+	return [directoryURL URLByAppendingStoreName:name];
 }
 
-- (instancetype)storeURLByAppendingName:(NSString *)name {
+- (instancetype)URLByAppendingStoreName:(NSString *)name {
 	NSURL *url = [self URLByAppendingPathComponent:name isDirectory:NO];
-	return [url URLByAppendingPathExtension:CDKSQLiteExtension];
+	return [url URLByAppendingPathExtension:CDKStoreExtension];
 }
 
 @end

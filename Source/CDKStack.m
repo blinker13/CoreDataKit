@@ -47,7 +47,7 @@
 	NSBundle *bundle = [NSBundle mainBundle];
 	NSDictionary *infos = [bundle infoDictionary];
 	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-	return [NSURL storeURLWithName:name];
+	return [NSURL URLWithStoreName:name];
 }
 
 

@@ -10,27 +10,30 @@
 #import "CDKAssert.h"
 #import "CDKStackComponents.h"
 
-#import "NSURL+CoreDataKit.h"
-
 
 @implementation CDKStack
 
-- (instancetype)initWithComponents:(CDKStackComponents *)components {
+- (instancetype)initWithModel:(NSManagedObjectModel *)model components:(CDKStackComponents *)components {
 	NSAssert(components, @"A stack must be initialized with valid components: %@", components);
 	
 	if ((self = [super init])) {
-		_model = [components model];
-		_coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
+		_coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
 		_mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 		[_mainContext setPersistentStoreCoordinator:_coordinator];
 		_store = [self loadStoreWithComponents:components];
+		_model = model;
 	}
 	return self;
 }
 
-- (instancetype)init {
+- (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	CDKStackComponents *components = [[CDKStackComponents alloc] init];
-	return [self initWithComponents:components];
+	return [self initWithModel:model components:components];
+}
+
+- (instancetype)init {
+	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
+	return [self initWithModel:model];
 }
 
 

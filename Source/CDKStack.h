@@ -19,6 +19,7 @@
 @property (nonatomic, readonly) NSPersistentStore				*store;
 
 
-- (instancetype)initWithComponents:(CDKStackComponents *)components NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithModel:(NSManagedObjectModel *)model components:(CDKStackComponents *)components NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithModel:(NSManagedObjectModel *)model;
 
 @end

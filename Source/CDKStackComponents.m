@@ -12,25 +12,23 @@
 
 @implementation CDKStackComponents
 
-- (instancetype)initWithModel:(NSManagedObjectModel *)model {
-	NSAssert(model, @"A stack must be initialized with a valid managed object model: %@", model);
+- (instancetype)initWithURL:(NSURL *)url {
+	NSAssert(url, @"A stack must be initialized with a valid URL: %@", url);
 	
 	if ((self = [super init])) {
-		NSBundle *bundle = [NSBundle mainBundle];
-		NSDictionary *infos = [bundle infoDictionary];
-		NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-		
-		_URL =  [NSURL URLWithStoreName:name];
 		_options = @{ NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES };
 		_configuration = nil;
-		_model = model;
+		_URL =  url;
 	}
 	return self;
 }
 
 - (instancetype)init {
-	NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
-	return [self initWithModel:model];
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSDictionary *infos = [bundle infoDictionary];
+	NSString *name = [infos objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+	NSURL *url =  [NSURL URLWithStoreName:name];
+	return [self initWithURL:url];
 }
 
 @end

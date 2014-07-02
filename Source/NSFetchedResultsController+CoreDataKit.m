@@ -69,17 +69,17 @@
 	}
 }
 
-- (BOOL)deleteObjectAtIndexPath:(NSIndexPath *)indexPath error:(NSError **)error {
+- (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath {
 	NSManagedObject *object = [self objectAtIndexPath:indexPath];
 	[self.managedObjectContext deleteObject:object];
-	return [self.managedObjectContext save:error];
 }
 
-- (BOOL)deleteObjectsAtIndexPaths:(NSArray *)indexPaths error:(NSError **)error {
-	for (NSManagedObject *object in [self objectsForIndexPaths:indexPaths]) {
+- (void)deleteObjectsAtIndexPaths:(NSArray *)indexPaths {
+	NSArray *objects = [self objectsForIndexPaths:indexPaths];
+	
+	for (NSManagedObject *object in objects) {
 		[self.managedObjectContext deleteObject:object];
 	}
-	return [self.managedObjectContext save:error];
 }
 
 @end

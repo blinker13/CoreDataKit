@@ -12,10 +12,8 @@
 		BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
 		BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
-		BD080CC5194B7C560052F7BE /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9F194B7B190052F7BE /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9D194B7B190052F7BE /* CDKFilterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9B194B7B190052F7BE /* CDKContextObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CC8194B7C5C0052F7BE /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA0194B7B190052F7BE /* CDKStack.m */; };
 		BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9E194B7B190052F7BE /* CDKFilterController.m */; };
 		BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9C194B7B190052F7BE /* CDKContextObserver.m */; };
 		BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,10 +28,10 @@
 		BD080CD5194B7C820052F7BE /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA9194B7B190052F7BE /* NSManagedObject+CoreDataKit.m */; };
 		BD080CD6194B7C820052F7BE /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CD7194B7C820052F7BE /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */; };
-		BDE16740195CDC1200CAFC5F /* CDKStackComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE1673E195CDC1200CAFC5F /* CDKStackComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDE16741195CDC1200CAFC5F /* CDKStackComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE1673E195CDC1200CAFC5F /* CDKStackComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDE16742195CDC1200CAFC5F /* CDKStackComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE1673F195CDC1200CAFC5F /* CDKStackComponents.m */; };
-		BDE16743195CDC1200CAFC5F /* CDKStackComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE1673F195CDC1200CAFC5F /* CDKStackComponents.m */; };
+		BD637408197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
+		BD637409197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
+		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
+		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
 		BDFD690A194DFB0400799C33 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BDFD690B194DFB0900799C33 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
@@ -49,8 +47,6 @@
 		BDFD6917194DFB6300799C33 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */; };
 		BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD6919194DFB7500799C33 /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD691A194DFB7500799C33 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9F194B7B190052F7BE /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD691B194DFB7500799C33 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA0194B7B190052F7BE /* CDKStack.m */; };
 		BDFD691E194DFB7500799C33 /* CDKContextObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9B194B7B190052F7BE /* CDKContextObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD691F194DFB7500799C33 /* CDKContextObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9C194B7B190052F7BE /* CDKContextObserver.m */; };
 /* End PBXBuildFile section */
@@ -80,8 +76,6 @@
 		BD080C9C194B7B190052F7BE /* CDKContextObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKContextObserver.m; sourceTree = "<group>"; };
 		BD080C9D194B7B190052F7BE /* CDKFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKFilterController.h; sourceTree = "<group>"; };
 		BD080C9E194B7B190052F7BE /* CDKFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKFilterController.m; sourceTree = "<group>"; };
-		BD080C9F194B7B190052F7BE /* CDKStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
-		BD080CA0194B7B190052F7BE /* CDKStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BD080CA1194B7B190052F7BE /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
 		BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
 		BD080CA3194B7B190052F7BE /* NSCoder+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+CoreDataKit.m"; sourceTree = "<group>"; };
@@ -107,8 +101,8 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDE1673E195CDC1200CAFC5F /* CDKStackComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStackComponents.h; sourceTree = "<group>"; };
-		BDE1673F195CDC1200CAFC5F /* CDKStackComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStackComponents.m; sourceTree = "<group>"; };
+		BD637407197CEB4900E639FC /* StackComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackComponents.swift; sourceTree = "<group>"; };
+		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,10 +226,8 @@
 		BD080CC4194B7C3C0052F7BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BD080C9F194B7B190052F7BE /* CDKStack.h */,
-				BD080CA0194B7B190052F7BE /* CDKStack.m */,
-				BDE1673E195CDC1200CAFC5F /* CDKStackComponents.h */,
-				BDE1673F195CDC1200CAFC5F /* CDKStackComponents.m */,
+				BD63740A197CED8900E639FC /* Stack.swift */,
+				BD637407197CEB4900E639FC /* StackComponents.swift */,
 				BD080C9B194B7B190052F7BE /* CDKContextObserver.h */,
 				BD080C9C194B7B190052F7BE /* CDKContextObserver.m */,
 				BD080C9D194B7B190052F7BE /* CDKFilterController.h */,
@@ -272,9 +264,7 @@
 			files = (
 				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
 				BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */,
-				BD080CC5194B7C560052F7BE /* CDKStack.h in Headers */,
 				BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */,
-				BDE16740195CDC1200CAFC5F /* CDKStackComponents.h in Headers */,
 				BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */,
 				BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */,
 				BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */,
@@ -290,12 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFD690E194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BDFD691A194DFB7500799C33 /* CDKStack.h in Headers */,
 				BDFD6914194DFB6300799C33 /* NSManagedObject+CoreDataKit.h in Headers */,
 				BDFD6912194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
 				BDFD690C194DFB6300799C33 /* NSCoder+CoreDataKit.h in Headers */,
 				BDFD6919194DFB7500799C33 /* CDKAssert.h in Headers */,
-				BDE16741195CDC1200CAFC5F /* CDKStackComponents.h in Headers */,
 				BDFD6916194DFB6300799C33 /* NSURL+CoreDataKit.h in Headers */,
 				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
 				BDFD691E194DFB7500799C33 /* CDKContextObserver.h in Headers */,
@@ -459,12 +447,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD080CCD194B7C820052F7BE /* NSCoder+CoreDataKit.m in Sources */,
-				BDE16742195CDC1200CAFC5F /* CDKStackComponents.m in Sources */,
 				BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */,
 				BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */,
+				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
 				BD080CD5194B7C820052F7BE /* NSManagedObject+CoreDataKit.m in Sources */,
 				BD080CCF194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.m in Sources */,
-				BD080CC8194B7C5C0052F7BE /* CDKStack.m in Sources */,
+				BD637408197CEB4900E639FC /* StackComponents.swift in Sources */,
 				BD080CD3194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.m in Sources */,
 				BD080CD1194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.m in Sources */,
 				BD080CD7194B7C820052F7BE /* NSURL+CoreDataKit.m in Sources */,
@@ -484,13 +472,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD637409197CEB4900E639FC /* StackComponents.swift in Sources */,
 				BDFD690D194DFB6300799C33 /* NSCoder+CoreDataKit.m in Sources */,
 				BDFD690F194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BDFD6917194DFB6300799C33 /* NSURL+CoreDataKit.m in Sources */,
 				BDFD691F194DFB7500799C33 /* CDKContextObserver.m in Sources */,
 				BDFD6915194DFB6300799C33 /* NSManagedObject+CoreDataKit.m in Sources */,
-				BDE16743195CDC1200CAFC5F /* CDKStackComponents.m in Sources */,
-				BDFD691B194DFB7500799C33 /* CDKStack.m in Sources */,
+				BD63740C197CED8900E639FC /* Stack.swift in Sources */,
 				BDFD6913194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +595,7 @@
 		BD080C90194B79E30052F7BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -616,12 +605,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CoreDataKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BD080C91194B79E30052F7BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -669,6 +660,7 @@
 		BDFD6904194DFAD600799C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -687,12 +679,14 @@
 				PRODUCT_NAME = CoreDataKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BDFD6905194DFAD600799C33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;

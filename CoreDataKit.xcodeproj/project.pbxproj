@@ -16,8 +16,6 @@
 		BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9B194B7B190052F7BE /* CDKContextObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9E194B7B190052F7BE /* CDKFilterController.m */; };
 		BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9C194B7B190052F7BE /* CDKContextObserver.m */; };
-		BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CCD194B7C820052F7BE /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA3194B7B190052F7BE /* NSCoder+CoreDataKit.m */; };
 		BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CCF194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */; };
 		BD080CD0194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,11 +30,11 @@
 		BD637409197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
 		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
 		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
+		BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
+		BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
 		BDFD690A194DFB0400799C33 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BDFD690B194DFB0900799C33 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
-		BDFD690C194DFB6300799C33 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD690D194DFB6300799C33 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA3194B7B190052F7BE /* NSCoder+CoreDataKit.m */; };
 		BDFD690E194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD690F194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */; };
 		BDFD6912194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAA194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,8 +75,6 @@
 		BD080C9D194B7B190052F7BE /* CDKFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKFilterController.h; sourceTree = "<group>"; };
 		BD080C9E194B7B190052F7BE /* CDKFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKFilterController.m; sourceTree = "<group>"; };
 		BD080CA1194B7B190052F7BE /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
-		BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CA3194B7B190052F7BE /* NSCoder+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+CoreDataKit.m"; sourceTree = "<group>"; };
 		BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSExpressionDescription+CoreDataKit.h"; sourceTree = "<group>"; };
 		BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+CoreDataKit.m"; sourceTree = "<group>"; };
 		BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -103,6 +99,7 @@
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD637407197CEB4900E639FC /* StackComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackComponents.swift; sourceTree = "<group>"; };
 		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+CoreDataKit.swift"; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,7 +164,7 @@
 			children = (
 				BD080CBD194B7B980052F7BE /* General */,
 				BD080CC4194B7C3C0052F7BE /* Classes */,
-				BD080CCB194B7C680052F7BE /* Categories */,
+				BD080CCB194B7C680052F7BE /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -236,11 +233,10 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		BD080CCB194B7C680052F7BE /* Categories */ = {
+		BD080CCB194B7C680052F7BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BD080CA2194B7B190052F7BE /* NSCoder+CoreDataKit.h */,
-				BD080CA3194B7B190052F7BE /* NSCoder+CoreDataKit.m */,
+				BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */,
 				BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */,
 				BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */,
 				BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */,
@@ -252,7 +248,7 @@
 				BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */,
 				BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */,
 			);
-			name = Categories;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +262,6 @@
 				BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */,
 				BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */,
 				BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */,
-				BD080CCC194B7C820052F7BE /* NSCoder+CoreDataKit.h in Headers */,
 				BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BD080CD0194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.h in Headers */,
 				BD080CD2194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.h in Headers */,
@@ -282,7 +277,6 @@
 				BDFD690E194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BDFD6914194DFB6300799C33 /* NSManagedObject+CoreDataKit.h in Headers */,
 				BDFD6912194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BDFD690C194DFB6300799C33 /* NSCoder+CoreDataKit.h in Headers */,
 				BDFD6919194DFB7500799C33 /* CDKAssert.h in Headers */,
 				BDFD6916194DFB6300799C33 /* NSURL+CoreDataKit.h in Headers */,
 				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
@@ -446,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD080CCD194B7C820052F7BE /* NSCoder+CoreDataKit.m in Sources */,
 				BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */,
 				BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */,
 				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
@@ -455,6 +448,7 @@
 				BD637408197CEB4900E639FC /* StackComponents.swift in Sources */,
 				BD080CD3194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.m in Sources */,
 				BD080CD1194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.m in Sources */,
+				BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
 				BD080CD7194B7C820052F7BE /* NSURL+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD637409197CEB4900E639FC /* StackComponents.swift in Sources */,
-				BDFD690D194DFB6300799C33 /* NSCoder+CoreDataKit.m in Sources */,
+				BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
 				BDFD690F194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BDFD6917194DFB6300799C33 /* NSURL+CoreDataKit.m in Sources */,
 				BDFD691F194DFB7500799C33 /* CDKContextObserver.m in Sources */,

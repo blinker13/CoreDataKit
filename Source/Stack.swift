@@ -9,15 +9,15 @@
 import CoreData
 
 
-class Stack {
+public class Stack {
 
-	let objectModel:NSManagedObjectModel
-	let mainContext:NSManagedObjectContext
-	let coordinator:NSPersistentStoreCoordinator
-	let store:NSPersistentStore
+	public let objectModel:NSManagedObjectModel
+	public let mainContext:NSManagedObjectContext
+	public let coordinator:NSPersistentStoreCoordinator
+	public let store:NSPersistentStore
 	
 	
-	init(model:NSManagedObjectModel, components:StackComponents) {
+	public init(model:NSManagedObjectModel, components:StackComponents) {
 		coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
 		mainContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
 		mainContext.persistentStoreCoordinator = self.coordinator
@@ -35,12 +35,12 @@ class Stack {
 		store = aStore!
 	}
 	
-	convenience init(model:NSManagedObjectModel) {
+	public convenience init(model:NSManagedObjectModel) {
 		let components = StackComponents()
 		self.init(model:model, components:components)
 	}
 	
-	convenience init() {
+	public convenience init() {
 		let model = NSManagedObjectModel.mergedModelFromBundles(nil)
 		self.init(model: model)
 	}

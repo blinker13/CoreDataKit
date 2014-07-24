@@ -9,42 +9,31 @@
 /* Begin PBXBuildFile section */
 		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
 		BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9D194B7B190052F7BE /* CDKFilterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9B194B7B190052F7BE /* CDKContextObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9E194B7B190052F7BE /* CDKFilterController.m */; };
 		BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9C194B7B190052F7BE /* CDKContextObserver.m */; };
-		BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CCF194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */; };
-		BD080CD0194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CD1194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA7194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.m */; };
-		BD080CD2194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAA194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CD3194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAB194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.m */; };
-		BD080CD4194B7C820052F7BE /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA8194B7B190052F7BE /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CD5194B7C820052F7BE /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA9194B7B190052F7BE /* NSManagedObject+CoreDataKit.m */; };
-		BD080CD6194B7C820052F7BE /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CD7194B7C820052F7BE /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */; };
+		BD0AA8951980E52300445CCF /* NSFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8941980E52300445CCF /* NSFetchedResultsController.swift */; };
+		BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
+		BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
+		BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
+		BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
+		BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
+		BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
 		BD637408197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
 		BD637409197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
 		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
 		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
-		BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
-		BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
+		BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
+		BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
+		BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
+		BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
 		BDFD690A194DFB0400799C33 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BDFD690B194DFB0900799C33 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
-		BDFD690E194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD690F194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */; };
-		BDFD6912194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAA194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6913194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAB194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.m */; };
-		BDFD6914194DFB6300799C33 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA8194B7B190052F7BE /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6915194DFB6300799C33 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CA9194B7B190052F7BE /* NSManagedObject+CoreDataKit.m */; };
-		BDFD6916194DFB6300799C33 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6917194DFB6300799C33 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */; };
 		BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6919194DFB7500799C33 /* CDKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9A194B7B190052F7BE /* CDKAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD691E194DFB7500799C33 /* CDKContextObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080C9B194B7B190052F7BE /* CDKContextObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD691F194DFB7500799C33 /* CDKContextObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080C9C194B7B190052F7BE /* CDKContextObserver.m */; };
 /* End PBXBuildFile section */
@@ -69,22 +58,11 @@
 /* Begin PBXFileReference section */
 		BD080C79194B79E30052F7BE /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD080C84194B79E30052F7BE /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD080C9A194B7B190052F7BE /* CDKAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKAssert.h; sourceTree = "<group>"; };
 		BD080C9B194B7B190052F7BE /* CDKContextObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKContextObserver.h; sourceTree = "<group>"; };
 		BD080C9C194B7B190052F7BE /* CDKContextObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKContextObserver.m; sourceTree = "<group>"; };
 		BD080C9D194B7B190052F7BE /* CDKFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKFilterController.h; sourceTree = "<group>"; };
 		BD080C9E194B7B190052F7BE /* CDKFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKFilterController.m; sourceTree = "<group>"; };
 		BD080CA1194B7B190052F7BE /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
-		BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSExpressionDescription+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+CoreDataKit.m"; sourceTree = "<group>"; };
-		BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CA7194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+CoreDataKit.m"; sourceTree = "<group>"; };
-		BD080CA8194B7B190052F7BE /* NSManagedObject+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CA9194B7B190052F7BE /* NSManagedObject+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CoreDataKit.m"; sourceTree = "<group>"; };
-		BD080CAA194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CAB194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
-		BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreDataKit.h"; sourceTree = "<group>"; };
-		BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreDataKit.m"; sourceTree = "<group>"; };
 		BD080CAF194B7B190052F7BE /* Bar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		BD080CB0194B7B190052F7BE /* Bar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 		BD080CB1194B7B190052F7BE /* CDKStackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
@@ -97,9 +75,14 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0AA8941980E52300445CCF /* NSFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsController.swift; sourceTree = "<group>"; };
+		BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
+		BD2BE9321981AE1B001EB2CE /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
 		BD637407197CEB4900E639FC /* StackComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackComponents.swift; sourceTree = "<group>"; };
 		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+CoreDataKit.swift"; sourceTree = "<group>"; };
+		BD63740D197CF4A000E639FC /* NSCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
+		BD637410197CF81000E639FC /* NSExpressionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExpressionDescription.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,7 +145,7 @@
 		BD080C99194B7B190052F7BE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BD080CBD194B7B980052F7BE /* General */,
+				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
 				BD080CC4194B7C3C0052F7BE /* Classes */,
 				BD080CCB194B7C680052F7BE /* Extensions */,
 			);
@@ -189,15 +172,6 @@
 				BD080CBC194B7B4F0052F7BE /* Info.plist */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		BD080CBD194B7B980052F7BE /* General */ = {
-			isa = PBXGroup;
-			children = (
-				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
-				BD080C9A194B7B190052F7BE /* CDKAssert.h */,
-			);
-			name = General;
 			sourceTree = "<group>";
 		};
 		BD080CC0194B7BD50052F7BE /* Resources */ = {
@@ -236,17 +210,12 @@
 		BD080CCB194B7C680052F7BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */,
-				BD080CA4194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.h */,
-				BD080CA5194B7B190052F7BE /* NSExpressionDescription+CoreDataKit.m */,
-				BD080CA6194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.h */,
-				BD080CA7194B7B190052F7BE /* NSFetchedResultsController+CoreDataKit.m */,
-				BD080CAA194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.h */,
-				BD080CAB194B7B190052F7BE /* NSManagedObjectContext+CoreDataKit.m */,
-				BD080CA8194B7B190052F7BE /* NSManagedObject+CoreDataKit.h */,
-				BD080CA9194B7B190052F7BE /* NSManagedObject+CoreDataKit.m */,
-				BD080CAC194B7B190052F7BE /* NSURL+CoreDataKit.h */,
-				BD080CAD194B7B190052F7BE /* NSURL+CoreDataKit.m */,
+				BD63740D197CF4A000E639FC /* NSCoder.swift */,
+				BD637410197CF81000E639FC /* NSExpressionDescription.swift */,
+				BD0AA8941980E52300445CCF /* NSFetchedResultsController.swift */,
+				BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */,
+				BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */,
+				BD2BE9321981AE1B001EB2CE /* NSURL.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -259,14 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
-				BD080CBF194B7BA60052F7BE /* CDKAssert.h in Headers */,
 				BD080CC6194B7C560052F7BE /* CDKFilterController.h in Headers */,
 				BD080CC7194B7C560052F7BE /* CDKContextObserver.h in Headers */,
-				BD080CCE194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BD080CD0194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.h in Headers */,
-				BD080CD2194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BD080CD4194B7C820052F7BE /* NSManagedObject+CoreDataKit.h in Headers */,
-				BD080CD6194B7C820052F7BE /* NSURL+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +237,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD690E194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BDFD6914194DFB6300799C33 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BDFD6912194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BDFD6919194DFB7500799C33 /* CDKAssert.h in Headers */,
-				BDFD6916194DFB6300799C33 /* NSURL+CoreDataKit.h in Headers */,
 				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
 				BDFD691E194DFB7500799C33 /* CDKContextObserver.h in Headers */,
 			);
@@ -441,15 +399,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD080CCA194B7C5C0052F7BE /* CDKContextObserver.m in Sources */,
+				BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */,
+				BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
 				BD080CC9194B7C5C0052F7BE /* CDKFilterController.m in Sources */,
+				BD0AA8951980E52300445CCF /* NSFetchedResultsController.swift in Sources */,
 				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
-				BD080CD5194B7C820052F7BE /* NSManagedObject+CoreDataKit.m in Sources */,
-				BD080CCF194B7C820052F7BE /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BD637408197CEB4900E639FC /* StackComponents.swift in Sources */,
-				BD080CD3194B7C820052F7BE /* NSManagedObjectContext+CoreDataKit.m in Sources */,
-				BD080CD1194B7C820052F7BE /* NSFetchedResultsController+CoreDataKit.m in Sources */,
-				BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
-				BD080CD7194B7C820052F7BE /* NSURL+CoreDataKit.m in Sources */,
+				BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */,
+				BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */,
+				BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,13 +425,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD637409197CEB4900E639FC /* StackComponents.swift in Sources */,
-				BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
-				BDFD690F194DFB6300799C33 /* NSExpressionDescription+CoreDataKit.m in Sources */,
-				BDFD6917194DFB6300799C33 /* NSURL+CoreDataKit.m in Sources */,
+				BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */,
 				BDFD691F194DFB7500799C33 /* CDKContextObserver.m in Sources */,
-				BDFD6915194DFB6300799C33 /* NSManagedObject+CoreDataKit.m in Sources */,
+				BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */,
 				BD63740C197CED8900E639FC /* Stack.swift in Sources */,
-				BDFD6913194DFB6300799C33 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
+				BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */,
+				BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
+				BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

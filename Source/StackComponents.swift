@@ -9,21 +9,21 @@
 import CoreData
 
 
-class StackComponents {
+public class StackComponents {
 
-	var configuration:String?
-	var options:[String:AnyObject]
-	var type:String
-	var URL:NSURL
+	public var configuration:String?
+	public var options:[String:AnyObject]
+	public var type:String
+	public var URL:NSURL
 	
 	
-	init(URL:NSURL) {
+	public init(URL:NSURL) {
 		self.options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
 		self.type = NSSQLiteStoreType
 		self.URL = URL
 	}
 	
-	convenience init() {
+	public convenience init() {
 		let bundle = NSBundle.mainBundle()
 		let infos = bundle.infoDictionary
 		let name = bundle.infoDictionary[kCFBundleExecutableKey] as NSString

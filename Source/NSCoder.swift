@@ -1,5 +1,5 @@
 //
-//  NSCoder+CoreDataKit.swift
+//  NSCoder.swift
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/07/14.
@@ -9,14 +9,14 @@
 import CoreData
 
 
-extension NSCoder {
+public extension NSCoder {
 
-	func encodeManagedObject(object:NSManagedObject, key:String) {
+	public func encodeManagedObject(object:NSManagedObject, key:String) {
 		let objectURI = object.objectID.URIRepresentation()
 		self.encodeObject(objectURI, forKey:key)
 	}
 	
-	func decodeManagedObjectForKey(key:String, inContext context:NSManagedObjectContext) -> NSManagedObject? {
+	public func decodeManagedObjectForKey(key:String, inContext context:NSManagedObjectContext) -> NSManagedObject? {
 		let objectURI = self.decodeObjectForKey(key) as? NSURL
 		var object:NSManagedObject?
 		

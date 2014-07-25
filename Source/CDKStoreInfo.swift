@@ -9,7 +9,7 @@
 import CoreData
 
 
-public class StoreComponents {
+public class CDKStoreInfo {
 
 	public var configuration:String?
 	public var options:[String:AnyObject]

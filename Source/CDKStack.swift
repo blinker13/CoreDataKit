@@ -1,5 +1,5 @@
 //
-//  Stack.swift
+//  CDKStack.swift
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/07/14.
@@ -9,7 +9,7 @@
 import CoreData
 
 
-public class Stack {
+public class CDKStack {
 
 	public let objectModel:NSManagedObjectModel
 	public let mainContext:NSManagedObjectContext
@@ -31,12 +31,17 @@ public class Stack {
 	
 	//MARK: -
 	
-	public func addStore(components:StoreComponents) -> NSPersistentStore {
+	public func addStore(components:CDKStoreInfo) -> NSPersistentStore {
 		let fileManager = NSFileManager.defaultManager()
 		let directoryURL = components.directoryURL()
 		
 		fileManager.createDirectoryAtURL(directoryURL, withIntermediateDirectories:true, attributes:nil, error:nil)
 		
 		return self.coordinator.addPersistentStoreWithType(components.type, configuration:components.configuration, URL:components.URL, options:components.options, error:nil)
+	}
+	
+	public func addStore() -> NSPersistentStore {
+		let info = CDKStoreInfo()
+		return self.addStore(info)
 	}
 }

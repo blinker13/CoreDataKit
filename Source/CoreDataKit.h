@@ -6,10 +6,4 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import <CoreDataKit/CDKContextObserver.h>
-
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-
-#import <CoreDataKit/CDKFilterController.h>
-
-#endif
+@import CoreData;

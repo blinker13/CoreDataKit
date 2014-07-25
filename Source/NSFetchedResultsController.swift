@@ -60,10 +60,4 @@ public extension NSFetchedResultsController {
 		let object = self.objectAtIndexPath(indexPath) as NSManagedObject
 		self.managedObjectContext.deleteObject(object)
 	}
-	
-	public func deleteObjectsAtIndexPaths(indexPaths:[NSIndexPath]) {
-		for object in self.objectsAtIndexPaths(indexPaths) {
-			self.managedObjectContext.deleteObject(object)
-		}
-	}
 }

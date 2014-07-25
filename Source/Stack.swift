@@ -14,34 +14,29 @@ public class Stack {
 	public let objectModel:NSManagedObjectModel
 	public let mainContext:NSManagedObjectContext
 	public let coordinator:NSPersistentStoreCoordinator
-	public let store:NSPersistentStore
 	
+	//MARK: -
 	
-	public init(model:NSManagedObjectModel, components:StackComponents) {
+	public init(model:NSManagedObjectModel) {
 		coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
 		mainContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
 		mainContext.persistentStoreCoordinator = self.coordinator
 		objectModel = model
-		
-		let directoryURL = components.URL.URLByDeletingLastPathComponent
-		let fileManager = NSFileManager.defaultManager()
-		var aStore:NSPersistentStore?
-		var error:NSError?
-		
-		if fileManager.createDirectoryAtURL(directoryURL, withIntermediateDirectories:true, attributes:nil, error:&error) {
-			aStore = coordinator.addPersistentStoreWithType(components.type, configuration:components.configuration, URL:components.URL, options:components.options, error:&error)
-		}
-		assert(!error, "Could not initialize Stack")
-		store = aStore!
-	}
-	
-	public convenience init(model:NSManagedObjectModel) {
-		let components = StackComponents()
-		self.init(model:model, components:components)
 	}
 	
 	public convenience init() {
 		let model = NSManagedObjectModel.mergedModelFromBundles(nil)
 		self.init(model: model)
+	}
+	
+	//MARK: -
+	
+	public func addStore(components:StoreComponents) -> NSPersistentStore {
+		let fileManager = NSFileManager.defaultManager()
+		let directoryURL = components.directoryURL()
+		
+		fileManager.createDirectoryAtURL(directoryURL, withIntermediateDirectories:true, attributes:nil, error:nil)
+		
+		return self.coordinator.addPersistentStoreWithType(components.type, configuration:components.configuration, URL:components.URL, options:components.options, error:nil)
 	}
 }

@@ -18,8 +18,8 @@
 		BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
 		BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
 		BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
-		BD637408197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
-		BD637409197CEB4900E639FC /* StackComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StackComponents.swift */; };
+		BD637408197CEB4900E639FC /* StoreComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StoreComponents.swift */; };
+		BD637409197CEB4900E639FC /* StoreComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637407197CEB4900E639FC /* StoreComponents.swift */; };
 		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
 		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
 		BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
@@ -69,7 +69,7 @@
 		BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
 		BD2BE9321981AE1B001EB2CE /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
-		BD637407197CEB4900E639FC /* StackComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackComponents.swift; sourceTree = "<group>"; };
+		BD637407197CEB4900E639FC /* StoreComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreComponents.swift; sourceTree = "<group>"; };
 		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		BD63740D197CF4A000E639FC /* NSCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
 		BD637410197CF81000E639FC /* NSExpressionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExpressionDescription.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BD63740A197CED8900E639FC /* Stack.swift */,
-				BD637407197CEB4900E639FC /* StackComponents.swift */,
+				BD637407197CEB4900E639FC /* StoreComponents.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 				BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
 				BD0AA8951980E52300445CCF /* NSFetchedResultsController.swift in Sources */,
 				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
-				BD637408197CEB4900E639FC /* StackComponents.swift in Sources */,
+				BD637408197CEB4900E639FC /* StoreComponents.swift in Sources */,
 				BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */,
 				BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */,
 				BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
@@ -405,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD637409197CEB4900E639FC /* StackComponents.swift in Sources */,
+				BD637409197CEB4900E639FC /* StoreComponents.swift in Sources */,
 				BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */,
 				BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */,
 				BD63740C197CED8900E639FC /* Stack.swift in Sources */,

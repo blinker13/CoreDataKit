@@ -1,5 +1,5 @@
 //
-//  StackComponents.swift
+//  StoreComponents.swift
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/07/14.
@@ -9,13 +9,14 @@
 import CoreData
 
 
-public class StackComponents {
+public class StoreComponents {
 
 	public var configuration:String?
 	public var options:[String:AnyObject]
 	public var type:String
 	public var URL:NSURL
 	
+	//MARK: -
 	
 	public init(URL:NSURL) {
 		self.options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
@@ -29,5 +30,11 @@ public class StackComponents {
 		let name = bundle.infoDictionary[kCFBundleExecutableKey] as NSString
 		let url = NSURL.URLWithStoreName(name)
 		self.init(URL:url)
+	}
+	
+	//MARK: -
+	
+	public func directoryURL() -> NSURL {
+		return self.URL.URLByDeletingLastPathComponent
 	}
 }

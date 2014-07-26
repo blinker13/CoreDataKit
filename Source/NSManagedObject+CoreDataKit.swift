@@ -23,7 +23,7 @@ public extension NSManagedObject {
 		return attribute.attributeType
 	}
 	
-	public func absoluteStringURI() -> String {
+	public var absoluteStringURI:String {
 		let uri = self.objectID.URIRepresentation()
 		return uri.absoluteString
 	}

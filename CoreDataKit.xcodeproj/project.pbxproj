@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
-				BD080CC4194B7C3C0052F7BE /* Classes */,
+				BD080CC4194B7C3C0052F7BE /* General */,
 				BD080CCB194B7C680052F7BE /* Extensions */,
 			);
 			path = Source;
@@ -184,13 +184,13 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		BD080CC4194B7C3C0052F7BE /* Classes */ = {
+		BD080CC4194B7C3C0052F7BE /* General */ = {
 			isa = PBXGroup;
 			children = (
 				BD63740A197CED8900E639FC /* CDKStack.swift */,
 				BD637407197CEB4900E639FC /* CDKStoreInfo.swift */,
 			);
-			name = Classes;
+			name = General;
 			sourceTree = "<group>";
 		};
 		BD080CCB194B7C680052F7BE /* Extensions */ = {

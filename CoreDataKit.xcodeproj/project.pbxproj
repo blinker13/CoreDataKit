@@ -311,6 +311,7 @@
 				TargetAttributes = {
 					BD080C78194B79E30052F7BE = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = MMDS6BCK8S;
 					};
 					BD080C83194B79E30052F7BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -318,6 +319,7 @@
 					};
 					BDFD68F0194DFAD600799C33 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = MMDS6BCK8S;
 					};
 					BDFD68FA194DFAD600799C33 = {
 						CreatedOnToolsVersion = 6.0;
@@ -528,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -545,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -593,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -619,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;

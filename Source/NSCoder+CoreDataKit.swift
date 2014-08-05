@@ -24,7 +24,7 @@ public extension NSCoder {
 			var error:NSError?
 			let objectID = context.objectIDForURI(uri)
 			object = context.existingObjectWithID(objectID, error:&error)
-			assert(!error, "Retrieving the object failed")
+			assert(error != nil, "Retrieving the object failed")
 		}
 		return object
 	}

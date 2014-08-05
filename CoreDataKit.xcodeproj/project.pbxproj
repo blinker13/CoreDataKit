@@ -11,7 +11,6 @@
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
 		BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
-		BD0AA8951980E52300445CCF /* NSFetchedResultsController+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8941980E52300445CCF /* NSFetchedResultsController+CoreDataKit.swift */; };
 		BD0AA8981980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
 		BD0AA8991980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
 		BD2BE930198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */; };
@@ -65,7 +64,6 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD0AA8941980E52300445CCF /* NSFetchedResultsController+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+CoreDataKit.swift"; sourceTree = "<group>"; };
 		BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+CoreDataKit.swift"; sourceTree = "<group>"; };
 		BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+CoreDataKit.swift"; sourceTree = "<group>"; };
 		BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+CoreDataKit.swift"; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 			children = (
 				BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */,
 				BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */,
-				BD0AA8941980E52300445CCF /* NSFetchedResultsController+CoreDataKit.swift */,
 				BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */,
 				BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */,
 				BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */,
@@ -385,7 +382,6 @@
 			files = (
 				BD2BE9331981AE1B001EB2CE /* NSURL+CoreDataKit.swift in Sources */,
 				BD0AA8981980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */,
-				BD0AA8951980E52300445CCF /* NSFetchedResultsController+CoreDataKit.swift in Sources */,
 				BD63740B197CED8900E639FC /* CDKStack.swift in Sources */,
 				BD637408197CEB4900E639FC /* CDKStoreInfo.swift in Sources */,
 				BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,

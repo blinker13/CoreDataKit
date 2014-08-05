@@ -12,15 +12,13 @@ import CoreData
 public class CDKStoreInfo {
 
 	public var configuration:String?
-	public var options:[String:AnyObject]
-	public var type:String
+	public var options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
+	public var type = NSSQLiteStoreType
 	public var URL:NSURL
 	
 	//MARK: -
 	
 	public init(URL:NSURL) {
-		self.options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
-		self.type = NSSQLiteStoreType
 		self.URL = URL
 	}
 	

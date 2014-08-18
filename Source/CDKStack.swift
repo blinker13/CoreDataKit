@@ -15,7 +15,6 @@ public class CDKStack {
 	public let mainContext:NSManagedObjectContext
 	public let coordinator:NSPersistentStoreCoordinator
 	
-	//MARK: -
 	
 	public init(model:NSManagedObjectModel) {
 		coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
@@ -28,9 +27,11 @@ public class CDKStack {
 		let model = NSManagedObjectModel.mergedModelFromBundles(nil)
 		self.init(model: model)
 	}
-	
-	//MARK: -
-	
+}
+
+
+public extension CDKStack {
+
 	public func addStore(components:CDKStoreInfo) -> NSPersistentStore {
 		let fileManager = NSFileManager.defaultManager()
 		let directoryURL = components.directoryURL()

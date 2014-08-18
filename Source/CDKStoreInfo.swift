@@ -16,7 +16,6 @@ public class CDKStoreInfo {
 	public var type = NSSQLiteStoreType
 	public var URL:NSURL
 	
-	//MARK: -
 	
 	public init(URL:NSURL) {
 		self.URL = URL
@@ -29,9 +28,11 @@ public class CDKStoreInfo {
 		let url = NSURL.URLWithStoreName(name)
 		self.init(URL:url)
 	}
-	
-	//MARK: -
-	
+}
+
+
+public extension CDKStoreInfo {
+
 	public func directoryURL() -> NSURL {
 		return self.URL.URLByDeletingLastPathComponent
 	}

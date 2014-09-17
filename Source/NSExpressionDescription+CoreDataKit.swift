@@ -11,26 +11,23 @@ import CoreData
 
 public extension NSExpressionDescription {
 
-	public class func descriptionWithFunction(function:String, key:String, resultType:NSAttributeType) -> NSExpressionDescription {
-		
+	public convenience init(function:String, key:String, resultType:NSAttributeType) {
 		let keyExpression = NSExpression(forKeyPath:key)
-		let expression = NSExpression(forFunction:function, arguments:[keyExpression])
 		
-		let description = NSExpressionDescription()
-		description.expressionResultType = resultType
-		description.expression = expression
-		description.name = key
+		self.init(resultType:resultType)
 		
-		return description
+		self.expression = NSExpression(forFunction:function, arguments:[keyExpression])
+		self.name = key
 	}
 	
-	public class func objectIDDescription() -> NSExpressionDescription {
+	public convenience init(resultType:NSAttributeType) {
+		self.init()
 		
-		let description = NSExpressionDescription()
-		description.expressionResultType = .ObjectIDAttributeType
-		description.expression = NSExpression.expressionForEvaluatedObject()
-		description.name = "objectID"
+		self.expressionResultType = resultType
 		
-		return description
+		if (resultType == .ObjectIDAttributeType) {
+			self.expression = NSExpression.expressionForEvaluatedObject()
+			self.name = "objectID"
+		}
 	}
 }

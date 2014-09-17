@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
-		BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
 		BD0AA8981980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
 		BD0AA8991980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
 		BD2BE930198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */; };
@@ -25,9 +23,9 @@
 		BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
 		BD637411197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */; };
 		BD637412197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */; };
+		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
+		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
-		BDFD690A194DFB0400799C33 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */; };
-		BDFD690B194DFB0900799C33 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB1194B7B190052F7BE /* CDKStackTests.m */; };
 		BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,15 +50,8 @@
 		BD080C79194B79E30052F7BE /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD080C84194B79E30052F7BE /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD080CA1194B7B190052F7BE /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
-		BD080CAF194B7B190052F7BE /* Bar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
-		BD080CB0194B7B190052F7BE /* Bar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
-		BD080CB1194B7B190052F7BE /* CDKStackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
-		BD080CB2194B7B190052F7BE /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
-		BD080CB3194B7B190052F7BE /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		BD080CB4194B7B190052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD080CB6194B7B190052F7BE /* Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test.xcdatamodel; sourceTree = "<group>"; };
-		BD080CB7194B7B190052F7BE /* XCTestCase+Fixtures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Fixtures.h"; sourceTree = "<group>"; };
-		BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Fixtures.m"; sourceTree = "<group>"; };
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +62,8 @@
 		BD63740A197CED8900E639FC /* CDKStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDKStack.swift; sourceTree = "<group>"; };
 		BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+CoreDataKit.swift"; sourceTree = "<group>"; };
 		BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSExpressionDescription+CoreDataKit.swift"; sourceTree = "<group>"; };
+		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
+		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,9 +136,8 @@
 		BD080CAE194B7B190052F7BE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BD080CB1194B7B190052F7BE /* CDKStackTests.m */,
-				BD080CB7194B7B190052F7BE /* XCTestCase+Fixtures.h */,
-				BD080CB8194B7B190052F7BE /* XCTestCase+Fixtures.m */,
+				BDD87FC719CA2439007493FB /* StackTests.swift */,
+				BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */,
 				BD080CC1194B7BEF0052F7BE /* Entities */,
 				BD080CC0194B7BD50052F7BE /* Resources */,
 			);
@@ -174,10 +166,6 @@
 		BD080CC1194B7BEF0052F7BE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BD080CAF194B7B190052F7BE /* Bar.h */,
-				BD080CB0194B7B190052F7BE /* Bar.m */,
-				BD080CB2194B7B190052F7BE /* Foo.h */,
-				BD080CB3194B7B190052F7BE /* Foo.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -394,8 +382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD080CC3194B7C0A0052F7BE /* XCTestCase+Fixtures.m in Sources */,
-				BD080CC2194B7C080052F7BE /* CDKStackTests.m in Sources */,
+				BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */,
+				BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +405,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD690A194DFB0400799C33 /* XCTestCase+Fixtures.m in Sources */,
-				BDFD690B194DFB0900799C33 /* CDKStackTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

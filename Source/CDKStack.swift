@@ -32,17 +32,16 @@ public class CDKStack {
 
 public extension CDKStack {
 
-	public func addStore(components:CDKStoreInfo) -> NSPersistentStore {
+	public func addStoreWithInfo(info:CDKStoreInfo) -> NSPersistentStore {
 		let fileManager = NSFileManager.defaultManager()
-		let directoryURL = components.directoryURL()
+		let directoryURL = info.directoryURL()
 		
 		fileManager.createDirectoryAtURL(directoryURL, withIntermediateDirectories:true, attributes:nil, error:nil)
-		
-		return self.coordinator.addPersistentStoreWithType(components.type, configuration:components.configuration, URL:components.URL, options:components.options, error:nil)
+		return self.coordinator.addPersistentStoreWithType(info.type, configuration:info.configuration, URL:info.URL, options:info.options, error:nil)!
 	}
 	
 	public func addStore() -> NSPersistentStore {
 		let info = CDKStoreInfo()
-		return self.addStore(info)
+		return self.addStoreWithInfo(info)
 	}
 }

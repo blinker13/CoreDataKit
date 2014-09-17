@@ -17,14 +17,13 @@ public extension NSCoder {
 	}
 	
 	public func decodeManagedObjectForKey(key:String, inContext context:NSManagedObjectContext) -> NSManagedObject? {
-		let objectURI = self.decodeObjectForKey(key) as? NSURL
+		let objectURI = self.decodeObjectForKey(key) as NSURL?
 		var object:NSManagedObject?
 		
 		if let uri = objectURI {
-			var error:NSError?
-			let objectID = context.objectIDForURI(uri)
-			object = context.existingObjectWithID(objectID, error:&error)
-			assert(error != nil, "Retrieving the object failed")
+			if let objectID = context.objectIDForURI(uri) {
+				object = context.existingObjectWithID(objectID, error:nil)
+			}
 		}
 		return object
 	}

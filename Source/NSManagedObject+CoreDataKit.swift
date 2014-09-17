@@ -11,14 +11,18 @@ import CoreData
 
 public extension NSManagedObject {
 
-	public class var entityName:String {return NSStringFromClass(self)}
+	public class var entityName:String {
+		let name = NSStringFromClass(self)
+		let nameParts = name.componentsSeparatedByString(".")
+		return nameParts.last!
+	}
 	
 	public class func insertInContext(context:NSManagedObjectContext) -> NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
 	public class func attributeTypeForKey(key:String, inContext:NSManagedObjectContext) -> NSAttributeType {
-		let entity = NSEntityDescription.entityForName(self.entityName, inManagedObjectContext:inContext)
+		let entity = NSEntityDescription.entityForName(self.entityName, inManagedObjectContext:inContext)!
 		let attribute = entity.attributesByName[key] as NSAttributeDescription
 		return attribute.attributeType
 	}

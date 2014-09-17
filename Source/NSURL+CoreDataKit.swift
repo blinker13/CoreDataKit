@@ -17,7 +17,7 @@ extension NSURL {
 		
 		let domain =  NSSearchPathDomainMask.UserDomainMask
 		let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains:domain)
-		let url = urls[0].URLByAppendingPathComponent(mainBundle.bundleIdentifier, isDirectory:true) as NSURL
+		let url = urls[0].URLByAppendingPathComponent(mainBundle.bundleIdentifier!, isDirectory:true) as NSURL
 		return url.URLByAppendingStoreName(name)
 	}
 	

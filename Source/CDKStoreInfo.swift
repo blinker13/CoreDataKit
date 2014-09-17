@@ -1,5 +1,5 @@
 //
-//  StoreComponents.swift
+//  CDKStoreInfo.swift
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/07/14.
@@ -34,6 +34,6 @@ public class CDKStoreInfo {
 public extension CDKStoreInfo {
 
 	public func directoryURL() -> NSURL {
-		return self.URL.URLByDeletingLastPathComponent
+		return self.URL.URLByDeletingLastPathComponent!
 	}
 }

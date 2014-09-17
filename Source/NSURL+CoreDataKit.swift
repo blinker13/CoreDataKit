@@ -11,17 +11,23 @@ import CoreData
 
 extension NSURL {
 
-	public class func URLWithStoreName(name:String) -> NSURL {
+	public class func defaultStoreURL() -> NSURL {
+		let bundle = NSBundle.mainBundle()
+		let name = bundle.infoDictionary[kCFBundleExecutableKey] as NSString
+		return self.storeURLWithName(name)
+	}
+	
+	public class func storeURLWithName(name:String) -> NSURL {
 		let fileManager = NSFileManager.defaultManager()
 		let mainBundle = NSBundle.mainBundle()
 		
 		let domain =  NSSearchPathDomainMask.UserDomainMask
 		let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains:domain)
 		let url = urls[0].URLByAppendingPathComponent(mainBundle.bundleIdentifier!, isDirectory:true) as NSURL
-		return url.URLByAppendingStoreName(name)
+		return url.storeURLByAppendingName(name)
 	}
 	
-	public func URLByAppendingStoreName(name:String) -> NSURL {
+	public func storeURLByAppendingName(name:String) -> NSURL {
 		let url = self.URLByAppendingPathComponent(name, isDirectory:false)
 		return url.URLByAppendingPathExtension("sqlite")
 	}

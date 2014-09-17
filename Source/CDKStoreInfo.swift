@@ -9,31 +9,23 @@
 import CoreData
 
 
-public class CDKStoreInfo {
+public struct CDKStoreInfo {
 
-	public var configuration:String?
 	public var options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
 	public var type = NSSQLiteStoreType
+	public var configuration:String?
 	public var URL:NSURL
 	
 	
-	public init(URL:NSURL) {
+	public init(URL:NSURL = NSURL.defaultStoreURL()) {
 		self.URL = URL
-	}
-	
-	public convenience init() {
-		let bundle = NSBundle.mainBundle()
-		let infos = bundle.infoDictionary
-		let name = bundle.infoDictionary[kCFBundleExecutableKey] as NSString
-		let url = NSURL.URLWithStoreName(name)
-		self.init(URL:url)
 	}
 }
 
 
 public extension CDKStoreInfo {
 
-	public func directoryURL() -> NSURL {
-		return self.URL.URLByDeletingLastPathComponent!
+	public var directoryURL:NSURL {
+		get {return self.URL.URLByDeletingLastPathComponent!}
 	}
 }

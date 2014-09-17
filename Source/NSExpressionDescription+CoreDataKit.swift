@@ -11,7 +11,7 @@ import CoreData
 
 public extension NSExpressionDescription {
 
-	public class func descriptionWithFunction(function:String, forKey key:String, resultType:NSAttributeType) -> NSExpressionDescription {
+	public class func descriptionWithFunction(function:String, key:String, resultType:NSAttributeType) -> NSExpressionDescription {
 		
 		let keyExpression = NSExpression(forKeyPath:key)
 		let expression = NSExpression(forFunction:function, arguments:[keyExpression])

@@ -11,15 +11,19 @@ import CoreData
 
 public extension NSManagedObjectContext {
 	
-	public func startMergingSaveNotificationsIntoContext(context:NSManagedObjectContext) {
+	public func startMergingChangesInto(context:NSManagedObjectContext) {
+		let action = Selector("mergeChangesFromContextDidSaveNotification:")
+		let name = NSManagedObjectContextDidSaveNotification;
 		let center = NSNotificationCenter.defaultCenter()
 		
-		center.addObserver(context, selector:"mergeChangesFromContextDidSaveNotification:", name:NSManagedObjectContextDidSaveNotification, object:self)
+		center.addObserver(context, selector:action, name:name, object:self)
 	}
 	
-	public func stopMergingSaveNotificationsIntoContext(context:NSManagedObjectContext) {
+	public func stopMergingChangesInto(context:NSManagedObjectContext) {
+		let name = NSManagedObjectContextDidSaveNotification;
 		let center = NSNotificationCenter.defaultCenter()
-		center.removeObserver(context, name:NSManagedObjectContextDidSaveNotification, object:self)
+		
+		center.removeObserver(context, name:name, object:self)
 	}
 }
 

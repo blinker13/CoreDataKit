@@ -27,10 +27,7 @@ public class CDKStack {
 		let model = NSManagedObjectModel.mergedModelFromBundles(nil)
 		self.init(model:model)
 	}
-}
-
-
-public extension CDKStack {
+	
 
 	/// Adds a new persistent store with specific information and returns the new store
 	public func addStore(info:CDKStoreInfo = CDKStoreInfo()) -> NSPersistentStore {

@@ -20,10 +20,7 @@ public struct CDKStoreInfo {
 	public init(URL:NSURL = NSURL.defaultStoreURL()) {
 		self.URL = URL
 	}
-}
-
-
-public extension CDKStoreInfo {
+	
 
 	public var directoryURL:NSURL {
 		get {return self.URL.URLByDeletingLastPathComponent!}

@@ -21,8 +21,7 @@ extension NSURL {
 		let fileManager = NSFileManager.defaultManager()
 		let mainBundle = NSBundle.mainBundle()
 		
-		let domain =  NSSearchPathDomainMask.UserDomainMask
-		let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains:domain)
+		let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains:.UserDomainMask)
 		let url = urls[0].URLByAppendingPathComponent(mainBundle.bundleIdentifier!, isDirectory:true) as NSURL
 		return url.storeURLByAppendingName(name)
 	}

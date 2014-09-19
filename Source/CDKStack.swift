@@ -16,16 +16,11 @@ public class CDKStack {
 	public let coordinator:NSPersistentStoreCoordinator
 	
 	
-	public init(model:NSManagedObjectModel) {
+	public init(_ model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {
 		self.coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
 		self.mainContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
 		self.mainContext.persistentStoreCoordinator = self.coordinator
 		self.model = model
-	}
-	
-	public convenience init() {
-		let model = NSManagedObjectModel.mergedModelFromBundles(nil)
-		self.init(model:model)
 	}
 	
 

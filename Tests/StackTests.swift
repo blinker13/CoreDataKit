@@ -23,6 +23,12 @@ class StackTests: XCTestCase {
 		return NSManagedObjectModel.mergedModelFromBundles(nil)
 	}
 	
+	func storeInfoFixture() -> CDKStoreInfo {
+		let bundle = NSBundle(forClass:self.dynamicType)
+		let url = bundle.bundleURL.storeURLByAppendingName("Test")
+		return CDKStoreInfo(url)
+	}
+	
 	
 	//MARK: - Stack Initialization
 	
@@ -56,5 +62,23 @@ class StackTests: XCTestCase {
 		XCTAssertEqual(stack.mainContext, stack.mainContext, "The main context getter should not be a factory method")
 		XCTAssertEqual(stack.coordinator, stack.coordinator, "The coordinator getter should not be a factory method")
 		XCTAssertEqual(stack.model, stack.model, "The model getter should not be a factory method")
+	}
+	
+	
+	//MARK - Stack Store
+	
+	func testStackAddStore() {
+		let model = self.modelFixture()
+		let info = self.storeInfoFixture()
+		let stack = CDKStack(model)
+		
+		let store = stack.addStore(info)
+		
+		XCTAssertEqual(stack.coordinator.persistentStores.count, 1, "A new store should have been initialized")
+		XCTAssertEqual(stack.coordinator.persistentStores.first as NSPersistentStore, store, "The store does not equal the returned store")
+//		XCTAssertEqual(info.configuration, store.configurationName, "The store configuration does not equal the input configuration")
+//		XCTAssertEqual(info.options, store.options, "The store options do not equal the input options")
+		XCTAssertEqual(info.type, store.type, "The store type does not equal the input type")
+		XCTAssertEqual(info.URL, store.URL!, "The store URL does not equal the input URL")
 	}
 }

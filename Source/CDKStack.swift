@@ -25,7 +25,7 @@ public class CDKStack {
 	
 
 	/// Adds a new persistent store with specific information and returns the new store
-	public func addStore(info:CDKStoreInfo = CDKStoreInfo()) -> NSPersistentStore {
+	public func addStore(_ info:CDKStoreInfo = CDKStoreInfo()) -> NSPersistentStore {
 		let fileManager = NSFileManager.defaultManager()
 		
 		fileManager.createDirectoryAtURL(info.directoryURL, withIntermediateDirectories:true, attributes:nil, error:nil)

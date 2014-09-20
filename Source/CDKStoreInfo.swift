@@ -17,7 +17,7 @@ public struct CDKStoreInfo {
 	public var URL:NSURL
 	
 	
-	public init(URL:NSURL = NSURL.defaultStoreURL()) {
+	public init(_ URL:NSURL = NSURL.defaultStoreURL()) {
 		self.URL = URL
 	}
 	

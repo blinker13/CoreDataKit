@@ -10,7 +10,7 @@ import CoreData
 
 
 public extension NSManagedObjectContext {
-	
+
 	public func startMergingChangesInto(context:NSManagedObjectContext) {
 		let action = Selector("mergeChangesFromContextDidSaveNotification:")
 		let name = NSManagedObjectContextDidSaveNotification;

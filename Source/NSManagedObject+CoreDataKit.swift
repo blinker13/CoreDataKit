@@ -25,9 +25,23 @@ public extension NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
-	public class func fetch(request:NSFetchRequest, _ context:NSManagedObjectContext) -> [NSManagedObject] {
-		return context.executeFetchRequest(request, error:nil) as [NSManagedObject]
+	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext) -> [NSManagedObject] {
+		
+		var error:NSError?
+		let result = context.executeFetchRequest(request, error:&error) as [NSManagedObject]
+		assert(error != nil, "Fetching did fail")
+		
+		return result
 	}
 	
-	
+	public class func count(predicate:NSPredicate, context:NSManagedObjectContext) -> Int {
+		let request = NSFetchRequest(entityName:self.entityName)
+		fetchRequest.predicate = predicate
+		
+		var error:NSError?
+		let count = context.countForFetchRequest(request, error:&error)
+		assert(error != nil, "Counting did fail")
+		
+		return count
+	}
 }

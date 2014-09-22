@@ -16,14 +16,18 @@ public extension NSManagedObject {
 		let nameParts = name.componentsSeparatedByString(".")
 		return nameParts.last!
 	}
-	
-	public class func insertInContext(context:NSManagedObjectContext) -> NSManagedObject {
+}
+
+
+public extension NSManagedObject {
+
+	public class func insert(context:NSManagedObjectContext) -> NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
-	public class func attributeTypeForKey(key:String, inContext:NSManagedObjectContext) -> NSAttributeType {
-		let entity = NSEntityDescription.entityForName(self.entityName, inManagedObjectContext:inContext)!
-		let attribute = entity.attributesByName[key] as NSAttributeDescription
-		return attribute.attributeType
+	public class func fetch(request:NSFetchRequest, _ context:NSManagedObjectContext) -> [NSManagedObject] {
+		return context.executeFetchRequest(request, error:nil) as [NSManagedObject]
 	}
+	
+	
 }

@@ -23,22 +23,9 @@ class StackTests: XCTestCase {
 		return NSManagedObjectModel.mergedModelFromBundles(nil)
 	}
 	
-	var fixtureStoreInfo:CDKStoreInfo {
-		let bundle = NSBundle(forClass:self.dynamicType)
-		let url = bundle.bundleURL.storeURLByAppendingName("Test")
-		return CDKStoreInfo(url)
-	}
-	
 	var fixtureStack:CDKStack {
 		let model = self.fixtureModel
 		return CDKStack(model)
-	}
-	
-	var fixtureStackWithTestStore:CDKStack {
-		let info = self.fixtureStoreInfo
-		let stack = self.fixtureStack
-		stack.addStore(info)
-		return stack
 	}
 	
 	
@@ -79,16 +66,16 @@ class StackTests: XCTestCase {
 	
 	//MARK - Stack Store
 	
-	func testStackAddStore() {
-		let stack = self.fixtureStack
-		let info = self.fixtureStoreInfo
-		let store = stack.addStore(info)
-		
-		XCTAssertEqual(stack.coordinator.persistentStores.count, 1, "A new store should have been initialized")
-		XCTAssertEqual(stack.coordinator.persistentStores.first as NSPersistentStore, store, "The store does not equal the returned store")
-//		XCTAssertEqual(info.configuration, store.configurationName, "The store configuration does not equal the input configuration")
-//		XCTAssertEqual(info.options, store.options, "The store options do not equal the input options")
-		XCTAssertEqual(info.type, store.type, "The store type does not equal the input type")
-		XCTAssertEqual(info.URL, store.URL!, "The store URL does not equal the input URL")
-	}
+//	func testStackAddStore() {
+//		let stack = self.fixtureStack
+//		let info = self.fixtureStoreInfo
+//		let store = stack.addStore(info)
+//		
+//		XCTAssertEqual(stack.coordinator.persistentStores.count, 1, "A new store should have been initialized")
+//		XCTAssertEqual(stack.coordinator.persistentStores.first as NSPersistentStore, store, "The store does not equal the returned store")
+////		XCTAssertEqual(info.configuration, store.configurationName, "The store configuration does not equal the input configuration")
+////		XCTAssertEqual(info.options, store.options, "The store options do not equal the input options")
+//		XCTAssertEqual(info.type, store.type, "The store type does not equal the input type")
+//		XCTAssertEqual(info.URL, store.URL!, "The store URL does not equal the input URL")
+//	}
 }

@@ -23,12 +23,12 @@ public class CDKStack {
 		self.model = model
 	}
 	
-
-	/// Adds a new persistent store with specific information and returns the new store
-	public func addStore(_ info:CDKStoreInfo = CDKStoreInfo()) -> NSPersistentStore {
+	
+	public func addStore(type:String = NSSQLiteStoreType, _ url:NSURL = NSURL.defaultStoreURL(), _ configuration:String?) -> NSPersistentStore {
+		let options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
 		let fileManager = NSFileManager.defaultManager()
 		
-		fileManager.createDirectoryAtURL(info.directoryURL, withIntermediateDirectories:true, attributes:nil, error:nil)
-		return self.coordinator.addPersistentStoreWithType(info.type, configuration:info.configuration, URL:info.URL, options:info.options, error:nil)!
+		fileManager.createDirectoryAtURL(url.URLByDeletingLastPathComponent!, withIntermediateDirectories:true, attributes:nil, error:nil)
+		return self.coordinator.addPersistentStoreWithType(type, configuration:configuration, URL:url, options:options, error:nil)!
 	}
 }

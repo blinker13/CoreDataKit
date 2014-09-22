@@ -14,29 +14,29 @@ class StackTests: XCTestCase {
 	
 	//MARK: - Fixtures
 	
-	var modelFixture:NSManagedObjectModel {
+	var fixtureModel:NSManagedObjectModel {
 		let bundle = NSBundle(forClass:self.dynamicType)
 		return NSManagedObjectModel.mergedModelFromBundles([bundle])
 	}
 	
-	var mergedModelFixture:NSManagedObjectModel {
+	var fixtureMergedModel:NSManagedObjectModel {
 		return NSManagedObjectModel.mergedModelFromBundles(nil)
 	}
 	
-	var storeInfoFixture:CDKStoreInfo {
+	var fixtureStoreInfo:CDKStoreInfo {
 		let bundle = NSBundle(forClass:self.dynamicType)
 		let url = bundle.bundleURL.storeURLByAppendingName("Test")
 		return CDKStoreInfo(url)
 	}
 	
-	var stackFixture:CDKStack {
-		let model = self.modelFixture
+	var fixtureStack:CDKStack {
+		let model = self.fixtureModel
 		return CDKStack(model)
 	}
 	
-	var stackWithTestStoreFixture:CDKStack {
-		let info = self.storeInfoFixture
-		let stack = self.stackFixture
+	var fixtureStackWithTestStore:CDKStack {
+		let info = self.fixtureStoreInfo
+		let stack = self.fixtureStack
 		stack.addStore(info)
 		return stack
 	}
@@ -50,12 +50,12 @@ class StackTests: XCTestCase {
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
 		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")
-		XCTAssertEqual(stack.model, self.mergedModelFixture, "The convenience initializer model should be a merged model from all bundles")
+		XCTAssertEqual(stack.model, self.fixtureMergedModel, "The convenience initializer model should be a merged model from all bundles")
 		XCTAssertEqual(stack.mainContext.concurrencyType, NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType, "The main context should use the main queue")
 	}
 	
 	func testStackInitializerWithModel() {
-		let model = self.modelFixture
+		let model = self.fixtureModel
 		let stack = CDKStack(model)
 		
 		XCTAssertEqual(stack.model, model, "The convenience initializer model should be a merged model from all bundles")
@@ -80,8 +80,8 @@ class StackTests: XCTestCase {
 	//MARK - Stack Store
 	
 	func testStackAddStore() {
-		let stack = self.stackFixture
-		let info = self.storeInfoFixture
+		let stack = self.fixtureStack
+		let info = self.fixtureStoreInfo
 		let store = stack.addStore(info)
 		
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 1, "A new store should have been initialized")

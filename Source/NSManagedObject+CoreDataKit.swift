@@ -29,18 +29,18 @@ public extension NSManagedObject {
 		
 		var error:NSError?
 		let result = context.executeFetchRequest(request, error:&error) as [NSManagedObject]
-		assert(error != nil, "Fetching did fail")
+		assert(error != nil, "Fetching failed")
 		
 		return result
 	}
 	
 	public class func count(predicate:NSPredicate, context:NSManagedObjectContext) -> Int {
 		let request = NSFetchRequest(entityName:self.entityName)
-		fetchRequest.predicate = predicate
+		request.predicate = predicate
 		
 		var error:NSError?
 		let count = context.countForFetchRequest(request, error:&error)
-		assert(error != nil, "Counting did fail")
+		assert(error != nil, "Counting failed")
 		
 		return count
 	}

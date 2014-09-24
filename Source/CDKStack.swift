@@ -9,11 +9,17 @@
 import CoreData
 
 
+/// Static Instance used for shared Stack
+private var _sharedStack:CDKStack?
+
+
 public class CDKStack {
 
 	public let model:NSManagedObjectModel
 	public let mainContext:NSManagedObjectContext
 	public let coordinator:NSPersistentStoreCoordinator
+	
+	public class var shared:CDKStack {return _sharedStack!}
 	
 	
 	public init(_ model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {
@@ -30,5 +36,9 @@ public class CDKStack {
 		
 		fileManager.createDirectoryAtURL(url.URLByDeletingLastPathComponent!, withIntermediateDirectories:true, attributes:nil, error:nil)
 		return self.coordinator.addPersistentStoreWithType(type, configuration:configuration, URL:url, options:options, error:nil)!
+	}
+	
+	public func share() {
+		_sharedStack = self
 	}
 }

@@ -21,11 +21,11 @@ public extension NSManagedObject {
 
 public extension NSManagedObject {
 
-	public class func insert(context:NSManagedObjectContext) -> NSManagedObject {
+	public class func insert(context:NSManagedObjectContext = CDKStack.shared.mainContext) -> NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
-	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext) -> [NSManagedObject] {
+	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> [NSManagedObject] {
 		
 		var error:NSError?
 		let result = context.executeFetchRequest(request, error:&error) as [NSManagedObject]
@@ -34,7 +34,7 @@ public extension NSManagedObject {
 		return result
 	}
 	
-	public class func count(predicate:NSPredicate, context:NSManagedObjectContext) -> Int {
+	public class func count(predicate:NSPredicate, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> Int {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		

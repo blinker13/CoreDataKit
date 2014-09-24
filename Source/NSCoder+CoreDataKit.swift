@@ -16,7 +16,7 @@ public extension NSCoder {
 		self.encodeObject(objectURI, forKey:key)
 	}
 	
-	public func decodeManagedObject(key:String, context:NSManagedObjectContext) -> NSManagedObject? {
+	public func decodeManagedObject(key:String, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> NSManagedObject? {
 		let objectURI = self.decodeObjectForKey(key) as NSURL?
 		var object:NSManagedObject?
 		

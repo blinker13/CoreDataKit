@@ -34,6 +34,15 @@ public extension NSManagedObject {
 		return result
 	}
 	
+	public class func first(predicate:NSPredicate, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> NSManagedObject? {
+		let request = NSFetchRequest(entityName:self.entityName)
+		request.predicate = predicate
+		request.fetchLimit = 1
+		
+		let results = self.fetch(request, context:context)
+		return results.first
+	}
+	
 	public class func count(predicate:NSPredicate, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> Int {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate

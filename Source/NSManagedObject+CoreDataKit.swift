@@ -25,6 +25,9 @@ public extension NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
+	
+	//MARK: - Fetch
+	
 	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> [NSManagedObject] {
 		
 		var error:NSError?
@@ -34,7 +37,17 @@ public extension NSManagedObject {
 		return result
 	}
 	
-	public class func first(predicate:NSPredicate, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> NSManagedObject? {
+	public class func fetch(predicate:NSPredicate? = nil, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> [NSManagedObject] {
+		let request = NSFetchRequest(entityName:self.entityName)
+		request.predicate = predicate
+		
+		return self.fetch(request, context:context)
+	}
+	
+	
+	//MARK: - First
+	
+	public class func first(predicate:NSPredicate? = nil, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> NSManagedObject? {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		request.fetchLimit = 1
@@ -43,6 +56,9 @@ public extension NSManagedObject {
 		return results.first
 	}
 	
+	
+	//MARK: - Count
+	
 	public class func count(predicate:NSPredicate, context:NSManagedObjectContext = CDKStack.shared.mainContext) -> Int {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
@@ -50,7 +66,6 @@ public extension NSManagedObject {
 		var error:NSError?
 		let count = context.countForFetchRequest(request, error:&error)
 		assert(error != nil, "Counting failed")
-		
 		return count
 	}
 }

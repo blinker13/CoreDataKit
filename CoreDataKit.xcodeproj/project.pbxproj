@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD0AA8981980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
-		BD0AA8991980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */; };
-		BD2BE930198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */; };
-		BD2BE931198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */; };
-		BD2BE9331981AE1B001EB2CE /* NSURL+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */; };
-		BD2BE9341981AE1B001EB2CE /* NSURL+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */; };
-		BD63740B197CED8900E639FC /* CDKStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* CDKStack.swift */; };
-		BD63740C197CED8900E639FC /* CDKStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* CDKStack.swift */; };
-		BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
-		BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */; };
-		BD637411197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */; };
-		BD637412197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */; };
+		BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
+		BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
+		BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
+		BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
+		BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
+		BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
+		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
+		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
+		BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
+		BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
+		BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
+		BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
 		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
 		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
@@ -53,12 +53,12 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+CoreDataKit.swift"; sourceTree = "<group>"; };
-		BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+CoreDataKit.swift"; sourceTree = "<group>"; };
-		BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+CoreDataKit.swift"; sourceTree = "<group>"; };
-		BD63740A197CED8900E639FC /* CDKStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDKStack.swift; sourceTree = "<group>"; };
-		BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+CoreDataKit.swift"; sourceTree = "<group>"; };
-		BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSExpressionDescription+CoreDataKit.swift"; sourceTree = "<group>"; };
+		BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
+		BD2BE9321981AE1B001EB2CE /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
+		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		BD63740D197CF4A000E639FC /* NSCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
+		BD637410197CF81000E639FC /* NSExpressionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExpressionDescription.swift; sourceTree = "<group>"; };
 		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
 		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
-				BD63740A197CED8900E639FC /* CDKStack.swift */,
+				BD63740A197CED8900E639FC /* Stack.swift */,
 				BD080CCB194B7C680052F7BE /* Extensions */,
 			);
 			path = Source;
@@ -170,11 +170,11 @@
 		BD080CCB194B7C680052F7BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BD63740D197CF4A000E639FC /* NSCoder+CoreDataKit.swift */,
-				BD637410197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift */,
-				BD0AA8971980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift */,
-				BD2BE92F198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift */,
-				BD2BE9321981AE1B001EB2CE /* NSURL+CoreDataKit.swift */,
+				BD63740D197CF4A000E639FC /* NSCoder.swift */,
+				BD637410197CF81000E639FC /* NSExpressionDescription.swift */,
+				BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */,
+				BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */,
+				BD2BE9321981AE1B001EB2CE /* NSURL.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -356,12 +356,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2BE9331981AE1B001EB2CE /* NSURL+CoreDataKit.swift in Sources */,
-				BD0AA8981980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */,
-				BD63740B197CED8900E639FC /* CDKStack.swift in Sources */,
-				BD63740E197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
-				BD2BE930198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */,
-				BD637411197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */,
+				BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */,
+				BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
+				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
+				BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */,
+				BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */,
+				BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +378,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD63740F197CF4A000E639FC /* NSCoder+CoreDataKit.swift in Sources */,
-				BD2BE931198154DC001EB2CE /* NSManagedObject+CoreDataKit.swift in Sources */,
-				BD63740C197CED8900E639FC /* CDKStack.swift in Sources */,
-				BD2BE9341981AE1B001EB2CE /* NSURL+CoreDataKit.swift in Sources */,
-				BD637412197CF81000E639FC /* NSExpressionDescription+CoreDataKit.swift in Sources */,
-				BD0AA8991980F1F000445CCF /* NSManagedObjectContext+CoreDataKit.swift in Sources */,
+				BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */,
+				BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */,
+				BD63740C197CED8900E639FC /* Stack.swift in Sources */,
+				BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */,
+				BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
+				BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

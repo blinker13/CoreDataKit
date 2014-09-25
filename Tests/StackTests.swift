@@ -12,8 +12,6 @@ import CoreDataKit
 
 class StackTests: XCTestCase {
 	
-	//MARK: - Fixtures
-	
 	var fixtureModel:NSManagedObjectModel {
 		let bundle = NSBundle(forClass:self.dynamicType)
 		return NSManagedObjectModel.mergedModelFromBundles([bundle])
@@ -23,44 +21,41 @@ class StackTests: XCTestCase {
 		return NSManagedObjectModel.mergedModelFromBundles(nil)
 	}
 	
-	var fixtureStack:CDKStack {
+	var fixtureStack:Stack {
 		let model = self.fixtureModel
-		return CDKStack(model)
+		return Stack(model)
 	}
 	
 	
 	//MARK: - Stack Initialization
 	
 	func testStackInitializer() {
-		let stack = CDKStack()
+		let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
+		let stack = Stack()
 		
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
 		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")
 		XCTAssertEqual(stack.model, self.fixtureMergedModel, "The convenience initializer model should be a merged model from all bundles")
-		XCTAssertEqual(stack.mainContext.concurrencyType, NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType, "The main context should use the main queue")
+		XCTAssertEqual(stack.mainContext.concurrencyType, type, "The main context should use the main queue")
+		XCTAssertEqual(stack.mainContext, stack.mainContext, ".mainContext should always return the same context")
+		XCTAssertEqual(stack.coordinator, stack.coordinator, ".coordinator should always return the same coordinator")
+		XCTAssertEqual(stack.model, stack.model, ".model should always return the same model")
 	}
 	
 	func testStackInitializerWithModel() {
+		let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
 		let model = self.fixtureModel
-		let stack = CDKStack(model)
+		let stack = Stack(model)
 		
 		XCTAssertEqual(stack.model, model, "The convenience initializer model should be a merged model from all bundles")
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
 		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")
-		XCTAssertEqual(stack.mainContext.concurrencyType, NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType, "The main context should use the main queue")
-	}
-	
-	
-	//MARK: - Stack Properties
-	
-	func testStackPropertyGetters() {
-		let stack = CDKStack()
-		
-		XCTAssertEqual(stack.mainContext, stack.mainContext, "The main context getter should not be a factory method")
-		XCTAssertEqual(stack.coordinator, stack.coordinator, "The coordinator getter should not be a factory method")
-		XCTAssertEqual(stack.model, stack.model, "The model getter should not be a factory method")
+		XCTAssertEqual(stack.mainContext.concurrencyType, type, "The main context should use the main queue")
+		XCTAssertEqual(stack.mainContext, stack.mainContext, ".mainContext should always return the same context")
+		XCTAssertEqual(stack.coordinator, stack.coordinator, ".coordinator should always return the same coordinator")
+		XCTAssertEqual(stack.model, stack.model, ".model should always return the same model")
 	}
 	
 	

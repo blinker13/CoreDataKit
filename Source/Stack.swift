@@ -1,5 +1,5 @@
 //
-//  CDKStack.swift
+//  Stack.swift
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 21/07/14.
@@ -10,16 +10,16 @@ import CoreData
 
 
 /// Static Instance used for shared Stack
-private var _sharedStack:CDKStack?
+private var _sharedStack:Stack?
 
 
-public class CDKStack {
+public class Stack {
 
 	public let model:NSManagedObjectModel
 	public let mainContext:NSManagedObjectContext
 	public let coordinator:NSPersistentStoreCoordinator
 	
-	public class var shared:CDKStack {return _sharedStack!}
+	public class var shared:Stack {return _sharedStack!}
 	
 	
 	public init(_ model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {

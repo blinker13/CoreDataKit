@@ -11,7 +11,7 @@ import CoreData
 
 public extension NSManagedObjectContext {
 
-	public func startForwardingChanges(context:NSManagedObjectContext = CDKStack.shared.mainContext) {
+	public func startForwardingChanges(context:NSManagedObjectContext = Stack.shared.mainContext) {
 		let action = Selector("mergeChangesFromContextDidSaveNotification:")
 		let name = NSManagedObjectContextDidSaveNotification;
 		let center = NSNotificationCenter.defaultCenter()
@@ -19,7 +19,7 @@ public extension NSManagedObjectContext {
 		center.addObserver(context, selector:action, name:name, object:self)
 	}
 	
-	public func stopForwardingChanges(context:NSManagedObjectContext = CDKStack.shared.mainContext) {
+	public func stopForwardingChanges(context:NSManagedObjectContext = Stack.shared.mainContext) {
 		let name = NSManagedObjectContextDidSaveNotification;
 		let center = NSNotificationCenter.defaultCenter()
 		

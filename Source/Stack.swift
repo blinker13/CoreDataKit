@@ -30,7 +30,7 @@ public class Stack {
 	}
 	
 	
-	public func addStore(type:String = NSSQLiteStoreType, _ url:NSURL = NSURL.defaultStoreURL(), _ configuration:String?) -> NSPersistentStore {
+	public func addStore(_ type:String = NSSQLiteStoreType, _ url:NSURL = NSURL.defaultStoreURL(), _ configuration:String? = nil) -> NSPersistentStore {
 		let options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
 		let fileManager = NSFileManager.defaultManager()
 		

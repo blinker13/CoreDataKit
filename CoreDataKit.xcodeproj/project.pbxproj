@@ -21,6 +21,9 @@
 		BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
 		BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
 		BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
+		BD99A53519D629BC003B6C87 /* NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53419D629BC003B6C87 /* NSPredicate.swift */; };
+		BD99A53719D63638003B6C87 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53619D63638003B6C87 /* Predicate.swift */; };
+		BD99A53919D6C7F4003B6C87 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */; };
 		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
 		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
@@ -59,6 +62,9 @@
 		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		BD63740D197CF4A000E639FC /* NSCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
 		BD637410197CF81000E639FC /* NSExpressionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExpressionDescription.swift; sourceTree = "<group>"; };
+		BD99A53419D629BC003B6C87 /* NSPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicate.swift; sourceTree = "<group>"; };
+		BD99A53619D63638003B6C87 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
 		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
 		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +131,7 @@
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
 				BD63740A197CED8900E639FC /* Stack.swift */,
+				BD99A53619D63638003B6C87 /* Predicate.swift */,
 				BD080CCB194B7C680052F7BE /* Extensions */,
 			);
 			path = Source;
@@ -134,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD87FC719CA2439007493FB /* StackTests.swift */,
+				BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */,
 				BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */,
 				BD080CC1194B7BEF0052F7BE /* Entities */,
 				BD080CC0194B7BD50052F7BE /* Resources */,
@@ -174,6 +182,7 @@
 				BD637410197CF81000E639FC /* NSExpressionDescription.swift */,
 				BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */,
 				BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */,
+				BD99A53419D629BC003B6C87 /* NSPredicate.swift */,
 				BD2BE9321981AE1B001EB2CE /* NSURL.swift */,
 			);
 			name = Extensions;
@@ -359,7 +368,9 @@
 				BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */,
 				BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
 				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
+				BD99A53719D63638003B6C87 /* Predicate.swift in Sources */,
 				BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */,
+				BD99A53519D629BC003B6C87 /* NSPredicate.swift in Sources */,
 				BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */,
 				BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
 			);
@@ -371,6 +382,7 @@
 			files = (
 				BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */,
 				BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */,
+				BD99A53919D6C7F4003B6C87 /* PredicateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

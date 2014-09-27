@@ -25,6 +25,11 @@ public extension NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
+	public class func lazy(info:[String:AnyObject?], context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
+		
+		return NSManagedObject()//TODO: implementation
+	}
+	
 	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
 		
 		var error:NSError?

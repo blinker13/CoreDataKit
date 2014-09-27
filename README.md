@@ -24,11 +24,12 @@ Adding a store will by default initialize an SQLite store named after the main b
 
 ```swift
 stack.addStore()
+```
 
-stack.addStore(type:NSInMemoryStoreType)
+Creating an in memory store is as easy as:
 
-let url = NSURL.defaultStoreURL()
-stack.addStore(NSSQLiteStoreType, url)
+```swift
+stack.addStore(NSInMemoryStoreType)
 ```
 
 

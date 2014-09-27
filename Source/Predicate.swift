@@ -9,10 +9,23 @@
 import CoreData
 
 
+public struct PredicateInfo {
+	let left:NSExpression
+	let right:NSExpression
+	let type:NSPredicateOperatorType
+	
+	public init(key:String, value:AnyObject, type:NSPredicateOperatorType) {
+		self.right = NSExpression(forConstantValue:value)
+		self.left = NSExpression(forKeyPath:key)
+		self.type = type
+	}
+}
+
+
 //MARK: - Less than
 
-public func < (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .LessThanPredicateOperatorType)
+public func < (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.LessThanPredicateOperatorType)
 }
 
 public func < (key:String, value:AnyObject) -> NSPredicate {
@@ -22,8 +35,8 @@ public func < (key:String, value:AnyObject) -> NSPredicate {
 
 //MARK: - Less than or equal
 
-public func <= (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .LessThanOrEqualToPredicateOperatorType)
+public func <= (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.LessThanOrEqualToPredicateOperatorType)
 }
 
 public func <= (key:String, value:AnyObject) -> NSPredicate {
@@ -33,8 +46,8 @@ public func <= (key:String, value:AnyObject) -> NSPredicate {
 
 //MARK: - Greater than
 
-public func > (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .GreaterThanPredicateOperatorType)
+public func > (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.GreaterThanPredicateOperatorType)
 }
 
 public func > (key:String, value:AnyObject) -> NSPredicate {
@@ -44,8 +57,8 @@ public func > (key:String, value:AnyObject) -> NSPredicate {
 
 //MARK: - Greater than or equal
 
-public func >= (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .GreaterThanOrEqualToPredicateOperatorType)
+public func >= (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.GreaterThanOrEqualToPredicateOperatorType)
 }
 
 public func >= (key:String, value:AnyObject) -> NSPredicate {
@@ -55,23 +68,25 @@ public func >= (key:String, value:AnyObject) -> NSPredicate {
 
 //MARK: - Equal
 
-public func == (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .EqualToPredicateOperatorType)
+public func == (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.EqualToPredicateOperatorType)
 }
 
-public func == (key:String, value:AnyObject) -> NSPredicate {
-	return NSComparisonPredicate(key == value)
+public func == (key:String, value:AnyObject?) -> NSPredicate {
+	if value != nil { return NSComparisonPredicate(key == value!) }
+	else { return NSPredicate(format:"%K == nil", key) }
 }
 
 
 //MARK: - Not equal
 
-public func != (key:String, value:AnyObject) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	return expressionTuple(key, value, .NotEqualToPredicateOperatorType)
+public func != (key:String, value:AnyObject) -> PredicateInfo {
+	return PredicateInfo(key:key, value:value, type:.NotEqualToPredicateOperatorType)
 }
 
-public func != (key:String, value:AnyObject) -> NSPredicate {
-	return NSComparisonPredicate(key != value)
+public func != (key:String, value:AnyObject?) -> NSPredicate {
+	if value != nil { return NSComparisonPredicate(key != value!) }
+	else { return NSPredicate(format:"%K != nil", key) }
 }
 
 
@@ -102,21 +117,12 @@ public prefix func ! (predicate:NSPredicate) -> NSPredicate {
 
 //MARK: - 
 
-public func ANY(any:(left:NSExpression, right:NSExpression, type:NSPredicateOperatorType)) -> NSPredicate {
+public func ANY(info:PredicateInfo) -> NSPredicate {
 	let modifier = NSComparisonPredicateModifier.AnyPredicateModifier
-	return NSComparisonPredicate(any, modifier)
+	return NSComparisonPredicate(info, modifier)
 }
 
-public func ALL(any:(left:NSExpression, right:NSExpression, type:NSPredicateOperatorType)) -> NSPredicate {
+public func ALL(info:PredicateInfo) -> NSPredicate {
 	let modifier = NSComparisonPredicateModifier.AllPredicateModifier
-	return NSComparisonPredicate(any, modifier)
-}
-
-
-//MARK: - Private 
-
-private func expressionTuple(key:String, value:AnyObject, type:NSPredicateOperatorType) -> (left:NSExpression, right:NSExpression, type:NSPredicateOperatorType) {
-	let right = NSExpression(forConstantValue:value)
-	let left = NSExpression(forKeyPath:key)
-	return (left, right, type)
+	return NSComparisonPredicate(info, modifier)
 }

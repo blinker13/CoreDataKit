@@ -30,7 +30,7 @@ public extension NSManagedObject {
 		return NSManagedObject()//TODO: implementation
 	}
 	
-	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
+	public class func fetch(#request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
 		
 		var error:NSError?
 		let result = context.executeFetchRequest(request, error:&error) as [NSManagedObject]
@@ -39,19 +39,19 @@ public extension NSManagedObject {
 		return result
 	}
 	
-	public class func fetch(predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
+	public class func fetch(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		
-		return self.fetch(request, context:context)
+		return self.fetch(request:request, context:context)
 	}
 	
-	public class func first(predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject? {
+	public class func first(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject? {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		request.fetchLimit = 1
 		
-		let results = self.fetch(request, context:context)
+		let results = self.fetch(request:request, context:context)
 		return results.first
 	}
 	
@@ -65,8 +65,8 @@ public extension NSManagedObject {
 		return count
 	}
 	
-	public class func delete(predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> Int {
-		let result = self.fetch(predicate:predicate, context:context)
+	public class func delete(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> Int {
+		let result = self.fetch(predicate, context:context)
 		let count = result.count
 		
 		for object in result {

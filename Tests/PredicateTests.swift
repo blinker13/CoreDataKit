@@ -60,6 +60,9 @@ class PredicateTests: XCTestCase {
 		XCTAssertFalse(result.evaluateWithObject(["age":20]))
 		XCTAssertTrue(result.evaluateWithObject(["age":21]))
 		XCTAssertFalse(result.evaluateWithObject(["age":22]))
+		
+		let nilResult:NSPredicate = "name" == nil
+		XCTAssertEqual(nilResult.predicateFormat, "name == nil")
 	}
 	
 	func testNotEqualOperator() {
@@ -70,6 +73,9 @@ class PredicateTests: XCTestCase {
 		XCTAssertTrue(result.evaluateWithObject(["age":20]))
 		XCTAssertFalse(result.evaluateWithObject(["age":21]))
 		XCTAssertTrue(result.evaluateWithObject(["age":22]))
+		
+		let nilResult:NSPredicate = "name" != nil
+		XCTAssertEqual(nilResult.predicateFormat, "name != nil")
 	}
 	
 	

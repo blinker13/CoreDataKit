@@ -20,17 +20,6 @@ public extension NSPredicate {
 		
 		return NSCompoundPredicate(type:.AndPredicateType, subpredicates:predicates)
 	}
-	
-	
-	//MARK: -
-	
-	public class func any(info:PredicateInfo) -> NSPredicate {
-		return NSComparisonPredicate(info, .AnyPredicateModifier)
-	}
-	
-	public class func all(info:PredicateInfo) -> NSPredicate {
-		return NSComparisonPredicate(info, .AllPredicateModifier)
-	}
 }
 
 public extension NSComparisonPredicate {

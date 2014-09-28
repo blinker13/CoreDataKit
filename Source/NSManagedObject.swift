@@ -29,9 +29,18 @@ public extension NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	
-	public class func lazy(info:[String:AnyObject?], context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
+	public class func lazy(info:[String:AnyObject], _ context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
 		
-		return NSManagedObject()//TODO: implementation
+		if info.count > 0 {
+			let filter = NSPredicate.require(info)
+			if let object = self.first(filter, context:context) {
+				return object
+			}
+		}
+		
+		let object = self.insert(context)
+		object.setValuesForKeysWithDictionary(info)
+		return object
 	}
 	
 	public class func fetch(#request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {

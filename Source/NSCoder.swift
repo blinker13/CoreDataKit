@@ -12,8 +12,7 @@ import CoreData
 public extension NSCoder {
 
 	public func encodeManagedObject(object:NSManagedObject, key:String) {
-		let objectURI = object.objectID.URIRepresentation()
-		self.encodeObject(objectURI, forKey:key)
+		self.encodeObject(object.URI, forKey:key)
 	}
 	
 	public func decodeManagedObject(key:String, context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject? {

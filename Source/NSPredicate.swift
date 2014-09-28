@@ -11,7 +11,7 @@ import CoreData
 
 public extension NSPredicate {
 
-	public class func require(info:[String:AnyObject]) -> NSPredicate {
+	public class func require(info:[String:AnyObject?]) -> NSPredicate {
 		var predicates = [NSPredicate]()
 		
 		for (key, value) in info {
@@ -24,18 +24,12 @@ public extension NSPredicate {
 	
 	//MARK: -
 	
-	public class func any(info:(left:NSExpression, right:NSExpression, type:NSPredicateOperatorType)) -> NSPredicate {
-		let modifier = NSComparisonPredicateModifier.AnyPredicateModifier
-		let options = NSComparisonPredicateOptions(0)
-		
-		return NSComparisonPredicate(leftExpression:info.left, rightExpression:info.right, modifier:modifier, type:info.type, options:options)
+	public class func any(info:PredicateInfo) -> NSPredicate {
+		return NSComparisonPredicate(info, .AnyPredicateModifier)
 	}
 	
-	public class func all(info:(left:NSExpression, right:NSExpression, type:NSPredicateOperatorType)) -> NSPredicate {
-		let modifier = NSComparisonPredicateModifier.AllPredicateModifier
-		let options = NSComparisonPredicateOptions(0)
-		
-		return NSComparisonPredicate(leftExpression:info.left, rightExpression:info.right, modifier:modifier, type:info.type, options:options)
+	public class func all(info:PredicateInfo) -> NSPredicate {
+		return NSComparisonPredicate(info, .AllPredicateModifier)
 	}
 }
 

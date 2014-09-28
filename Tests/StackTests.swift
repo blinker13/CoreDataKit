@@ -11,24 +11,7 @@ import CoreDataKit
 
 
 class StackTests: XCTestCase {
-	
-	var fixtureModel:NSManagedObjectModel {
-		let bundle = NSBundle(forClass:self.dynamicType)
-		return NSManagedObjectModel.mergedModelFromBundles([bundle])
-	}
-	
-	var fixtureMergedModel:NSManagedObjectModel {
-		return NSManagedObjectModel.mergedModelFromBundles(nil)
-	}
-	
-	var fixtureStack:Stack {
-		let model = self.fixtureModel
-		return Stack(model)
-	}
-	
-	
-	//MARK: - Stack Initialization
-	
+
 	func testStackInitializer() {
 		let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
 		let stack = Stack()

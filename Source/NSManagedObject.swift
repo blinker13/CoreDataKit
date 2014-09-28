@@ -16,12 +16,16 @@ public extension NSManagedObject {
 		let nameParts = name.componentsSeparatedByString(".")
 		return nameParts.last!
 	}
+	
+	public var URI:NSURL {
+		return self.objectID.URIRepresentation()
+	}
 }
 
 
 public extension NSManagedObject {
 
-	public class func insert(context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
+	public class func insert(_ context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
 	}
 	

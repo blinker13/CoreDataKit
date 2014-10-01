@@ -14,7 +14,7 @@ class NSPredicateExtensionTests: XCTestCase {
 
 	func testRequire() {
 		let stack = self.fixtureStack
-		let object = Bar.insert(stack.mainContext) as Bar
+		let object = Bar.insert(context:stack.mainContext) as Bar
 		object.name = "Bar"
 		
 		

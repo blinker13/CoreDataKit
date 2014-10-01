@@ -25,7 +25,7 @@ public extension NSManagedObject {
 
 public extension NSManagedObject {
 
-	public class func insert<T : NSManagedObject>(_ context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
+	public class func insert<T : NSManagedObject>(context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
 		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as T
 	}
 	
@@ -38,7 +38,7 @@ public extension NSManagedObject {
 			}
 		}
 		
-		let object = self.insert(context)
+		let object = self.insert(context:context)
 		object.setValuesForKeysWithDictionary(info)
 		return object as T
 	}
@@ -70,7 +70,7 @@ public extension NSManagedObject {
 		return results.first
 	}
 	
-	public class func count(predicate:NSPredicate, context:NSManagedObjectContext = Stack.shared.mainContext) -> Int {
+	public class func count(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> Int {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		

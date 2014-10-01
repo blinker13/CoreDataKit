@@ -118,11 +118,9 @@ public prefix func ! (predicate:NSPredicate) -> NSPredicate {
 //MARK: - 
 
 public func ANY(info:PredicateInfo) -> NSPredicate {
-	let modifier = NSComparisonPredicateModifier.AnyPredicateModifier
-	return NSComparisonPredicate(info, modifier)
+	return NSComparisonPredicate(info, modifier:.AnyPredicateModifier)
 }
 
 public func ALL(info:PredicateInfo) -> NSPredicate {
-	let modifier = NSComparisonPredicateModifier.AllPredicateModifier
-	return NSComparisonPredicate(info, modifier)
+	return NSComparisonPredicate(info, modifier:.AllPredicateModifier)
 }

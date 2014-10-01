@@ -14,7 +14,7 @@ class NSCoderExtensionTests: XCTestCase {
 
 	func testEncoding() {
 		let stack = self.fixtureStack
-		let object = Bar.insert(stack.mainContext)
+		let object = Bar.insert(context:stack.mainContext)
 		let coder = NSKeyedArchiver()
 		
 		coder.encodeManagedObject(object, key:"test")

@@ -24,7 +24,7 @@ public extension NSPredicate {
 
 public extension NSComparisonPredicate {
 
-	public convenience init(_ info:PredicateInfo, _ modifier:NSComparisonPredicateModifier = NSComparisonPredicateModifier.DirectPredicateModifier, _ options:NSComparisonPredicateOptions = NSComparisonPredicateOptions(0)) {
+	public convenience init(_ info:PredicateInfo, modifier:NSComparisonPredicateModifier = NSComparisonPredicateModifier.DirectPredicateModifier, options:NSComparisonPredicateOptions = NSComparisonPredicateOptions(0)) {
 		self.init(leftExpression:info.left, rightExpression:info.right, modifier:modifier, type:info.type, options:options)
 	}
 }

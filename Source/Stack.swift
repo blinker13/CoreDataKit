@@ -22,7 +22,7 @@ public class Stack {
 	public class var shared:Stack {return _sharedStack!}
 	
 	
-	public init(_ model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {
+	public init(model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {
 		self.coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
 		self.mainContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
 		self.mainContext.persistentStoreCoordinator = self.coordinator
@@ -30,16 +30,15 @@ public class Stack {
 	}
 	
 	
-	public func addStore(_ type:String = NSSQLiteStoreType, _ url:NSURL = NSURL.defaultStoreURL(), _ configuration:String? = nil) -> NSPersistentStore {
+	public func addStore(url:NSURL = NSURL.defaultStoreURL(), configuration:String? = nil) -> NSPersistentStore {
 		let options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
 		
-		if type != NSInMemoryStoreType {
-			let fileManager = NSFileManager.defaultManager()
-			let urlPath = url.URLByDeletingLastPathComponent!
-			fileManager.createDirectoryAtURL(urlPath, withIntermediateDirectories:true, attributes:nil, error:nil)
-		}
+		var error:NSError?
+		let fileManager = NSFileManager.defaultManager()
+		fileManager.createDirectoryAtURL(url.URLByDeletingLastPathComponent!, withIntermediateDirectories:true, attributes:nil, error:&error)
+		assert(error == nil, "Creating a directory failed")
 		
-		return self.coordinator.addPersistentStoreWithType(type, configuration:configuration, URL:url, options:options, error:nil)!
+		return self.coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration:configuration, URL:url, options:options, error:nil)!
 	}
 	
 	public func share() {

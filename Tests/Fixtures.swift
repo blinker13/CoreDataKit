@@ -22,13 +22,12 @@ extension XCTestCase {
 	}
 	
 	var fixtureStackWithoutStore:Stack {
-		let model = self.fixtureModel
-		return Stack(model)
+		return Stack(model:self.fixtureModel)
 	}
 	
 	var fixtureStack:Stack {
 		let stack = self.fixtureStackWithoutStore
-			stack.addStore(NSInMemoryStoreType)
+		stack.coordinator.addPersistentStoreWithType(NSInMemoryStoreType, configuration:nil, URL:nil, options:nil, error:nil)
 		return stack
 	}
 }

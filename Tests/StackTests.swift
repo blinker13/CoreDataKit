@@ -27,11 +27,11 @@ class StackTests: XCTestCase {
 	}
 	
 	func testStackInitializerWithModel() {
+		let fixtureModel = self.fixtureModel
+		let stack = Stack(model:fixtureModel)
 		let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
-		let model = self.fixtureModel
-		let stack = Stack(model)
 		
-		XCTAssertEqual(stack.model, model, "The convenience initializer model should be a merged model from all bundles")
+		XCTAssertEqual(stack.model, fixtureModel, "The convenience initializer model should be a merged model from all bundles")
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
 		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")

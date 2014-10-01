@@ -32,9 +32,13 @@ public class Stack {
 	
 	public func addStore(_ type:String = NSSQLiteStoreType, _ url:NSURL = NSURL.defaultStoreURL(), _ configuration:String? = nil) -> NSPersistentStore {
 		let options = [NSMigratePersistentStoresAutomaticallyOption:true, NSInferMappingModelAutomaticallyOption:true]
-		let fileManager = NSFileManager.defaultManager()
 		
-		fileManager.createDirectoryAtURL(url.URLByDeletingLastPathComponent!, withIntermediateDirectories:true, attributes:nil, error:nil)
+		if type != NSInMemoryStoreType {
+			let fileManager = NSFileManager.defaultManager()
+			let urlPath = url.URLByDeletingLastPathComponent!
+			fileManager.createDirectoryAtURL(urlPath, withIntermediateDirectories:true, attributes:nil, error:nil)
+		}
+		
 		return self.coordinator.addPersistentStoreWithType(type, configuration:configuration, URL:url, options:options, error:nil)!
 	}
 	

@@ -21,8 +21,14 @@ extension XCTestCase {
 		return NSManagedObjectModel.mergedModelFromBundles(nil)
 	}
 	
-	var fixtureStackWithout:Stack {
+	var fixtureStackWithoutStore:Stack {
 		let model = self.fixtureModel
 		return Stack(model)
+	}
+	
+	var fixtureStack:Stack {
+		let stack = self.fixtureStackWithoutStore
+			stack.addStore(NSInMemoryStoreType)
+		return stack
 	}
 }

@@ -13,8 +13,8 @@ import CoreDataKit
 class NSCoderExtensionTests: XCTestCase {
 
 	func testEncoding() {
-		let context = self.fixtureStack.mainContext
-		let object = Bar.insert(context)
+		let stack = self.fixtureStack
+		let object = Bar.insert(stack.mainContext)
 		let coder = NSKeyedArchiver()
 		
 		coder.encodeManagedObject(object, key:"test")

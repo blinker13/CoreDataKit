@@ -25,25 +25,26 @@ public extension NSManagedObject {
 
 public extension NSManagedObject {
 
-	public class func insert(_ context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
-		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as NSManagedObject
+	public class func insert<T : NSManagedObject>(_ context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
+		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as T
 	}
 	
-	public class func lazy(info:[String:AnyObject], _ context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject {
+	public class func lazy<T : NSManagedObject>(info:[String:AnyObject], context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
 		
 		if info.count > 0 {
 			let filter = NSPredicate.require(info)
-			if let object = self.first(filter, context:context) {
-				return object
+			if let object = self.first(filter) {
+				return object as T
 			}
 		}
 		
 		let object = self.insert(context)
 		object.setValuesForKeysWithDictionary(info)
-		return object
+		return object as T
 	}
 	
-	public class func fetch(#request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
+	//TODO: replace explicit return value with a generic value type
+	public class func fetch(request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
 		
 		var error:NSError?
 		let result = context.executeFetchRequest(request, error:&error) as [NSManagedObject]
@@ -52,19 +53,20 @@ public extension NSManagedObject {
 		return result
 	}
 	
+	//TODO: replace explicit return value with a generic value type
 	public class func fetch(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> [NSManagedObject] {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		
-		return self.fetch(request:request, context:context)
+		return self.fetch(request, context:context)
 	}
 	
-	public class func first(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> NSManagedObject? {
+	public class func first<T : NSManagedObject>(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> T? {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		request.fetchLimit = 1
 		
-		let results = self.fetch(request:request, context:context)
+		let results = self.fetch(request, context:context) as [T]
 		return results.first
 	}
 	

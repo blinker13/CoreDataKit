@@ -29,6 +29,7 @@
 		BD99A53F19D80A28003B6C87 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53E19D80A28003B6C87 /* Fixtures.swift */; };
 		BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */; };
 		BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
+		BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */; };
 		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
 		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
@@ -74,6 +75,7 @@
 		BD99A53C19D809EE003B6C87 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		BD99A53E19D80A28003B6C87 /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoderExtensionTests.swift; sourceTree = "<group>"; };
+		BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
 		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
 		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				BDD87FC719CA2439007493FB /* StackTests.swift */,
 				BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */,
 				BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */,
+				BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */,
 				BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */,
 				BD080CC1194B7BEF0052F7BE /* Entities */,
 				BD080CC0194B7BD50052F7BE /* Resources */,
@@ -395,6 +398,7 @@
 			files = (
 				BD99A53D19D809EE003B6C87 /* Bar.swift in Sources */,
 				BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */,
+				BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */,
 				BD99A53B19D809EE003B6C87 /* Foo.swift in Sources */,
 				BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */,
 				BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */,
@@ -480,6 +484,7 @@
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -518,6 +523,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

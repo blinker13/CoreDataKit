@@ -13,7 +13,7 @@ import CoreDataKit
 extension XCTestCase {
 
 	var fixtureModel:NSManagedObjectModel {
-		let bundle = NSBundle(forClass:self.dynamicType)
+		let bundle = NSBundle(forClass:StackTests.self)
 		return NSManagedObjectModel.mergedModelFromBundles([bundle])
 	}
 	

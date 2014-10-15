@@ -9,29 +9,32 @@
 import CoreData
 
 
-public protocol DataSourceDelegate : NSObjectProtocol {
+public protocol DataSourceDelegate : class {
 	
-	func dataSourceWillChangeContent(dataSource:DataSource)
-	func dataSourceDidChangeContent(dataSource:DataSource)
+	typealias Associate
+	typealias ManagedObject
 	
-	func dataSource(dataSource:DataSource, didInsert section:Int)
-	func dataSource(dataSource:DataSource, didDelete section:Int)
+	func dataSourceWillChangeContent(dataSource:DataSource<Self>)
+	func dataSourceDidChangeContent(dataSource:DataSource<Self>)
 	
-	func dataSource(dataSource:DataSource, didInsert object:NSManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource, didDelete object:NSManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource, didUpdate object:NSManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource, didMove object:NSManagedObject, at indexPath:NSIndexPath, to:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didInsert section:Int)
+	func dataSource(dataSource:DataSource<Self>, didDelete section:Int)
 	
-	func dataSource(dataSource:DataSource, associateFor object:NSManagedObject, at indexPath:NSIndexPath) -> AnyObject
-	func dataSource(dataSource:DataSource, shouldDelete object:NSManagedObject, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didInsert object:ManagedObject, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didDelete object:ManagedObject, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didUpdate object:ManagedObject, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didMove object:ManagedObject, at indexPath:NSIndexPath, to:NSIndexPath)
+	
+	func dataSource(dataSource:DataSource<Self>, associateFor object:ManagedObject, at indexPath:NSIndexPath) -> Associate
+	func dataSource(dataSource:DataSource<Self>, shouldDelete object:ManagedObject, at indexPath:NSIndexPath)
 }
 
 
 //MARK: -
 
-public class DataSource : NSFetchedResultsControllerDelegate {
+public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedObject> : NSFetchedResultsControllerDelegate {
 
-	public weak var delegate:DataSourceDelegate?
+	public weak var delegate:D?
 	
 	public let context:NSManagedObjectContext
 	public let request:NSFetchRequest
@@ -58,11 +61,11 @@ public class DataSource : NSFetchedResultsControllerDelegate {
 	
 	//MARK: -
 	
-	public subscript(indexPath:NSIndexPath) -> NSManagedObject {
-		return self.fetchedResults.objectAtIndexPath(indexPath) as NSManagedObject
+	public subscript(indexPath:NSIndexPath) -> D.ManagedObject {
+		return self.fetchedResults.objectAtIndexPath(indexPath) as D.ManagedObject
 	}
 	
-	public subscript(object:NSManagedObject) -> NSIndexPath? {
+	public subscript(object:D.ManagedObject) -> NSIndexPath? {
 		return self.fetchedResults.indexPathForObject(object)
 	}
 	
@@ -71,7 +74,7 @@ public class DataSource : NSFetchedResultsControllerDelegate {
 		self.delete(object)
 	}
 	
-	public func delete(object:NSManagedObject) {
+	public func delete(object:D.ManagedObject) {
 		
 		self.context.performBlockAndWait {
 			var error:NSError?
@@ -100,7 +103,7 @@ public class DataSource : NSFetchedResultsControllerDelegate {
 		}
 	}
 	
-	public func controller(controller:NSFetchedResultsController, didChangeObject object:NSManagedObject, atIndexPath indexPath:NSIndexPath!, forChangeType type:NSFetchedResultsChangeType, newIndexPath:NSIndexPath!) {
+	public func controller(controller:NSFetchedResultsController, didChangeObject object:D.ManagedObject, atIndexPath indexPath:NSIndexPath!, forChangeType type:NSFetchedResultsChangeType, newIndexPath:NSIndexPath!) {
 		
 		switch type {
 			case .Insert: self.delegate?.dataSource(self, didInsert:object, at:newIndexPath)
@@ -136,8 +139,8 @@ public class DataSource : NSFetchedResultsControllerDelegate {
 
 extension DataSource : SequenceType {
 	
-	public func generate() -> IndexingGenerator<[NSManagedObject]> {
-		let objects = self.fetchedResults.fetchedObjects as [NSManagedObject]
+	public func generate() -> IndexingGenerator<[D.ManagedObject]> {
+		let objects = self.fetchedResults.fetchedObjects as [D.ManagedObject]
 		return objects.generate()
 	}
 }

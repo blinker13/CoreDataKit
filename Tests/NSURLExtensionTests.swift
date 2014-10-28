@@ -14,7 +14,7 @@ class NSURLExtensionTests: XCTestCase {
 
 	func testStoreURLByAppendingName() {
 		let expectedPath = "foo/bar/test.sqlite"
-		let startURL = NSURL(string:"foo/bar")
+		let startURL = NSURL(string:"foo/bar")!
 		
 		let testURL = startURL.storeURLByAppendingName("test")
 		

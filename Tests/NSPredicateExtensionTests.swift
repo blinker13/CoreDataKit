@@ -13,12 +13,12 @@ import CoreDataKit
 class NSPredicateExtensionTests: XCTestCase {
 
 	func testRequire() {
-		let result = NSPredicate.require(["name":"Felix", "age":13])
-		XCTAssertEqual(result.predicateFormat, "name == \"Felix\" AND age == 13")
+		let result = NSPredicate.require(["age":13, "name":"Felix"])
+		XCTAssertEqual(result.predicateFormat, "age == 13 AND name == \"Felix\"")
 	}
 	
 	func testRequireWithNilValue() {
-		let result = NSPredicate.require(["name":nil, "age":13])
-		XCTAssertEqual(result.predicateFormat, "name == nil AND age == 13")
+		let result = NSPredicate.require(["age":13, "name":nil])
+		XCTAssertEqual(result.predicateFormat, "age == 13 AND name == nil")
 	}
 }

@@ -14,11 +14,11 @@ extension XCTestCase {
 
 	var fixtureModel:NSManagedObjectModel {
 		let bundle = NSBundle(forClass:StackTests.self)
-		return NSManagedObjectModel.mergedModelFromBundles([bundle])
+		return NSManagedObjectModel.mergedModelFromBundles([bundle])!
 	}
 	
 	var fixtureMergedModel:NSManagedObjectModel {
-		return NSManagedObjectModel.mergedModelFromBundles(nil)
+		return NSManagedObjectModel.mergedModelFromBundles(nil)!
 	}
 	
 	var fixtureStackWithoutStore:Stack {

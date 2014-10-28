@@ -18,7 +18,7 @@ class StackTests: XCTestCase {
 		
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
-		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")
+		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator!, "Main context is not connected to the coordinator")
 		XCTAssertEqual(stack.model, self.fixtureMergedModel, "The convenience initializer model should be a merged model from all bundles")
 		XCTAssertEqual(stack.mainContext.concurrencyType, type, "The main context should use the main queue")
 		XCTAssertEqual(stack.mainContext, stack.mainContext, ".mainContext should always return the same context")
@@ -34,7 +34,7 @@ class StackTests: XCTestCase {
 		XCTAssertEqual(stack.model, fixtureModel, "The convenience initializer model should be a merged model from all bundles")
 		XCTAssertEqual(stack.model, stack.coordinator.managedObjectModel, "The coordinator is not connected to the model")
 		XCTAssertEqual(stack.coordinator.persistentStores.count, 0, "After initialization a stack should not have a persistent store")
-		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator, "Main context is not connected to the coordinator")
+		XCTAssertEqual(stack.coordinator, stack.mainContext.persistentStoreCoordinator!, "Main context is not connected to the coordinator")
 		XCTAssertEqual(stack.mainContext.concurrencyType, type, "The main context should use the main queue")
 		XCTAssertEqual(stack.mainContext, stack.mainContext, ".mainContext should always return the same context")
 		XCTAssertEqual(stack.coordinator, stack.coordinator, ".coordinator should always return the same coordinator")

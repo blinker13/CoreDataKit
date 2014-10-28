@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
-import CoreData
+import Foundation
 
 
 public extension NSPredicate {

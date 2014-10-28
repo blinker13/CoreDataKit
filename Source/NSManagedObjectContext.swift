@@ -32,6 +32,6 @@ public extension NSManagedObjectContext {
 
 	public func objectIDForURI(uri:NSURL) -> NSManagedObjectID? {
 		let coordinator = self.persistentStoreCoordinator
-		return coordinator.managedObjectIDForURIRepresentation(uri)
+		return coordinator?.managedObjectIDForURIRepresentation(uri)
 	}
 }

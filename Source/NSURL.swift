@@ -13,7 +13,7 @@ extension NSURL {
 
 	public class func defaultStoreURL() -> NSURL {
 		let bundle = NSBundle.mainBundle()
-		let name = bundle.infoDictionary[kCFBundleExecutableKey] as NSString
+		let name = bundle.infoDictionary?[kCFBundleExecutableKey] as NSString
 		return self.storeURLWithName(name)
 	}
 	

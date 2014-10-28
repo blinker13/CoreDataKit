@@ -11,8 +11,8 @@ import CoreData
 
 public protocol DataSourceDelegate : class {
 	
-	typealias Associate
-	typealias ManagedObject
+	typealias AO
+	typealias MO
 	
 	func dataSourceWillChangeContent(dataSource:DataSource<Self>)
 	func dataSourceDidChangeContent(dataSource:DataSource<Self>)
@@ -20,19 +20,19 @@ public protocol DataSourceDelegate : class {
 	func dataSource(dataSource:DataSource<Self>, didInsert section:Int)
 	func dataSource(dataSource:DataSource<Self>, didDelete section:Int)
 	
-	func dataSource(dataSource:DataSource<Self>, didInsert object:ManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource<Self>, didDelete object:ManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource<Self>, didUpdate object:ManagedObject, at indexPath:NSIndexPath)
-	func dataSource(dataSource:DataSource<Self>, didMove object:ManagedObject, at indexPath:NSIndexPath, to:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didInsert object:MO, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didDelete object:MO, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didUpdate object:MO, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, didMove object:MO, at indexPath:NSIndexPath, to:NSIndexPath)
 	
-	func dataSource(dataSource:DataSource<Self>, associateFor object:ManagedObject, at indexPath:NSIndexPath) -> Associate
-	func dataSource(dataSource:DataSource<Self>, shouldDelete object:ManagedObject, at indexPath:NSIndexPath)
+	func dataSource(dataSource:DataSource<Self>, associateFor object:MO, at indexPath:NSIndexPath) -> AO
+	func dataSource(dataSource:DataSource<Self>, shouldDelete object:MO, at indexPath:NSIndexPath)
 }
 
 
 //MARK: -
 
-public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedObject> : NSFetchedResultsControllerDelegate {
+public class DataSource<D:DataSourceDelegate where D.MO == NSManagedObject> : NSFetchedResultsControllerDelegate {
 
 	public weak var delegate:D?
 	
@@ -49,8 +49,8 @@ public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedO
 	public init(_ request:NSFetchRequest, context:NSManagedObjectContext = Stack.shared.mainContext, shouldSectionResults:Bool = false, cacheName:String? = nil) {
 		
 		if shouldSectionResults {
-			let descriptor = request.sortDescriptors.first as NSSortDescriptor
-			self.sectionKey = descriptor.key
+			let descriptors = request.sortDescriptors as [NSSortDescriptor]?
+			self.sectionKey = descriptors?.first?.key
 		}
 		
 		self.cacheName = cacheName
@@ -61,11 +61,11 @@ public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedO
 	
 	//MARK: -
 	
-	public subscript(indexPath:NSIndexPath) -> D.ManagedObject {
-		return self.fetchedResults.objectAtIndexPath(indexPath) as D.ManagedObject
+	public subscript(indexPath:NSIndexPath) -> D.MO {
+		return self.fetchedResults.objectAtIndexPath(indexPath) as D.MO
 	}
 	
-	public subscript(object:D.ManagedObject) -> NSIndexPath? {
+	public subscript(object:D.MO) -> NSIndexPath? {
 		return self.fetchedResults.indexPathForObject(object)
 	}
 	
@@ -74,7 +74,7 @@ public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedO
 		self.delete(object)
 	}
 	
-	public func delete(object:D.ManagedObject) {
+	public func delete(object:D.MO) {
 		
 		self.context.performBlockAndWait {
 			var error:NSError?
@@ -103,7 +103,7 @@ public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedO
 		}
 	}
 	
-	public func controller(controller:NSFetchedResultsController, didChangeObject object:D.ManagedObject, atIndexPath indexPath:NSIndexPath!, forChangeType type:NSFetchedResultsChangeType, newIndexPath:NSIndexPath!) {
+	public func controller(controller:NSFetchedResultsController, didChangeObject object:D.MO, atIndexPath indexPath:NSIndexPath!, forChangeType type:NSFetchedResultsChangeType, newIndexPath:NSIndexPath!) {
 		
 		switch type {
 			case .Insert: self.delegate?.dataSource(self, didInsert:object, at:newIndexPath)
@@ -139,8 +139,8 @@ public class DataSource<D:DataSourceDelegate where D.ManagedObject == NSManagedO
 
 extension DataSource : SequenceType {
 	
-	public func generate() -> IndexingGenerator<[D.ManagedObject]> {
-		let objects = self.fetchedResults.fetchedObjects as [D.ManagedObject]
+	public func generate() -> IndexingGenerator<[D.MO]> {
+		let objects = self.fetchedResults.fetchedObjects as [D.MO]
 		return objects.generate()
 	}
 }

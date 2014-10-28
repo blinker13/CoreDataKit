@@ -74,7 +74,7 @@ public func == (key:String, value:AnyObject) -> PredicateInfo {
 
 public func == (key:String, value:AnyObject?) -> NSPredicate {
 	if value != nil { return NSComparisonPredicate(key == value!) }
-	else { return NSPredicate(format:"%K == nil", key) }
+	else { return NSPredicate(format:"%K == nil", key)! }
 }
 
 
@@ -86,7 +86,7 @@ public func != (key:String, value:AnyObject) -> PredicateInfo {
 
 public func != (key:String, value:AnyObject?) -> NSPredicate {
 	if value != nil { return NSComparisonPredicate(key != value!) }
-	else { return NSPredicate(format:"%K != nil", key) }
+	else { return NSPredicate(format:"%K != nil", key)! }
 }
 
 

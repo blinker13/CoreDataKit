@@ -22,7 +22,7 @@ public class Stack {
 	public class var shared:Stack {return _sharedStack!}
 	
 	
-	public init(model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)) {
+	public init(model:NSManagedObjectModel = NSManagedObjectModel.mergedModelFromBundles(nil)!) {
 		self.coordinator = NSPersistentStoreCoordinator(managedObjectModel:model)
 		self.mainContext = NSManagedObjectContext(concurrencyType:.MainQueueConcurrencyType)
 		self.mainContext.persistentStoreCoordinator = self.coordinator

@@ -25,22 +25,22 @@ public extension NSManagedObject {
 
 public extension NSManagedObject {
 
-	public class func insert<T : NSManagedObject>(context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
-		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as T
+	public class func insert<MO:NSManagedObject>(context:NSManagedObjectContext = Stack.shared.mainContext) -> MO {
+		return NSEntityDescription.insertNewObjectForEntityForName(self.entityName, inManagedObjectContext:context) as MO
 	}
 	
-	public class func lazy<T : NSManagedObject>(info:[String:AnyObject], context:NSManagedObjectContext = Stack.shared.mainContext) -> T {
+	public class func lazy<MO:NSManagedObject>(info:[String:AnyObject], context:NSManagedObjectContext = Stack.shared.mainContext) -> MO {
 		
 		if info.count > 0 {
 			let filter = NSPredicate.require(info)
 			if let object = self.first(filter) {
-				return object as T
+				return object as MO
 			}
 		}
 		
 		let object = self.insert(context:context)
 		object.setValuesForKeysWithDictionary(info)
-		return object as T
+		return object as MO
 	}
 	
 	//TODO: replace explicit return value with a generic value type
@@ -61,12 +61,12 @@ public extension NSManagedObject {
 		return self.fetch(request, context:context)
 	}
 	
-	public class func first<T : NSManagedObject>(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> T? {
+	public class func first<MO:NSManagedObject>(_ predicate:NSPredicate? = nil, context:NSManagedObjectContext = Stack.shared.mainContext) -> MO? {
 		let request = NSFetchRequest(entityName:self.entityName)
 		request.predicate = predicate
 		request.fetchLimit = 1
 		
-		let results = self.fetch(request, context:context) as [T]
+		let results = self.fetch(request, context:context) as [MO]
 		return results.first
 	}
 	

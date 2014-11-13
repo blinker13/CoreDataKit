@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD080C78194B79E30052F7BE"
-               BuildableName = "CoreDataKit.framework"
+               BlueprintIdentifier = "BDC45DE11A155DC900662D74"
+               BuildableName = "CoreDataKit iOS.framework"
                BlueprintName = "CoreDataKit iOS"
                ReferencedContainer = "container:CoreDataKit.xcodeproj">
             </BuildableReference>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD080C83194B79E30052F7BE"
-               BuildableName = "CoreDataKitTests.xctest"
-               BlueprintName = "CoreDataKit iOS Tests"
+               BlueprintIdentifier = "BDC45DEB1A155DCA00662D74"
+               BuildableName = "CoreDataKitTests iOS.xctest"
+               BlueprintName = "CoreDataKitTests iOS"
                ReferencedContainer = "container:CoreDataKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,8 +56,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD080C78194B79E30052F7BE"
-            BuildableName = "CoreDataKit.framework"
+            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
+            BuildableName = "CoreDataKit iOS.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
@@ -75,8 +75,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD080C78194B79E30052F7BE"
-            BuildableName = "CoreDataKit.framework"
+            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
+            BuildableName = "CoreDataKit iOS.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
@@ -93,8 +93,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD080C78194B79E30052F7BE"
-            BuildableName = "CoreDataKit.framework"
+            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
+            BuildableName = "CoreDataKit iOS.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>

@@ -7,86 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
-		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD88950819FF8A9A00B06014 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53E19D80A28003B6C87 /* Fixtures.swift */; };
-		BD88950919FF8A9E00B06014 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
-		BD88950A19FF8AA100B06014 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */; };
-		BD88950B19FF8AA500B06014 /* NSCoderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */; };
-		BD88950C19FF8AA800B06014 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */; };
-		BD88950D19FF8AAB00B06014 /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
-		BD88950E19FF8C9C00B06014 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
-		BD88950F19FF8C9F00B06014 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53A19D809EE003B6C87 /* Foo.swift */; };
-		BD88951019FF8CA300B06014 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53C19D809EE003B6C87 /* Bar.swift */; };
-		BD99A53919D6C7F4003B6C87 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */; };
-		BD99A53B19D809EE003B6C87 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53A19D809EE003B6C87 /* Foo.swift */; };
-		BD99A53D19D809EE003B6C87 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53C19D809EE003B6C87 /* Bar.swift */; };
-		BD99A53F19D80A28003B6C87 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53E19D80A28003B6C87 /* Fixtures.swift */; };
-		BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */; };
-		BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
-		BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */; };
-		BDC7376A1A14A30500CACC47 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7376B1A14A30500CACC47 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7376C1A14A30500CACC47 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CDKStack.m */; };
-		BDC7376D1A14A30500CACC47 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CDKStack.m */; };
-		BDC737761A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737771A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
-		BDC737791A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
-		BDC7377C1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7377D1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7377E1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */; };
-		BDC7377F1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */; };
-		BDC737821A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737831A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737841A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */; };
-		BDC737851A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */; };
-		BDC737881A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737891A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7378A1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */; };
-		BDC7378B1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */; };
-		BDC7378E1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7378F1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC737901A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */; };
-		BDC737911A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */; };
-		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
-		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
-		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
-		BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45DED1A155DCA00662D74 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45DE21A155DC900662D74 /* CoreDataKit.framework */; };
+		BDC45DFB1A155F1500662D74 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45D9E1A155D6600662D74 /* CDKStackTests.m */; };
+		BDC45DFC1A155F2100662D74 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45DFD1A155F2100662D74 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45DFE1A155F2100662D74 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CDKStack.m */; };
+		BDC45DFF1A155F2100662D74 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E001A155F2100662D74 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */; };
+		BDC45E011A155F2100662D74 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E021A155F2100662D74 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */; };
+		BDC45E031A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E041A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */; };
+		BDC45E051A155F2100662D74 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E061A155F2100662D74 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */; };
+		BDC45E071A155F2100662D74 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E081A155F2100662D74 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
+		BDC45E0E1A15651C00662D74 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E0D1A15651C00662D74 /* XCTestCase+Fixtures.m */; };
+		BDC45E111A156C1000662D74 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E101A156C1000662D74 /* NSURLTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD080CD8194B7DD60052F7BE /* PBXContainerItemProxy */ = {
+		BDC45DEE1A155DCA00662D74 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD080C70194B79E30052F7BE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BD080C78194B79E30052F7BE;
+			remoteGlobalIDString = BDC45DE11A155DC900662D74;
 			remoteInfo = "CoreDataKit iOS";
-		};
-		BDFD68FD194DFAD600799C33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD080C70194B79E30052F7BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BDFD68F0194DFAD600799C33;
-			remoteInfo = "CoreDataKit OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD080C79194B79E30052F7BE /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD080C84194B79E30052F7BE /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD080CA1194B7B190052F7BE /* CoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataKit.h; sourceTree = "<group>"; };
 		BD080CB4194B7B190052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD080CB6194B7B190052F7BE /* Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test.xcdatamodel; sourceTree = "<group>"; };
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
-		BD99A53A19D809EE003B6C87 /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
-		BD99A53C19D809EE003B6C87 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
-		BD99A53E19D80A28003B6C87 /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
-		BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoderExtensionTests.swift; sourceTree = "<group>"; };
-		BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
+		BDC45D9E1A155D6600662D74 /* CDKStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
+		BDC45DE21A155DC900662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45DEC1A155DCA00662D74 /* CoreDataKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45E0C1A15651C00662D74 /* XCTestCase+Fixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Fixtures.h"; sourceTree = "<group>"; };
+		BDC45E0D1A15651C00662D74 /* XCTestCase+Fixtures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Fixtures.m"; sourceTree = "<group>"; };
+		BDC45E101A156C1000662D74 /* NSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTests.m; sourceTree = "<group>"; };
 		BDC737681A14A30500CACC47 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
 		BDC737691A14A30500CACC47 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -99,40 +61,21 @@
 		BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSExpressionDescription+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+CoreDataKit.m"; sourceTree = "<group>"; };
-		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
-		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
-		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BD080C75194B79E30052F7BE /* Frameworks */ = {
+		BDC45DDE1A155DC900662D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD080C81194B79E30052F7BE /* Frameworks */ = {
+		BDC45DE91A155DCA00662D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68ED194DFAD600799C33 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68F8194DFAD600799C33 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */,
+				BDC45DED1A155DCA00662D74 /* CoreDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +95,8 @@
 		BD080C7A194B79E30052F7BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD080C79194B79E30052F7BE /* CoreDataKit.framework */,
-				BD080C84194B79E30052F7BE /* CoreDataKitTests.xctest */,
-				BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */,
-				BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */,
+				BDC45DE21A155DC900662D74 /* CoreDataKit.framework */,
+				BDC45DEC1A155DCA00662D74 /* CoreDataKitTests iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,14 +115,10 @@
 		BD080CAE194B7B190052F7BE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BD99A53E19D80A28003B6C87 /* Fixtures.swift */,
-				BDD87FC719CA2439007493FB /* StackTests.swift */,
-				BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */,
-				BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */,
-				BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */,
-				BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */,
-				BD080CC1194B7BEF0052F7BE /* Entities */,
 				BD080CC0194B7BD50052F7BE /* Resources */,
+				BDC45E0F1A15652400662D74 /* Support */,
+				BDC45D9E1A155D6600662D74 /* CDKStackTests.m */,
+				BDC45E101A156C1000662D74 /* NSURLTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -205,15 +142,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BD080CC1194B7BEF0052F7BE /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BD99A53C19D809EE003B6C87 /* Bar.swift */,
-				BD99A53A19D809EE003B6C87 /* Foo.swift */,
-			);
-			name = Entities;
-			sourceTree = "<group>";
-		};
 		BD080CCB194B7C680052F7BE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,110 +159,69 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		BDC45E0F1A15652400662D74 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BDC45E0C1A15651C00662D74 /* XCTestCase+Fixtures.h */,
+				BDC45E0D1A15651C00662D74 /* XCTestCase+Fixtures.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BD080C76194B79E30052F7BE /* Headers */ = {
+		BDC45DDF1A155DC900662D74 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC737881A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BDC7376A1A14A30500CACC47 /* CDKStack.h in Headers */,
-				BDC7377C1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
-				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
-				BDC737821A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BDC7378E1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BDC737761A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68EE194DFAD600799C33 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC737891A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BDC7376B1A14A30500CACC47 /* CDKStack.h in Headers */,
-				BDC7377D1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
-				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
-				BDC737831A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
-				BDC7378F1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */,
-				BDC737771A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */,
+				BDC45DFD1A155F2100662D74 /* CDKStack.h in Headers */,
+				BDC45E071A155F2100662D74 /* NSURL+CoreDataKit.h in Headers */,
+				BDC45DFF1A155F2100662D74 /* NSCoder+CoreDataKit.h in Headers */,
+				BDC45E011A155F2100662D74 /* NSExpressionDescription+CoreDataKit.h in Headers */,
+				BDC45E031A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BDC45E051A155F2100662D74 /* NSManagedObject+CoreDataKit.h in Headers */,
+				BDC45DFC1A155F2100662D74 /* CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BD080C78194B79E30052F7BE /* CoreDataKit iOS */ = {
+		BDC45DE11A155DC900662D74 /* CoreDataKit iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD080C8F194B79E30052F7BE /* Build configuration list for PBXNativeTarget "CoreDataKit iOS" */;
+			buildConfigurationList = BDC45DF51A155DCA00662D74 /* Build configuration list for PBXNativeTarget "CoreDataKit iOS" */;
 			buildPhases = (
-				BD080C74194B79E30052F7BE /* Sources */,
-				BD080C75194B79E30052F7BE /* Frameworks */,
-				BD080C76194B79E30052F7BE /* Headers */,
-				BD080C77194B79E30052F7BE /* Resources */,
+				BDC45DDD1A155DC900662D74 /* Sources */,
+				BDC45DDE1A155DC900662D74 /* Frameworks */,
+				BDC45DDF1A155DC900662D74 /* Headers */,
+				BDC45DE01A155DC900662D74 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "CoreDataKit iOS";
-			productName = CoreDataKit;
-			productReference = BD080C79194B79E30052F7BE /* CoreDataKit.framework */;
+			productName = "CoreDataKit iOS";
+			productReference = BDC45DE21A155DC900662D74 /* CoreDataKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BD080C83194B79E30052F7BE /* CoreDataKit iOS Tests */ = {
+		BDC45DEB1A155DCA00662D74 /* CoreDataKitTests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD080C92194B79E30052F7BE /* Build configuration list for PBXNativeTarget "CoreDataKit iOS Tests" */;
+			buildConfigurationList = BDC45DF81A155DCA00662D74 /* Build configuration list for PBXNativeTarget "CoreDataKitTests iOS" */;
 			buildPhases = (
-				BD080C80194B79E30052F7BE /* Sources */,
-				BD080C81194B79E30052F7BE /* Frameworks */,
-				BD080C82194B79E30052F7BE /* Resources */,
+				BDC45DE81A155DCA00662D74 /* Sources */,
+				BDC45DE91A155DCA00662D74 /* Frameworks */,
+				BDC45DEA1A155DCA00662D74 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD080CD9194B7DD60052F7BE /* PBXTargetDependency */,
+				BDC45DEF1A155DCA00662D74 /* PBXTargetDependency */,
 			);
-			name = "CoreDataKit iOS Tests";
-			productName = CoreDataKitTests;
-			productReference = BD080C84194B79E30052F7BE /* CoreDataKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BDFD68F0194DFAD600799C33 /* CoreDataKit OSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD6908194DFAD600799C33 /* Build configuration list for PBXNativeTarget "CoreDataKit OSX" */;
-			buildPhases = (
-				BDFD68EC194DFAD600799C33 /* Sources */,
-				BDFD68ED194DFAD600799C33 /* Frameworks */,
-				BDFD68EE194DFAD600799C33 /* Headers */,
-				BDFD68EF194DFAD600799C33 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CoreDataKit OSX";
-			productName = "CoreDataKit OSX";
-			productReference = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BDFD68FA194DFAD600799C33 /* CoreDataKit OSX Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD6909194DFAD600799C33 /* Build configuration list for PBXNativeTarget "CoreDataKit OSX Tests" */;
-			buildPhases = (
-				BDFD68F7194DFAD600799C33 /* Sources */,
-				BDFD68F8194DFAD600799C33 /* Frameworks */,
-				BDFD68F9194DFAD600799C33 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDFD68FE194DFAD600799C33 /* PBXTargetDependency */,
-			);
-			name = "CoreDataKit OSX Tests";
-			productName = "CoreDataKit OSXTests";
-			productReference = BDFD68FB194DFAD600799C33 /* CoreDataKitTests.xctest */;
+			name = "CoreDataKitTests iOS";
+			productName = "CoreDataKit iOSTests";
+			productReference = BDC45DEC1A155DCA00662D74 /* CoreDataKitTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -346,21 +233,11 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Felix Gabel";
 				TargetAttributes = {
-					BD080C78194B79E30052F7BE = {
-						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = MMDS6BCK8S;
+					BDC45DE11A155DC900662D74 = {
+						CreatedOnToolsVersion = 6.1;
 					};
-					BD080C83194B79E30052F7BE = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = BD080C78194B79E30052F7BE;
-					};
-					BDFD68F0194DFAD600799C33 = {
-						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = MMDS6BCK8S;
-					};
-					BDFD68FA194DFAD600799C33 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = BDFD68F0194DFAD600799C33;
+					BDC45DEB1A155DCA00662D74 = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -376,37 +253,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD080C78194B79E30052F7BE /* CoreDataKit iOS */,
-				BD080C83194B79E30052F7BE /* CoreDataKit iOS Tests */,
-				BDFD68F0194DFAD600799C33 /* CoreDataKit OSX */,
-				BDFD68FA194DFAD600799C33 /* CoreDataKit OSX Tests */,
+				BDC45DE11A155DC900662D74 /* CoreDataKit iOS */,
+				BDC45DEB1A155DCA00662D74 /* CoreDataKitTests iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BD080C77194B79E30052F7BE /* Resources */ = {
+		BDC45DE01A155DC900662D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD080C82194B79E30052F7BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68EF194DFAD600799C33 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68F9194DFAD600799C33 /* Resources */ = {
+		BDC45DEA1A155DCA00662D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,76 +277,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BD080C74194B79E30052F7BE /* Sources */ = {
+		BDC45DDD1A155DC900662D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC7377E1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
-				BDC737841A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
-				BDC7376C1A14A30500CACC47 /* CDKStack.m in Sources */,
-				BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
-				BDC7378A1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
-				BDC737901A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
+				BDC45E001A155F2100662D74 /* NSCoder+CoreDataKit.m in Sources */,
+				BDC45DFE1A155F2100662D74 /* CDKStack.m in Sources */,
+				BDC45E081A155F2100662D74 /* NSURL+CoreDataKit.m in Sources */,
+				BDC45E061A155F2100662D74 /* NSManagedObject+CoreDataKit.m in Sources */,
+				BDC45E021A155F2100662D74 /* NSExpressionDescription+CoreDataKit.m in Sources */,
+				BDC45E041A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD080C80194B79E30052F7BE /* Sources */ = {
+		BDC45DE81A155DCA00662D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD99A53D19D809EE003B6C87 /* Bar.swift in Sources */,
-				BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */,
-				BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */,
-				BD99A53B19D809EE003B6C87 /* Foo.swift in Sources */,
-				BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */,
-				BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */,
-				BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */,
-				BD99A53919D6C7F4003B6C87 /* PredicateTests.swift in Sources */,
-				BD99A53F19D80A28003B6C87 /* Fixtures.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68EC194DFAD600799C33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC737851A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
-				BDC7378B1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
-				BDC737791A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
-				BDC7377F1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
-				BDC7376D1A14A30500CACC47 /* CDKStack.m in Sources */,
-				BDC737911A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDFD68F7194DFAD600799C33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD88950F19FF8C9F00B06014 /* Foo.swift in Sources */,
-				BD88950B19FF8AA500B06014 /* NSCoderExtensionTests.swift in Sources */,
-				BD88950919FF8A9E00B06014 /* StackTests.swift in Sources */,
-				BD88950D19FF8AAB00B06014 /* NSURLExtensionTests.swift in Sources */,
-				BD88950E19FF8C9C00B06014 /* Test.xcdatamodeld in Sources */,
-				BD88950C19FF8AA800B06014 /* NSPredicateExtensionTests.swift in Sources */,
-				BD88950819FF8A9A00B06014 /* Fixtures.swift in Sources */,
-				BD88951019FF8CA300B06014 /* Bar.swift in Sources */,
-				BD88950A19FF8AA100B06014 /* PredicateTests.swift in Sources */,
+				BDC45E0E1A15651C00662D74 /* XCTestCase+Fixtures.m in Sources */,
+				BDC45E111A156C1000662D74 /* NSURLTests.m in Sources */,
+				BDC45DFB1A155F1500662D74 /* CDKStackTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD080CD9194B7DD60052F7BE /* PBXTargetDependency */ = {
+		BDC45DEF1A155DCA00662D74 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD080C78194B79E30052F7BE /* CoreDataKit iOS */;
-			targetProxy = BD080CD8194B7DD60052F7BE /* PBXContainerItemProxy */;
-		};
-		BDFD68FE194DFAD600799C33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BDFD68F0194DFAD600799C33 /* CoreDataKit OSX */;
-			targetProxy = BDFD68FD194DFAD600799C33 /* PBXContainerItemProxy */;
+			target = BDC45DE11A155DC900662D74 /* CoreDataKit iOS */;
+			targetProxy = BDC45DEE1A155DCA00662D74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,7 +346,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -565,7 +385,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -576,60 +395,41 @@
 			};
 			name = Release;
 		};
-		BD080C90194B79E30052F7BE /* Debug */ = {
+		BDC45DF61A155DCA00662D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = CoreDataKit;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BD080C91194B79E30052F7BE /* Release */ = {
+		BDC45DF71A155DCA00662D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = CoreDataKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		BD080C93194B79E30052F7BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CoreDataKitTests;
-			};
-			name = Debug;
-		};
-		BD080C94194B79E30052F7BE /* Release */ = {
+		BDC45DF91A155DCA00662D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -637,98 +437,25 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CoreDataKitTests;
-			};
-			name = Release;
-		};
-		BDFD6904194DFAD600799C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CoreDataKit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		BDFD6905194DFAD600799C33 /* Release */ = {
+		BDC45DFA1A155DCA00662D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CoreDataKit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		BDFD6906194DFAD600799C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CoreDataKitTests;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		BDFD6907194DFAD600799C33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CoreDataKitTests;
-				SDKROOT = macosx;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -744,41 +471,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD080C8F194B79E30052F7BE /* Build configuration list for PBXNativeTarget "CoreDataKit iOS" */ = {
+		BDC45DF51A155DCA00662D74 /* Build configuration list for PBXNativeTarget "CoreDataKit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD080C90194B79E30052F7BE /* Debug */,
-				BD080C91194B79E30052F7BE /* Release */,
+				BDC45DF61A155DCA00662D74 /* Debug */,
+				BDC45DF71A155DCA00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		BD080C92194B79E30052F7BE /* Build configuration list for PBXNativeTarget "CoreDataKit iOS Tests" */ = {
+		BDC45DF81A155DCA00662D74 /* Build configuration list for PBXNativeTarget "CoreDataKitTests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD080C93194B79E30052F7BE /* Debug */,
-				BD080C94194B79E30052F7BE /* Release */,
+				BDC45DF91A155DCA00662D74 /* Debug */,
+				BDC45DFA1A155DCA00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDFD6908194DFAD600799C33 /* Build configuration list for PBXNativeTarget "CoreDataKit OSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDFD6904194DFAD600799C33 /* Debug */,
-				BDFD6905194DFAD600799C33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDFD6909194DFAD600799C33 /* Build configuration list for PBXNativeTarget "CoreDataKit OSX Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDFD6906194DFAD600799C33 /* Debug */,
-				BDFD6907194DFAD600799C33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

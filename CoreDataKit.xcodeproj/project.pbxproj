@@ -9,21 +9,6 @@
 /* Begin PBXBuildFile section */
 		BD080C85194B79E30052F7BE /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD080C79194B79E30052F7BE /* CoreDataKit.framework */; };
 		BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
-		BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */; };
-		BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
-		BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */; };
-		BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
-		BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BE9321981AE1B001EB2CE /* NSURL.swift */; };
-		BD63740B197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
-		BD63740C197CED8900E639FC /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740A197CED8900E639FC /* Stack.swift */; };
-		BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
-		BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63740D197CF4A000E639FC /* NSCoder.swift */; };
-		BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
-		BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD637410197CF81000E639FC /* NSExpressionDescription.swift */; };
-		BD6A9A0D19DEA38D0039F31D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A9A0C19DEA38D0039F31D /* DataSource.swift */; };
-		BD88950619FF8A8300B06014 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53619D63638003B6C87 /* Predicate.swift */; };
-		BD88950719FF8A9100B06014 /* NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53419D629BC003B6C87 /* NSPredicate.swift */; };
 		BD88950819FF8A9A00B06014 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53E19D80A28003B6C87 /* Fixtures.swift */; };
 		BD88950919FF8A9E00B06014 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BD88950A19FF8AA100B06014 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */; };
@@ -33,8 +18,6 @@
 		BD88950E19FF8C9C00B06014 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
 		BD88950F19FF8C9F00B06014 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53A19D809EE003B6C87 /* Foo.swift */; };
 		BD88951019FF8CA300B06014 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53C19D809EE003B6C87 /* Bar.swift */; };
-		BD99A53519D629BC003B6C87 /* NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53419D629BC003B6C87 /* NSPredicate.swift */; };
-		BD99A53719D63638003B6C87 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53619D63638003B6C87 /* Predicate.swift */; };
 		BD99A53919D6C7F4003B6C87 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */; };
 		BD99A53B19D809EE003B6C87 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53A19D809EE003B6C87 /* Foo.swift */; };
 		BD99A53D19D809EE003B6C87 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A53C19D809EE003B6C87 /* Bar.swift */; };
@@ -42,6 +25,33 @@
 		BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */; };
 		BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
 		BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */; };
+		BDC7376A1A14A30500CACC47 /* CoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7376B1A14A30500CACC47 /* CoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7376C1A14A30500CACC47 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CoreDataStack.m */; };
+		BDC7376D1A14A30500CACC47 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CoreDataStack.m */; };
+		BDC737701A14A86D00CACC47 /* CoreDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7376E1A14A86D00CACC47 /* CoreDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737721A14A86D00CACC47 /* CoreDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7376F1A14A86D00CACC47 /* CoreDataSource.m */; };
+		BDC737731A14A86D00CACC47 /* CoreDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7376F1A14A86D00CACC47 /* CoreDataSource.m */; };
+		BDC737761A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737771A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
+		BDC737791A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
+		BDC7377C1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7377D1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7377E1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */; };
+		BDC7377F1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */; };
+		BDC737821A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737831A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737841A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */; };
+		BDC737851A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */; };
+		BDC737881A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737891A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7378A1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */; };
+		BDC7378B1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */; };
+		BDC7378E1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7378F1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC737901A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */; };
+		BDC737911A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */; };
 		BDD87FC819CA2439007493FB /* NSURLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */; };
 		BDD87FCA19CA2439007493FB /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD87FC719CA2439007493FB /* StackTests.swift */; };
 		BDFD68FC194DFAD600799C33 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */; };
@@ -74,21 +84,26 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
-		BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
-		BD2BE9321981AE1B001EB2CE /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
-		BD63740A197CED8900E639FC /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		BD63740D197CF4A000E639FC /* NSCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoder.swift; sourceTree = "<group>"; };
-		BD637410197CF81000E639FC /* NSExpressionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExpressionDescription.swift; sourceTree = "<group>"; };
-		BD6A9A0C19DEA38D0039F31D /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		BD99A53419D629BC003B6C87 /* NSPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicate.swift; sourceTree = "<group>"; };
-		BD99A53619D63638003B6C87 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		BD99A53819D6C7F4003B6C87 /* PredicateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
 		BD99A53A19D809EE003B6C87 /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		BD99A53C19D809EE003B6C87 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		BD99A53E19D80A28003B6C87 /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoderExtensionTests.swift; sourceTree = "<group>"; };
 		BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
+		BDC737681A14A30500CACC47 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		BDC737691A14A30500CACC47 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		BDC7376E1A14A86D00CACC47 /* CoreDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataSource.h; sourceTree = "<group>"; };
+		BDC7376F1A14A86D00CACC47 /* CoreDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSource.m; sourceTree = "<group>"; };
+		BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CoreDataKit.m"; sourceTree = "<group>"; };
+		BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSExpressionDescription+CoreDataKit.h"; sourceTree = "<group>"; };
+		BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDD87FC619CA2439007493FB /* NSURLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensionTests.swift; sourceTree = "<group>"; };
 		BDD87FC719CA2439007493FB /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		BDFD68F1194DFAD600799C33 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,10 +169,11 @@
 			isa = PBXGroup;
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
-				BD63740A197CED8900E639FC /* Stack.swift */,
-				BD99A53619D63638003B6C87 /* Predicate.swift */,
-				BD6A9A0C19DEA38D0039F31D /* DataSource.swift */,
-				BD080CCB194B7C680052F7BE /* Extensions */,
+				BDC737681A14A30500CACC47 /* CoreDataStack.h */,
+				BDC737691A14A30500CACC47 /* CoreDataStack.m */,
+				BDC7376E1A14A86D00CACC47 /* CoreDataSource.h */,
+				BDC7376F1A14A86D00CACC47 /* CoreDataSource.m */,
+				BD080CCB194B7C680052F7BE /* Categories */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -205,17 +221,21 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		BD080CCB194B7C680052F7BE /* Extensions */ = {
+		BD080CCB194B7C680052F7BE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BD63740D197CF4A000E639FC /* NSCoder.swift */,
-				BD637410197CF81000E639FC /* NSExpressionDescription.swift */,
-				BD0AA8971980F1F000445CCF /* NSManagedObjectContext.swift */,
-				BD2BE92F198154DC001EB2CE /* NSManagedObject.swift */,
-				BD99A53419D629BC003B6C87 /* NSPredicate.swift */,
-				BD2BE9321981AE1B001EB2CE /* NSURL.swift */,
+				BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */,
+				BDC7377B1A14EC4000CACC47 /* NSCoder+CoreDataKit.m */,
+				BDC7378C1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h */,
+				BDC7378D1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m */,
+				BDC737801A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h */,
+				BDC737811A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m */,
+				BDC737861A1507D500CACC47 /* NSManagedObject+CoreDataKit.h */,
+				BDC737871A1507D500CACC47 /* NSManagedObject+CoreDataKit.m */,
+				BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */,
+				BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */,
 			);
-			name = Extensions;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +245,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC737881A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
+				BDC7376A1A14A30500CACC47 /* CoreDataStack.h in Headers */,
+				BDC7377C1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
+				BDC737701A14A86D00CACC47 /* CoreDataSource.h in Headers */,
 				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
+				BDC737821A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BDC7378E1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */,
+				BDC737761A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +260,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC737891A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
+				BDC7376B1A14A30500CACC47 /* CoreDataStack.h in Headers */,
+				BDC7377D1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
 				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
+				BDC737831A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
+				BDC7378F1A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.h in Headers */,
+				BDC737771A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2BE9331981AE1B001EB2CE /* NSURL.swift in Sources */,
-				BD0AA8981980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
-				BD63740B197CED8900E639FC /* Stack.swift in Sources */,
-				BD6A9A0D19DEA38D0039F31D /* DataSource.swift in Sources */,
-				BD99A53719D63638003B6C87 /* Predicate.swift in Sources */,
-				BD63740E197CF4A000E639FC /* NSCoder.swift in Sources */,
-				BD99A53519D629BC003B6C87 /* NSPredicate.swift in Sources */,
-				BD2BE930198154DC001EB2CE /* NSManagedObject.swift in Sources */,
-				BD637411197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
+				BDC7377E1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
+				BDC737841A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
+				BDC7376C1A14A30500CACC47 /* CoreDataStack.m in Sources */,
+				BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
+				BDC737721A14A86D00CACC47 /* CoreDataSource.m in Sources */,
+				BDC7378A1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
+				BDC737901A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,14 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD63740F197CF4A000E639FC /* NSCoder.swift in Sources */,
-				BD2BE931198154DC001EB2CE /* NSManagedObject.swift in Sources */,
-				BD88950619FF8A8300B06014 /* Predicate.swift in Sources */,
-				BD63740C197CED8900E639FC /* Stack.swift in Sources */,
-				BD2BE9341981AE1B001EB2CE /* NSURL.swift in Sources */,
-				BD637412197CF81000E639FC /* NSExpressionDescription.swift in Sources */,
-				BD88950719FF8A9100B06014 /* NSPredicate.swift in Sources */,
-				BD0AA8991980F1F000445CCF /* NSManagedObjectContext.swift in Sources */,
+				BDC737851A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
+				BDC7378B1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
+				BDC737791A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
+				BDC7377F1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
+				BDC737731A14A86D00CACC47 /* CoreDataSource.m in Sources */,
+				BDC7376D1A14A30500CACC47 /* CoreDataStack.m in Sources */,
+				BDC737911A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

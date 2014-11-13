@@ -17,7 +17,3 @@
 #import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObject+CoreDataKit.h>
 #import <CoreDataKit/NSURL+CoreDataKit.h>
-
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#import <CoreDataKit/CoreDataSource.h>
-#endif

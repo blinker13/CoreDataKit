@@ -1,16 +1,16 @@
 //
-//  CoreDataStack.m
+//  CDKStack.m
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 13/11/14.
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
-#import "CoreDataStack.h"
+#import "CDKStack.h"
 #import "NSURL+CoreDataKit.h"
 
 
-@implementation CoreDataStack
+@implementation CDKStack
 
 - (instancetype)initWithModel:(NSManagedObjectModel *)model {
 	if ((self = [super init])) {

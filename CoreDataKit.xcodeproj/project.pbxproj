@@ -25,10 +25,10 @@
 		BD99A54119D80BAE003B6C87 /* NSCoderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */; };
 		BD99A54219D81136003B6C87 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
 		BD99A54419D83970003B6C87 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */; };
-		BDC7376A1A14A30500CACC47 /* CoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7376B1A14A30500CACC47 /* CoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC7376C1A14A30500CACC47 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CoreDataStack.m */; };
-		BDC7376D1A14A30500CACC47 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CoreDataStack.m */; };
+		BDC7376A1A14A30500CACC47 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7376B1A14A30500CACC47 /* CDKStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737681A14A30500CACC47 /* CDKStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC7376C1A14A30500CACC47 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CDKStack.m */; };
+		BDC7376D1A14A30500CACC47 /* CDKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737691A14A30500CACC47 /* CDKStack.m */; };
 		BDC737761A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC737771A14A93A00CACC47 /* NSURL+CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
@@ -87,8 +87,8 @@
 		BD99A53E19D80A28003B6C87 /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		BD99A54019D80BAE003B6C87 /* NSCoderExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoderExtensionTests.swift; sourceTree = "<group>"; };
 		BD99A54319D83970003B6C87 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
-		BDC737681A14A30500CACC47 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		BDC737691A14A30500CACC47 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		BDC737681A14A30500CACC47 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
+		BDC737691A14A30500CACC47 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreDataKit.h"; sourceTree = "<group>"; };
 		BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreDataKit.m"; sourceTree = "<group>"; };
 		BDC7377A1A14EC4000CACC47 /* NSCoder+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
-				BDC737681A14A30500CACC47 /* CoreDataStack.h */,
-				BDC737691A14A30500CACC47 /* CoreDataStack.m */,
+				BDC737681A14A30500CACC47 /* CDKStack.h */,
+				BDC737691A14A30500CACC47 /* CDKStack.m */,
 				BD080CCB194B7C680052F7BE /* Categories */,
 			);
 			path = Source;
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC737881A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BDC7376A1A14A30500CACC47 /* CoreDataStack.h in Headers */,
+				BDC7376A1A14A30500CACC47 /* CDKStack.h in Headers */,
 				BDC7377C1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
 				BD080CBE194B7BA60052F7BE /* CoreDataKit.h in Headers */,
 				BDC737821A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC737891A1507D500CACC47 /* NSManagedObject+CoreDataKit.h in Headers */,
-				BDC7376B1A14A30500CACC47 /* CoreDataStack.h in Headers */,
+				BDC7376B1A14A30500CACC47 /* CDKStack.h in Headers */,
 				BDC7377D1A14EC4000CACC47 /* NSCoder+CoreDataKit.h in Headers */,
 				BDFD6918194DFB7500799C33 /* CoreDataKit.h in Headers */,
 				BDC737831A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
@@ -422,7 +422,7 @@
 			files = (
 				BDC7377E1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
 				BDC737841A14EE5600CACC47 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
-				BDC7376C1A14A30500CACC47 /* CoreDataStack.m in Sources */,
+				BDC7376C1A14A30500CACC47 /* CDKStack.m in Sources */,
 				BDC737781A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
 				BDC7378A1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BDC737901A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
@@ -453,7 +453,7 @@
 				BDC7378B1A1507D500CACC47 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BDC737791A14A93A00CACC47 /* NSURL+CoreDataKit.m in Sources */,
 				BDC7377F1A14EC4000CACC47 /* NSCoder+CoreDataKit.m in Sources */,
-				BDC7376D1A14A30500CACC47 /* CoreDataStack.m in Sources */,
+				BDC7376D1A14A30500CACC47 /* CDKStack.m in Sources */,
 				BDC737911A150A8700CACC47 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

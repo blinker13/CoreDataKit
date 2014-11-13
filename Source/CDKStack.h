@@ -1,5 +1,5 @@
 //
-//  CoreDataStack.h
+//  CDKStack.h
 //  CoreDataKit
 //
 //  Created by Felix Gabel on 13/11/14.
@@ -10,7 +10,7 @@
 @import CoreData;
 
 
-@interface CoreDataStack : NSObject
+@interface CDKStack : NSObject
 
 @property (nonatomic, readonly) NSManagedObjectModel			*model;
 @property (nonatomic, readonly) NSManagedObjectContext			*mainContext;

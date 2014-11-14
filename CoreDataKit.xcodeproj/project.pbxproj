@@ -24,6 +24,8 @@
 		BDC45E081A155F2100662D74 /* NSURL+CoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */; };
 		BDC45E0E1A15651C00662D74 /* XCTestCase+Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E0D1A15651C00662D74 /* XCTestCase+Fixtures.m */; };
 		BDC45E111A156C1000662D74 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E101A156C1000662D74 /* NSURLTests.m */; };
+		BDC45E691A16007E00662D74 /* CDKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E671A16007E00662D74 /* CDKDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E6A1A16007E00662D74 /* CDKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E681A16007E00662D74 /* CDKDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BDC45E0C1A15651C00662D74 /* XCTestCase+Fixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Fixtures.h"; sourceTree = "<group>"; };
 		BDC45E0D1A15651C00662D74 /* XCTestCase+Fixtures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Fixtures.m"; sourceTree = "<group>"; };
 		BDC45E101A156C1000662D74 /* NSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTests.m; sourceTree = "<group>"; };
+		BDC45E671A16007E00662D74 /* CDKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKDataSource.h; sourceTree = "<group>"; };
+		BDC45E681A16007E00662D74 /* CDKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKDataSource.m; sourceTree = "<group>"; };
 		BDC737681A14A30500CACC47 /* CDKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKStack.h; sourceTree = "<group>"; };
 		BDC737691A14A30500CACC47 /* CDKStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStack.m; sourceTree = "<group>"; };
 		BDC737741A14A93A00CACC47 /* NSURL+CoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreDataKit.h"; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
 				BDC737681A14A30500CACC47 /* CDKStack.h */,
 				BDC737691A14A30500CACC47 /* CDKStack.m */,
+				BDC45E671A16007E00662D74 /* CDKDataSource.h */,
+				BDC45E681A16007E00662D74 /* CDKDataSource.m */,
 				BD080CCB194B7C680052F7BE /* Categories */,
 			);
 			path = Source;
@@ -177,6 +183,7 @@
 			files = (
 				BDC45DFD1A155F2100662D74 /* CDKStack.h in Headers */,
 				BDC45E071A155F2100662D74 /* NSURL+CoreDataKit.h in Headers */,
+				BDC45E691A16007E00662D74 /* CDKDataSource.h in Headers */,
 				BDC45DFF1A155F2100662D74 /* NSCoder+CoreDataKit.h in Headers */,
 				BDC45E011A155F2100662D74 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BDC45E031A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.h in Headers */,
@@ -284,6 +291,7 @@
 				BDC45E001A155F2100662D74 /* NSCoder+CoreDataKit.m in Sources */,
 				BDC45DFE1A155F2100662D74 /* CDKStack.m in Sources */,
 				BDC45E081A155F2100662D74 /* NSURL+CoreDataKit.m in Sources */,
+				BDC45E6A1A16007E00662D74 /* CDKDataSource.m in Sources */,
 				BDC45E061A155F2100662D74 /* NSManagedObject+CoreDataKit.m in Sources */,
 				BDC45E021A155F2100662D74 /* NSExpressionDescription+CoreDataKit.m in Sources */,
 				BDC45E041A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.m in Sources */,
@@ -478,6 +486,7 @@
 				BDC45DF71A155DCA00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC45DF81A155DCA00662D74 /* Build configuration list for PBXNativeTarget "CoreDataKitTests iOS" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +495,7 @@
 				BDC45DFA1A155DCA00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

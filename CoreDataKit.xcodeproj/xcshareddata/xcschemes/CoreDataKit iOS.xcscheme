@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-               BuildableName = "CoreDataKit iOS.framework"
+               BuildableName = "CoreDataKit.framework"
                BlueprintName = "CoreDataKit iOS"
                ReferencedContainer = "container:CoreDataKit.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit iOS.framework"
+            BuildableName = "CoreDataKit.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit iOS.framework"
+            BuildableName = "CoreDataKit.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit iOS.framework"
+            BuildableName = "CoreDataKit.framework"
             BlueprintName = "CoreDataKit iOS"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>

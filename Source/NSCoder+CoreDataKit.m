@@ -25,9 +25,4 @@
 	return nil;
 }
 
-- (id)decodeManagedObjectForKey:(NSString *)key {
-	NSManagedObjectContext *context = nil;//TODO: get shared main context
-	return [self decodeManagedObjectForKey:key inContext:context];
-}
-
 @end

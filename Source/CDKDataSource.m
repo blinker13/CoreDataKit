@@ -41,9 +41,8 @@
 	return [self initWithRequest:request context:context shouldSectionResults:NO];
 }
 
-- (instancetype)initWithRequest:(NSFetchRequest *)request {
-	NSManagedObjectContext *context = nil;//TODO: get shared stack context
-	return [self initWithRequest:request context:context];
+- (instancetype)init {
+	return [self initWithRequest:nil context:nil];
 }
 
 

@@ -44,7 +44,6 @@
 - (instancetype)initWithRequest:(NSFetchRequest *)request context:(NSManagedObjectContext *)context shouldSectionResults:(BOOL)shouldSectionResults cacheName:(NSString *)cacheName NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithRequest:(NSFetchRequest *)request context:(NSManagedObjectContext *)context shouldSectionResults:(BOOL)shouldSectionResults;
 - (instancetype)initWithRequest:(NSFetchRequest *)request context:(NSManagedObjectContext *)context;
-- (instancetype)initWithRequest:(NSFetchRequest *)request;
 
 
 - (NSUInteger)numberOfSections;

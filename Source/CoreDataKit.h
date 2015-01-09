@@ -12,11 +12,6 @@
 
 #import <CoreDataKit/CDKStack.h>
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#import <CoreDataKit/CDKDataSource.h>
-#endif
-
-
 #import <CoreDataKit/NSCoder+CoreDataKit.h>
 #import <CoreDataKit/NSExpressionDescription+CoreDataKit.h>
 #import <CoreDataKit/NSManagedObjectContext+CoreDataKit.h>

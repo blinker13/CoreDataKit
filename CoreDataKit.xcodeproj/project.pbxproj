@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD567D731A6EEDAB00C9495F /* CDKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD567D721A6EEDAB00C9495F /* CDKDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC45DED1A155DCA00662D74 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45DE21A155DC900662D74 /* CoreDataKit.framework */; };
 		BDC45DFB1A155F1500662D74 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45D9E1A155D6600662D74 /* CDKStackTests.m */; };
 		BDC45DFC1A155F2100662D74 /* CoreDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD080CA1194B7B190052F7BE /* CoreDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +44,7 @@
 		BD080CB9194B7B190052F7BE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD567D721A6EEDAB00C9495F /* CDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKDefines.h; sourceTree = "<group>"; };
 		BDC45D9E1A155D6600662D74 /* CDKStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
 		BDC45DE21A155DC900662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC45DEC1A155DCA00662D74 /* CoreDataKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BD080CA1194B7B190052F7BE /* CoreDataKit.h */,
+				BD567D721A6EEDAB00C9495F /* CDKDefines.h */,
 				BDC737681A14A30500CACC47 /* CDKStack.h */,
 				BDC737691A14A30500CACC47 /* CDKStack.m */,
 				BD080CCB194B7C680052F7BE /* Categories */,
@@ -177,6 +180,7 @@
 			files = (
 				BDC45DFD1A155F2100662D74 /* CDKStack.h in Headers */,
 				BDC45E071A155F2100662D74 /* NSURL+CoreDataKit.h in Headers */,
+				BD567D731A6EEDAB00C9495F /* CDKDefines.h in Headers */,
 				BDC45DFF1A155F2100662D74 /* NSCoder+CoreDataKit.h in Headers */,
 				BDC45E011A155F2100662D74 /* NSExpressionDescription+CoreDataKit.h in Headers */,
 				BDC45E031A155F2100662D74 /* NSManagedObjectContext+CoreDataKit.h in Headers */,

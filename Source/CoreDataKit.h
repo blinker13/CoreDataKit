@@ -10,6 +10,8 @@
 @import CoreData;
 
 
+#import <CoreDataKit/CDKDefines.h>
+
 #import <CoreDataKit/CDKStack.h>
 
 #import <CoreDataKit/NSCoder+CoreDataKit.h>

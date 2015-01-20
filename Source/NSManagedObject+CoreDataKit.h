@@ -16,4 +16,10 @@
 
 + (NSString *)entityName;
 
++ (instancetype)insertInContext:(NSManagedObjectContext *)context;
+
++ (NSFetchRequest *)requestWithSortKey:(NSString *)key ascending:(BOOL)ascending;
++ (NSFetchRequest *)requestWithPredicateFormat:(NSString *)format, ...;
++ (NSFetchRequest *)request;
+
 @end

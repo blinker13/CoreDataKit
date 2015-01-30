@@ -9,28 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-               BuildableName = "CoreDataKit.framework"
-               BlueprintName = "CoreDataKit iOS"
-               ReferencedContainer = "container:CoreDataKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDC45DEB1A155DCA00662D74"
-               BuildableName = "CoreDataKitTests iOS.xctest"
-               BlueprintName = "CoreDataKitTests iOS"
+               BlueprintIdentifier = "BDA77D371A7C3DBA004CC056"
+               BuildableName = "CoreDataKitTests OSX.xctest"
+               BlueprintName = "CoreDataKitTests OSX"
                ReferencedContainer = "container:CoreDataKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDC45DEB1A155DCA00662D74"
-               BuildableName = "CoreDataKitTests iOS.xctest"
-               BlueprintName = "CoreDataKitTests iOS"
+               BlueprintIdentifier = "BDA77D371A7C3DBA004CC056"
+               BuildableName = "CoreDataKitTests OSX.xctest"
+               BlueprintName = "CoreDataKitTests OSX"
                ReferencedContainer = "container:CoreDataKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit.framework"
-            BlueprintName = "CoreDataKit iOS"
+            BlueprintIdentifier = "BDA77D371A7C3DBA004CC056"
+            BuildableName = "CoreDataKitTests OSX.xctest"
+            BlueprintName = "CoreDataKitTests OSX"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +61,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit.framework"
-            BlueprintName = "CoreDataKit iOS"
+            BlueprintIdentifier = "BDA77D371A7C3DBA004CC056"
+            BuildableName = "CoreDataKitTests OSX.xctest"
+            BlueprintName = "CoreDataKitTests OSX"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDC45DE11A155DC900662D74"
-            BuildableName = "CoreDataKit.framework"
-            BlueprintName = "CoreDataKit iOS"
+            BlueprintIdentifier = "BDA77D371A7C3DBA004CC056"
+            BuildableName = "CoreDataKitTests OSX.xctest"
+            BlueprintName = "CoreDataKitTests OSX"
             ReferencedContainer = "container:CoreDataKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

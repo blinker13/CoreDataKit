@@ -31,16 +31,7 @@
 	return request;
 }
 
-+ (NSFetchRequest *)requestWithPredicateFormat:(NSString *)format, ... {
-	va_list list, listCopy;
-	va_start(list, format);
-	va_copy(listCopy, list);
-	va_end(list);
-	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:format arguments:listCopy];
-	
-	va_end(listCopy);
-	
++ (NSFetchRequest *)requestWithPredicate:(NSPredicate *)predicate {
 	NSFetchRequest *request = [self request];
 	[request setPredicate:predicate];
 	return request;

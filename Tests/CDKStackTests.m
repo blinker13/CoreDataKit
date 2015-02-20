@@ -7,6 +7,8 @@
 //
 
 #import "XCTestCase+Fixtures.h"
+#import "NSURL+CoreDataKit.h"
+#import "CDKStack.h"
 
 
 @interface CDKStackTests : XCTestCase
@@ -42,7 +44,25 @@
 	XCTAssertEqual(stack.mainContext.concurrencyType, NSMainQueueConcurrencyType, "The main context should use the main queue");
 }
 
-
-#pragma mark -
+- (void)testConfigurations {
+	NSURL *directory = [[NSURL alloc] initFileURLWithPath:NSTemporaryDirectory() isDirectory:YES];
+	NSURL *store1 = [directory storeURLByAppendingName:@"test1"];
+	NSURL *store2 = [directory storeURLByAppendingName:@"test2"];
+	
+	NSDictionary *options = @{
+		NSMigratePersistentStoresAutomaticallyOption: @NO,
+		NSInferMappingModelAutomaticallyOption: @NO,
+		NSSQLiteManualVacuumOption: @YES,
+		NSSQLitePragmasOption: @{@"journal_mode":@"DELETE"}
+	};
+	
+	
+	NSManagedObjectModel *fixtureModel = [self fixtureModel];
+	CDKStack *stack = [[CDKStack alloc] initWithModel:fixtureModel];
+	[stack addStoreAtURL:store1 withOptions:options configuration:@"Foo"];
+	[stack addStoreAtURL:store2 withOptions:options configuration:@"Bar"];
+	
+	NSLog(@"hi");
+}
 
 @end

@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD55829F1A937E180074EF97 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
+		BD5582A01A937E190074EF97 /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD080CB5194B7B190052F7BE /* Test.xcdatamodeld */; };
 		BD567D731A6EEDAB00C9495F /* CDKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD567D721A6EEDAB00C9495F /* CDKDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD761E541A977CF2002091EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E511A977CB5002091EA /* CoreData.framework */; };
+		BD761E551A977CF2002091EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E4F1A977CA9002091EA /* Foundation.framework */; };
+		BD761E571A977D0C002091EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E511A977CB5002091EA /* CoreData.framework */; };
+		BD761E581A977D0C002091EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E4F1A977CA9002091EA /* Foundation.framework */; };
+		BD761E591A977DF7002091EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E511A977CB5002091EA /* CoreData.framework */; };
+		BD761E5A1A977DF7002091EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E4F1A977CA9002091EA /* Foundation.framework */; };
+		BD761E5B1A977E2D002091EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E511A977CB5002091EA /* CoreData.framework */; };
+		BD761E5C1A977E2D002091EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD761E4F1A977CA9002091EA /* Foundation.framework */; };
 		BDA77D391A7C3DBA004CC056 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA77D2E1A7C3DBA004CC056 /* CoreDataKit.framework */; };
 		BDA77D471A7C3E57004CC056 /* CDKStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45D9E1A155D6600662D74 /* CDKStackTests.m */; };
 		BDA77D481A7C3E5A004CC056 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E101A156C1000662D74 /* NSURLTests.m */; };
@@ -70,6 +80,8 @@
 		BD080CBA194B7B190052F7BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD080CBC194B7B4F0052F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD567D721A6EEDAB00C9495F /* CDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKDefines.h; sourceTree = "<group>"; };
+		BD761E4F1A977CA9002091EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BD761E511A977CB5002091EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BDA77D2E1A7C3DBA004CC056 /* CoreDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA77D381A7C3DBA004CC056 /* CoreDataKitTests OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataKitTests OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC45D9E1A155D6600662D74 /* CDKStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKStackTests.m; sourceTree = "<group>"; };
@@ -93,11 +105,31 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD761E4E1A977C99002091EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD761E541A977CF2002091EA /* CoreData.framework in Frameworks */,
+				BD761E551A977CF2002091EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD761E561A977D04002091EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD761E571A977D0C002091EA /* CoreData.framework in Frameworks */,
+				BD761E581A977D0C002091EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDA77D351A7C3DBA004CC056 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD761E591A977DF7002091EA /* CoreData.framework in Frameworks */,
 				BDA77D391A7C3DBA004CC056 /* CoreDataKit.framework in Frameworks */,
+				BD761E5A1A977DF7002091EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +137,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD761E5B1A977E2D002091EA /* CoreData.framework in Frameworks */,
 				BDC45DED1A155DCA00662D74 /* CoreDataKit.framework in Frameworks */,
+				BD761E5C1A977E2D002091EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +152,7 @@
 				BD080CBB194B7B360052F7BE /* Resources */,
 				BD080C99194B7B190052F7BE /* Source */,
 				BD080CAE194B7B190052F7BE /* Tests */,
+				BD761E531A977CDB002091EA /* Frameworks */,
 				BD080C7A194B79E30052F7BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,10 +183,10 @@
 		BD080CAE194B7B190052F7BE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BD080CC0194B7BD50052F7BE /* Resources */,
-				BDC45E0F1A15652400662D74 /* Support */,
 				BDC45D9E1A155D6600662D74 /* CDKStackTests.m */,
 				BDC45E101A156C1000662D74 /* NSURLTests.m */,
+				BD080CC0194B7BD50052F7BE /* Resources */,
+				BDC45E0F1A15652400662D74 /* Support */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -190,6 +225,15 @@
 				BDC737751A14A93A00CACC47 /* NSURL+CoreDataKit.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		BD761E531A977CDB002091EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD761E511A977CB5002091EA /* CoreData.framework */,
+				BD761E4F1A977CA9002091EA /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BDC45E0F1A15652400662D74 /* Support */ = {
@@ -243,6 +287,7 @@
 			buildPhases = (
 				BDA77D291A7C3DBA004CC056 /* Sources */,
 				BDA77D2B1A7C3DBA004CC056 /* Headers */,
+				BD761E561A977D04002091EA /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +322,7 @@
 			buildPhases = (
 				BDC45DDD1A155DC900662D74 /* Sources */,
 				BDC45DDF1A155DC900662D74 /* Headers */,
+				BD761E4E1A977C99002091EA /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA77D481A7C3E5A004CC056 /* NSURLTests.m in Sources */,
+				BD5582A01A937E190074EF97 /* Test.xcdatamodeld in Sources */,
 				BDA77D471A7C3E57004CC056 /* CDKStackTests.m in Sources */,
 				BDA77D571A7C3F01004CC056 /* XCTestCase+Fixtures.m in Sources */,
 			);
@@ -409,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC45E0E1A15651C00662D74 /* XCTestCase+Fixtures.m in Sources */,
+				BD55829F1A937E180074EF97 /* Test.xcdatamodeld in Sources */,
 				BDC45E111A156C1000662D74 /* NSURLTests.m in Sources */,
 				BDC45DFB1A155F1500662D74 /* CDKStackTests.m in Sources */,
 			);
@@ -438,6 +486,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -480,6 +529,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;

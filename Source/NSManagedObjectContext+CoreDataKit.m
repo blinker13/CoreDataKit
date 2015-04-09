@@ -1,10 +1,3 @@
-//
-//  NSManagedObjectContext+CoreDataKit.m
-//  CoreDataKit
-//
-//  Created by Felix Gabel on 13/11/14.
-//  Copyright (c) 2014 Felix Gabel. All rights reserved.
-//
 
 #import "NSManagedObjectContext+CoreDataKit.h"
 
